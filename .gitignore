@@ -22,6 +22,8 @@
 
 # production
 /build
+/android-nfc-share/**/build/
+/android-nfc-share/.gradle/
 
 # misc
 .DS_Store

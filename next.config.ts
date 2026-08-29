@@ -5,16 +5,15 @@ const nextConfig: NextConfig = {
   poweredByHeader: false,
   agentRules: false,
   allowedDevOrigins: ["127.0.0.1", "localhost"],
-  skipTrailingSlashRedirect: true,
+  trailingSlash: true,
   images: {
     formats: ["image/avif", "image/webp"],
   },
   async redirects() {
     return [
-      { source: "/spaces/school-spaces", destination: "/spaces/garden-makeovers", permanent: true },
+      { source: "/spaces/school-spaces", destination: "/spaces/garden-makeovers/", permanent: true },
       { source: "/card", destination: "/BusinessCard/", permanent: false },
       { source: "/business-card", destination: "/BusinessCard/", permanent: false },
-      { source: "/BusinessCard", destination: "/BusinessCard/", permanent: false },
     ];
   },
 };
