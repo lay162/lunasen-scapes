@@ -27,18 +27,30 @@ On **lunasen-scapes.co.uk** set up:
 
 GoDaddy → the `.co.uk` → **Email**. Professional email / Workspace is fine. The site enquiry form already writes to this address.
 
-### 3. Send the .com to the .co.uk
+### 3. Send the .com to the .co.uk (this is the bit you click)
 
-The website code already does this: `lunasenscapes.com` and `www.lunasenscapes.com` jump to `https://lunasen-scapes.co.uk` (and `/BusinessCard/` on `.com` becomes `/BusinessCard/` on `.co.uk`).
+You do **not** push domains from GitHub. The website code is already pushed. This part is only in GoDaddy, in Chrome, on your Chromebook.
 
-In GoDaddy, after the `.co.uk` is live, also set a **forward** as a backup:
+Do this on **lunasenscapes.com** only. Do **not** forward the `.co.uk` — that one is the home.
 
-1. GoDaddy → **lunasenscapes.com** → **DNS** or **Forwarding**
-2. Forward to **https://lunasen-scapes.co.uk**
-3. Forward **www.lunasenscapes.com** the same way
-4. Use a **301 / permanent** forward if GoDaddy offers it
+1. Open [godaddy.com](https://www.godaddy.com) and sign in.
+2. Open **My Products**, then **Domains**.
+3. Click **lunasenscapes.com** (the one **without** the hyphen).
+4. Click **DNS**, then **Forwarding**.
+5. Click **Add Forwarding**.
+6. Choose **Domain** (the main name, not a subdomain).
+7. Destination: **https://lunasen-scapes.co.uk**
+8. Type: **Permanent (301)**
+9. Do **not** choose “Forward with masking”. If you see “Forward only”, that is the right one.
+10. Click **Save**.
+11. Add forwarding again, this time as **Subdomain**, name **www**, same destination **https://lunasen-scapes.co.uk**, **Permanent (301)**, no masking.
+12. Save.
 
-Until the `.co.uk` site is hosted, leave the `.com` alone.
+Wait. It can be a few minutes, sometimes longer. Then type `lunasenscapes.com` in Chrome. It should jump to `lunasen-scapes.co.uk`.
+
+If GoDaddy asks you to verify with a code, that is normal. Use the code they send.
+
+The website code also sends `.com` visitors to the `.co.uk` once both names are pointed at the live host. The GoDaddy forward is the simple version you can do yourself.
 
 ## What you cannot do in GoDaddy alone
 
