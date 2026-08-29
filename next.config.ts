@@ -16,6 +16,18 @@ const nextConfig: NextConfig = {
       { source: "/card/", destination: "/BusinessCard/", permanent: false },
       { source: "/business-card", destination: "/BusinessCard/", permanent: false },
       { source: "/business-card/", destination: "/BusinessCard/", permanent: false },
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "lunasenscapes.com" }],
+        destination: "https://lunasen-scapes.co.uk/:path*",
+        permanent: true,
+      },
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "www.lunasenscapes.com" }],
+        destination: "https://lunasen-scapes.co.uk/:path*",
+        permanent: true,
+      },
     ];
   },
   async rewrites() {

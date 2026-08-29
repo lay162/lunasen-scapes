@@ -2,8 +2,8 @@
 
 You own:
 
-- **lunasen-scapes.co.uk** — the real LUNA SEN-Scapes site (hyphen, branded name)
-- **lunasenscapes.com** — the spare name. This should only ever send people to the `.co.uk`
+- **lunasen-scapes.co.uk** — the real LUNA SEN-Scapes site (hyphen, branded name). This is the only site people should stay on.
+- **lunasenscapes.com** — spare name. Anyone who types this is sent to the `.co.uk`. Same page, same card. They never stay on `.com`.
 
 The digital business card, once the `.co.uk` is live, is:
 
@@ -27,16 +27,18 @@ On **lunasen-scapes.co.uk** set up:
 
 GoDaddy → the `.co.uk` → **Email**. Professional email / Workspace is fine. The site enquiry form already writes to this address.
 
-### 3. Park the .com as a forward (do this after the .co.uk is live)
+### 3. Send the .com to the .co.uk
 
-When `https://lunasen-scapes.co.uk` opens the site:
+The website code already does this: `lunasenscapes.com` and `www.lunasenscapes.com` jump to `https://lunasen-scapes.co.uk` (and `/BusinessCard/` on `.com` becomes `/BusinessCard/` on `.co.uk`).
+
+In GoDaddy, after the `.co.uk` is live, also set a **forward** as a backup:
 
 1. GoDaddy → **lunasenscapes.com** → **DNS** or **Forwarding**
 2. Forward to **https://lunasen-scapes.co.uk**
 3. Forward **www.lunasenscapes.com** the same way
 4. Use a **301 / permanent** forward if GoDaddy offers it
 
-Until the `.co.uk` site is hosted, leave the `.com` alone. Do not point it at a random parking page if you can help it.
+Until the `.co.uk` site is hosted, leave the `.com` alone.
 
 ## What you cannot do in GoDaddy alone
 
