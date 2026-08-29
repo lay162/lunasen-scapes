@@ -13,7 +13,9 @@ const nextConfig: NextConfig = {
     return [
       { source: "/spaces/school-spaces", destination: "/spaces/garden-makeovers/", permanent: true },
       { source: "/card", destination: "/BusinessCard/", permanent: false },
+      { source: "/card/", destination: "/BusinessCard/", permanent: false },
       { source: "/business-card", destination: "/BusinessCard/", permanent: false },
+      { source: "/business-card/", destination: "/BusinessCard/", permanent: false },
     ];
   },
 };
