@@ -30,7 +30,7 @@ Drop your square logo in later as `public/brand/logo.png`. Favicon can follow th
 
 ## Enquiry email
 
-Enquiries go to **enquiries@lunasenscapes.co.uk**. Set that mailbox up on your domain, or change it in `.env.local`.
+Enquiries go to **enquiries@lunasen-scapes.co.uk**. Set that mailbox up on your domain, or change it in `.env.local`.
 
 Copy `.env.example` to `.env.local` to change:
 
