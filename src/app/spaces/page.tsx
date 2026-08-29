@@ -33,7 +33,7 @@ export default function SpacesPage() {
           "Move.",
           "Regulate.",
           "Sit outside.",
-          "We design gardens and play areas for disabled people and SEN families, then build them with proper levelling, dig offs and drainage.",
+          "We design gardens, play areas and rooms for SEN children, SEN adults and disabled people, then we build — including internal works.",
         ]}
       />
       <section className="mx-auto max-w-6xl px-4 py-12 sm:px-6">

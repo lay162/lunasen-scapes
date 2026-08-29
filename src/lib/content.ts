@@ -15,7 +15,7 @@ export const SPACES = [
       "special needs playground UK",
       "accessible playground garden",
     ],
-    audience: "Family gardens and private outdoor play for disabled and SEN children",
+    audience: "SEN children, SEN adults, disabled people and anyone who needs a safe play area at home",
     outcomes: [
       "Zoning for high-energy play, quiet retreat and time together",
       "Surfacing specified for wheelchair users, walkers and sensory seekers",
@@ -46,7 +46,7 @@ export const SPACES = [
       "inclusive landscaping UK",
       "disability garden transformation",
     ],
-    audience: "Disabled adults, SEN families and anyone who needs the garden to work with a wheelchair, walker or complex needs",
+    audience: "SEN children, SEN adults, disabled people and anyone who needs the garden to work",
     outcomes: [
       "A garden you can get into and move through, not look at from the back door",
       "Levels, ramps and widths that match how you actually move",
@@ -237,6 +237,59 @@ export const GROUNDWORK_SERVICES = [
     slug: "extensions",
     title: "Extension groundworks",
     summary: "Dig outs, drainage and concrete for extensions, porches, garages and roofing groundwork packages.",
+  },
+] as const;
+
+export const BUILDING_SERVICES = [
+  {
+    slug: "general-building",
+    title: "General building",
+    summary: "Full building works on family homes — from a single room to a wider package, kept in one brief.",
+  },
+  {
+    slug: "internal-works",
+    title: "Internal works",
+    summary: "Floors, walls, doorways, plastering and finishing so rooms are safe, level and usable every day.",
+  },
+  {
+    slug: "accessible-adaptations",
+    title: "Accessible internal adaptations",
+    summary: "Wider openings, flush thresholds, wet rooms, grab-ready walls and layouts that work for wheelchairs and walkers.",
+  },
+  {
+    slug: "extensions",
+    title: "Extensions",
+    summary: "Dig out, foundations, brickwork and weathertight shell for rear, side and porch extensions.",
+  },
+  {
+    slug: "conversions",
+    title: "Conversions",
+    summary: "Garage, loft and outbuilding conversions turned into usable rooms, including sensory or quiet rooms.",
+  },
+  {
+    slug: "brickwork",
+    title: "Brickwork & blockwork",
+    summary: "Walls, garden structures, piers and repairs built true, then tied into the rest of the job.",
+  },
+  {
+    slug: "flooring",
+    title: "Flooring",
+    summary: "Level, durable floors indoors — including surfaces that take wheelchair traffic and sensory-room use.",
+  },
+  {
+    slug: "plastering",
+    title: "Plastering & finishing",
+    summary: "Walls and ceilings finished so a room can be lived in, not left as a building site.",
+  },
+  {
+    slug: "outbuildings",
+    title: "Outbuildings & stores",
+    summary: "Garden rooms, stores and bases — built so equipment and people have a proper place to go.",
+  },
+  {
+    slug: "renovations",
+    title: "Renovations",
+    summary: "Tired rooms and tired plots brought back as one job: strip-out, rebuild, finish.",
   },
 ] as const;
 
@@ -455,33 +508,34 @@ export const WORK_ITEMS = [
 export const FAQS = [
   {
     q: "What is LUNA SEN-Scapes?",
-    a: "LUNA SEN-Scapes is the environments company of LUNA SEN Group Ltd. We design and build inclusive playgrounds, safe play areas, sensory gardens, sensory rooms and disabled garden makeovers for families across the UK. We also deliver full groundworks: driveways, fencing, patios, landscaping, drainage, levelling and dig offs. One company. One brief.",
+    a: "LUNA SEN-Scapes is the environments and building company of LUNA SEN Group Ltd. We make safe places for SEN children, SEN adults and disabled people: gardens, play areas, driveways and internal rooms. We also carry out all aspects of building works. One company. One brief. Across the UK.",
+  },
+  {
+    q: "Who is this for?",
+    a: "SEN children. SEN adults. Disabled people. Anyone who needs a safe garden, a safe play area, a usable driveway or internal work that actually fits how they live. Families and supported homes. We do not take school contracts.",
   },
   {
     q: "Do you do garden makeovers for disabled people?",
     a: "Yes. That is a core LUNA SEN-Scapes brief. We rebuild gardens so wheelchair users, walkers and SEN families can actually use the outdoor space. Paths, ramps, drainage, planting, safe play and fencing sit in the same job.",
   },
   {
-    q: "Do you still do driveways, fencing and patios?",
-    a: "Yes. LUNA SEN-Scapes still does the full groundworks package for family homes. Driveways, fencing, gates, patios, landscaping, drainage, levelling, dig offs, foundations, dropped kerbs and extension groundworks. Play areas and garden makeovers sit on that same work.",
+    q: "Do you do building and internal works as well as gardens?",
+    a: "Yes. LUNA SEN-Scapes does all aspects of building works: general building, extensions, conversions, brickwork, internal renovations, flooring, plastering, accessible adaptations and outbuildings. Gardens and driveways sit next to that, not instead of it.",
   },
   {
-    q: "Do you only sell play equipment?",
-    a: "No. We start with the ground. Levelling, dig offs, drainage and surfacing come first. Then equipment and planting. You can also ask us to prepare a site for kit you already have a supplier for.",
+    q: "Do you still do driveways, fencing and patios?",
+    a: "Yes. Driveways, fencing, gates, patios, landscaping, drainage, levelling, dig offs, foundations and dropped kerbs. Play areas and garden makeovers sit on that same work.",
   },
   {
     q: "Which areas do you cover?",
-    a: "The United Kingdom. We are based in the Wirral and travel across England, Scotland, Wales and Northern Ireland for disabled garden makeovers, playgrounds and groundworks. Send the postcode. We will say if a visit makes sense.",
-  },
-  {
-    q: "Who is this for?",
-    a: "Families. Disabled adults. SEN children who need a safe garden or play area at home. We do not take school contracts. If the brief is a family garden, a driveway or a home sensory room, you are in the right place.",
+    a: "The United Kingdom. We are based in the Wirral and travel across England, Scotland, Wales and Northern Ireland. Send the postcode. We will say if a visit makes sense.",
   },
 ] as const;
 
 export const NAV = [
   { href: "/spaces", label: "Spaces" },
   { href: "/groundworks", label: "Groundworks" },
+  { href: "/building", label: "Building" },
   { href: "/work", label: "Work" },
   { href: "/areas", label: "Areas" },
   { href: "/about", label: "About" },

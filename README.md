@@ -1,10 +1,8 @@
 # LUNA SEN-Scapes
 
-Disabled garden makeovers, inclusive playgrounds, safe play areas, sensory gardens and home sensory rooms for families — plus full groundworks: driveways, fencing, patios, landscaping, drainage, levelling and dig offs.
+Safe places for SEN children, SEN adults and disabled people: garden makeovers, playgrounds, driveways, internal works and all aspects of building. Nationwide from a Wirral base.
 
-A company of **LUNA SEN Group Ltd**. Nationwide from a Wirral base.
-
-This is a public website (Next.js) for family gardens across the United Kingdom. We do not take school contracts.
+A company of **LUNA SEN Group Ltd**. We do not take school contracts.
 
 GitHub: [lay162/lunasen-scapes](https://github.com/lay162/lunasen-scapes)
 

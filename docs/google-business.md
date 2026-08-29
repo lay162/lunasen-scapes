@@ -45,7 +45,7 @@ Sunday: closed
 
 ## Description (paste)
 
-LUNA SEN-Scapes designs and builds disabled garden makeovers, inclusive playgrounds, safe play areas, sensory gardens and home sensory rooms for families across the United Kingdom. We also deliver driveways, fencing, patios, landscaping, drainage, levelling and dig offs. We start with the ground — then equipment and planting. Part of LUNA SEN Group Ltd (company 17049817). Based in the Wirral, we work UK wide.
+LUNA SEN-Scapes makes safe places for SEN children, SEN adults and disabled people across the UK: gardens, playgrounds, driveways, internal works and all aspects of building. We start with the ground — then the finish. Part of LUNA SEN Group Ltd (company 17049817). Based in the Wirral, we work UK wide.
 
 ## Photos to upload first
 

@@ -3,9 +3,9 @@ export const SITE = {
   shortName: "LUNA SEN-Scapes",
   legalName: "LUNA SEN Group Ltd",
   companyNumber: "17049817",
-  tagline: "Disabled garden makeovers, playgrounds and groundworks — UK wide.",
+  tagline: "Safe places, gardens and building works for SEN and disabled people — UK wide.",
   description:
-    "LUNA SEN-Scapes designs and builds disabled garden makeovers, inclusive playgrounds, safe play areas, sensory gardens and sensory rooms for families across the UK, plus driveways, fencing, patios, landscaping, drainage, levelling and dig offs.",
+    "LUNA SEN-Scapes builds safe places for SEN children, SEN adults and disabled people across the UK: garden makeovers, playgrounds, driveways, internal works and all aspects of building. Groundworks, fencing, patios, landscaping, drainage and renovations sit in the same brief.",
   url: process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") || "https://lunasenscapes.co.uk",
   email: process.env.NEXT_PUBLIC_ENQUIRY_EMAIL || "enquiries@lunasenscapes.co.uk",
   phoneDisplay: "07375 996 207",

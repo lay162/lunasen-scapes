@@ -52,7 +52,7 @@ export default function GroundworksPage() {
         <div className="mt-12 rounded-3xl bg-black p-8 text-white md:p-10">
           <h2 className="text-2xl font-black">Send the site, not a shopping list.</h2>
           <p className="mx-auto mt-3 max-w-xl text-white/70">Photos and a postcode are enough to start.</p>
-          <p className="mx-auto mt-2 max-w-xl text-white/70">Driveway or SEN yard — tell us what you need.</p>
+          <p className="mx-auto mt-2 max-w-xl text-white/70">Driveway or garden — tell us what you need.</p>
           <Link href="/enquire" className="luna-btn luna-btn-gradient mt-6 h-12 px-5">
             Talk to us about the ground
           </Link>

@@ -8,7 +8,7 @@ import { SITE } from "@/lib/site";
 export const metadata = pageMetadata({
   title: "About LUNA SEN-Scapes",
   description:
-    "LUNA SEN-Scapes is a LUNA SEN Group Ltd company building disabled garden makeovers, inclusive playgrounds and groundworks for families across the United Kingdom.",
+    "LUNA SEN-Scapes is a LUNA SEN Group Ltd company making safe places for SEN children, SEN adults and disabled people — gardens, driveways, internal works and all aspects of building across the UK.",
   path: "/about",
 });
 
@@ -18,14 +18,13 @@ export default function AboutPage() {
       <JsonLd data={breadcrumbJsonLd([{ name: "Home", path: "/" }, { name: "About", path: "/about" }])} />
       <PageHero
         eyebrow={SITE.legalName}
-        title="Gardens that work. Play that is safe. Ground that lasts."
+        title="Gardens that work. Rooms that work. Ground that lasts."
         lines={[
-          "LUNA SEN-Scapes is the environments company of LUNA SEN Group Ltd.",
-          "We rebuild gardens for disabled people and SEN families across the UK.",
-          "Inclusive playgrounds, safe play areas, sensory gardens and home sensory rooms.",
-          "We also do driveways, fencing, patios, landscaping, drainage and dig offs.",
+          "LUNA SEN-Scapes is the environments and building company of LUNA SEN Group Ltd.",
+          "For SEN children, SEN adults and disabled people.",
+          "Anyone who needs a safe garden, play area, driveway or safer rooms inside.",
+          "We do the groundworks and all aspects of building works.",
           "We do not take school contracts.",
-          "The groundworks stay in-house.",
         ]}
       />
       <section className="mx-auto max-w-3xl space-y-5 px-4 py-12 text-muted-foreground sm:px-6">

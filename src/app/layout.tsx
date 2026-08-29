@@ -19,7 +19,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
   title: {
-    default: `${SITE.name} | Disabled Garden Makeovers, Playgrounds & Groundworks | UK`,
+    default: `${SITE.name} | Safe Places, Gardens & Building Works for SEN & Disabled People | UK`,
     template: `%s | ${SITE.name}`,
   },
   description: SITE.description,
@@ -34,7 +34,8 @@ export const metadata: Metadata = {
     "inclusive playground UK",
     "safe play area SEN",
     "sensory garden UK",
-    "wheelchair garden makeover",
+    "building works UK",
+    "internal adaptations disabled",
     "LUNA SEN-Scapes",
     "LUNA SEN Group",
   ],

@@ -9,31 +9,31 @@ import { Textarea } from "@/components/ui/textarea";
 import { SITE } from "@/lib/site";
 
 const SETTINGS = [
-  "Family home / garden",
-  "Disabled garden makeover",
-  "Safe play area / playground",
-  "Home driveway / patio / fencing",
-  "Supported living / adult home",
-  "Commercial groundworks",
+  "Family home — SEN child",
+  "Family home — SEN adult",
+  "Disabled person / household",
+  "Safe place / play area",
+  "Garden or driveway",
+  "Internal works / building",
+  "Supported living",
   "Other",
 ] as const;
 
 const INTERESTS = [
+  "Safe garden / play area",
   "Disabled garden makeover",
-  "Accessible garden",
   "Inclusive playground",
-  "Safe play area",
   "Sensory garden",
-  "Sensory room",
+  "Sensory room / internal room",
+  "Internal works",
+  "Building / extension",
+  "Accessible adaptation",
   "Driveway",
   "Fencing & gates",
   "Patio & paving",
   "Landscaping",
   "Levelling and dig offs",
   "Drainage",
-  "Inclusive surfacing",
-  "Foundations",
-  "Dropped kerb",
   "Not sure yet",
 ] as const;
 

@@ -6,13 +6,13 @@ import { FaqList } from "@/components/faq-list";
 import { JsonLd } from "@/components/json-ld";
 import { Lines } from "@/components/lines";
 import { BrandName } from "@/components/brand-mark";
-import { AREAS, FAQS, GROUNDWORK_SERVICES, SPACES, WORK_ITEMS } from "@/lib/content";
+import { AREAS, BUILDING_SERVICES, FAQS, GROUNDWORK_SERVICES, SPACES, WORK_ITEMS } from "@/lib/content";
 import { lunaBtnClass, lunaLinkClass } from "@/lib/luna-tone";
 import { breadcrumbJsonLd, faqJsonLd, pageMetadata } from "@/lib/seo";
 import { SITE } from "@/lib/site";
 
 export const metadata = pageMetadata({
-  title: `${SITE.name} | Disabled Garden Makeovers, Playgrounds & Groundworks | UK`,
+  title: `${SITE.name} | Safe Places, Gardens & Building Works for SEN & Disabled People | UK`,
   description: SITE.description,
   path: "/",
   keywords: [
@@ -48,12 +48,12 @@ export default function HomePage() {
               tone="light"
               lines={[
                 "This is LUNA SEN-Scapes.",
-                "We rebuild gardens for disabled people and SEN families.",
-                "Inclusive playgrounds, safe play areas, sensory gardens and home sensory rooms.",
-                "We also do the groundworks: driveways, fencing, patios, landscaping, drainage, levelling and dig offs.",
+                "For SEN children, SEN adults and disabled people.",
+                "Anyone who needs a safe garden, a safe play area, a usable driveway or safer rooms inside.",
+                "We do the groundworks and all aspects of building works.",
                 "One company.",
                 "One brief.",
-                "From the first dig to the finished garden.",
+                "From the first dig to the finished space.",
               ]}
             />
           </div>
@@ -68,13 +68,16 @@ export default function HomePage() {
             <Link href="/groundworks" className={`${lunaBtnClass(2)} h-12 px-6 text-base`}>
               Groundworks
             </Link>
+            <Link href="/building" className={`${lunaBtnClass(0)} h-12 px-6 text-base`}>
+              Building
+            </Link>
           </div>
           <dl className="mt-12 grid grid-cols-2 gap-4 text-sm sm:grid-cols-4">
             {[
-              ["On site", "Groundworks included"],
-              ["Families", "Children and adults"],
-              ["£5M", "Public liability cover"],
-              ["UK", "England to Northern Ireland"],
+              ["SEN", "Children and adults"],
+              ["Disabled", "Safe places first"],
+              ["Build", "Internal and external"],
+              ["UK", "Nationwide"],
             ].map(([stat, label], i) => (
               <div key={label}>
                 <dt className={`text-2xl font-black ${lunaLinkClass(i)}`}>{stat}</dt>
@@ -87,14 +90,15 @@ export default function HomePage() {
 
       <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
         <p className="text-[11px] font-bold uppercase tracking-[0.28em] text-luna-pink">Spaces</p>
-        <h2 className="mt-2 text-3xl font-black tracking-tight">Garden makeovers, playgrounds and safe play.</h2>
+        <h2 className="mt-2 text-3xl font-black tracking-tight">Safe places for SEN children, SEN adults and disabled people.</h2>
         <div className="mt-6">
           <Lines
             lines={[
-              "If the brief is a disabled garden or a SEN play area, we start with how people move.",
-              "Then we dig.",
-              "Play companies sell kit.",
-              "We make the ground fit the people.",
+              "A garden you can get into.",
+              "A play area you can trust.",
+              "A driveway you can use.",
+              "A room that works inside the house.",
+              "We start with how people move. Then we build.",
             ]}
           />
         </div>
@@ -147,6 +151,31 @@ export default function HomePage() {
             ))}
           </ul>
         </div>
+      </section>
+
+      <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
+        <p className="text-[11px] font-bold uppercase tracking-[0.28em] text-luna-pink">Building</p>
+        <h2 className="mt-2 text-3xl font-black tracking-tight">All aspects of building works.</h2>
+        <div className="mt-6">
+          <Lines
+            lines={[
+              "Internal works, extensions, conversions, flooring and renovations.",
+              "Accessible adaptations for wheelchairs, walkers and complex needs.",
+              "The garden and the house can be one job.",
+            ]}
+          />
+        </div>
+        <Link href="/building" className={`${lunaBtnClass(2)} mt-8 h-11 px-5`}>
+          All building works
+        </Link>
+        <ul className="mt-10 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+          {BUILDING_SERVICES.map((service) => (
+            <li key={service.slug} className="rounded-2xl border bg-white p-4">
+              <h3 className="font-bold">{service.title}</h3>
+              <p className="mt-1 text-sm text-muted-foreground">{service.summary}</p>
+            </li>
+          ))}
+        </ul>
       </section>
 
       <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
@@ -212,7 +241,7 @@ export default function HomePage() {
             tone="light"
             lines={[
               "Send photos, a postcode and what you need doing.",
-              "Garden makeover, playground or a driveway.",
+              "Garden, driveway, play area or internal works.",
               "We will tell you if a visit is worth it.",
             ]}
           />

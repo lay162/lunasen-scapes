@@ -82,7 +82,7 @@ export function BrandMark({
               inverted ? "text-white/55" : "text-muted-foreground",
             )}
           >
-            SEN spaces · groundworks · UK wide
+            SEN · disabled · building · UK wide
           </span>
         ) : null}
       </span>

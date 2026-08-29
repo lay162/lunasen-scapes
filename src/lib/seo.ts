@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { SITE, absoluteUrl, fullAddress } from "@/lib/site";
-import { AREAS, GROUNDWORK_SERVICES, SPACES } from "@/lib/content";
+import { AREAS, BUILDING_SERVICES, GROUNDWORK_SERVICES, SPACES } from "@/lib/content";
 
 const defaultOg = {
   url: absoluteUrl("/opengraph-image"),
@@ -33,6 +33,8 @@ export function pageMetadata({
       "safe play area",
       "disabled garden makeover",
       "accessible garden UK",
+      "building works UK",
+      "internal adaptations",
       "sensory garden",
       "sensory room",
       "United Kingdom",
@@ -124,6 +126,12 @@ export function localBusinessJsonLd() {
           "Drainage",
           "Foundations",
           "Dropped kerbs",
+          "Building works",
+          "Internal works",
+          "Accessible internal adaptations",
+          "Extensions",
+          "Conversions",
+          "Renovations",
           "Garden adaptations for disabled people",
         ],
         brand: { "@type": "Brand", name: "LUNA SEN-Scapes" },
@@ -164,6 +172,16 @@ export function localBusinessJsonLd() {
                 name: service.title,
                 description: service.summary,
                 url: absoluteUrl("/groundworks"),
+                provider: { "@id": id },
+              },
+            })),
+            ...BUILDING_SERVICES.map((service) => ({
+              "@type": "Offer",
+              itemOffered: {
+                "@type": "Service",
+                name: service.title,
+                description: service.summary,
+                url: absoluteUrl("/building"),
                 provider: { "@id": id },
               },
             })),

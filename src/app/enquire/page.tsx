@@ -8,7 +8,7 @@ import { SITE, fullAddress } from "@/lib/site";
 export const metadata = pageMetadata({
   title: "Enquire | Disabled Garden Makeover, Playground & Groundworks Quotes UK",
   description:
-    "Request a LUNA SEN-Scapes site visit for disabled garden makeovers, inclusive playgrounds, sensory rooms, driveways, fencing or safe play areas anywhere in the UK.",
+    "Request a LUNA SEN-Scapes site visit for gardens, playgrounds, driveways, internal works or building anywhere in the UK.",
   path: "/enquire",
 });
 
@@ -20,8 +20,8 @@ export default function EnquirePage() {
         eyebrow="Free visit where it is useful"
         title="Tell us the site. We will tell you if we should come."
         lines={[
-          "Families use this form.",
-          "Garden makeover, playground, fencing, patio or driveway.",
+          "SEN children, SEN adults, disabled people — anyone who needs a safer space.",
+          "Garden, driveway, play area, internal works or a full build.",
           "We need a postcode, how the space is used, and what is failing now.",
         ]}
       />
