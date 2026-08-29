@@ -1,25 +1,25 @@
 export const SPACES = [
   {
     slug: "playgrounds",
-    title: "SEN playgrounds",
-    eyebrow: "Inclusive play",
+    title: "Inclusive playgrounds",
+    eyebrow: "Safe play",
     summary:
-      "Inclusive playgrounds for SEN schools, specialist settings and family gardens — planned from the dig up, not bolted onto poor ground.",
-    seoTitle: "SEN Playgrounds Wirral, Liverpool & Cheshire | LUNA SEN-Scapes",
+      "Family playgrounds and safe play areas for disabled and SEN children — planned from the dig up, not bolted onto poor ground.",
+    seoTitle: "Inclusive Playgrounds & Safe Play Areas UK | LUNA SEN-Scapes",
     seoDescription:
-      "SEN playground design and build across Wirral, Liverpool, Cheshire and the North West. Inclusive equipment, safety surfacing, levelling and dig offs by LUNA SEN-Scapes.",
+      "LUNA SEN-Scapes designs and builds inclusive playgrounds and safe play areas for disabled and SEN children across the UK. Safety surfacing, levelling and dig offs included.",
     keywords: [
-      "SEN playground Wirral",
-      "SEN playground Liverpool",
-      "inclusive playground Cheshire",
-      "special needs playground North West",
-      "school playground groundworks",
+      "inclusive playground UK",
+      "SEN playground family garden",
+      "safe play area disabled child",
+      "special needs playground UK",
+      "accessible playground garden",
     ],
-    audience: "SEN schools, specialist provisions, nurseries and family gardens",
+    audience: "Family gardens and private outdoor play for disabled and SEN children",
     outcomes: [
-      "Zoning for high-energy play, quiet retreat and social gathering",
+      "Zoning for high-energy play, quiet retreat and time together",
       "Surfacing specified for wheelchair users, walkers and sensory seekers",
-      "Ground prepared so equipment stays level through Wirral winters",
+      "Ground prepared so equipment stays level through a British winter",
     ],
     includes: [
       "Site survey, levels and underground service awareness",
@@ -30,31 +30,34 @@ export const SPACES = [
     ],
   },
   {
-    slug: "sensory-rooms",
-    title: "Sensory rooms",
-    eyebrow: "Indoor regulation",
+    slug: "garden-makeovers",
+    title: "Disabled garden makeovers",
+    eyebrow: "Accessible gardens",
     summary:
-      "Calm, durable sensory rooms for SEN children and adults — floors, walls, lighting zones and safe thresholds that stand up to daily use.",
-    seoTitle: "SEN Sensory Rooms Wirral & North West | LUNA SEN-Scapes",
+      "Full garden makeovers for disabled people and SEN families — wheelchair paths, level lawns, raised beds and outdoor rooms that actually get used.",
+    seoTitle: "Disabled Garden Makeovers UK | Accessible Gardens | LUNA SEN-Scapes",
     seoDescription:
-      "Sensory room build-outs for SEN schools, homes and adult settings in Wirral, Liverpool and Cheshire. Safe floors, lighting zones and regulation spaces by LUNA SEN-Scapes.",
+      "LUNA SEN-Scapes rebuilds gardens for disabled people across the UK. Accessible paths, ramps, drainage, planting and safe outdoor living — a proper makeover, not a few sleepers on mud.",
     keywords: [
-      "sensory room Wirral",
-      "SEN sensory room Liverpool",
-      "sensory room installation Cheshire",
-      "adult SEN sensory space",
+      "disabled garden makeover UK",
+      "accessible garden design UK",
+      "wheelchair garden makeover",
+      "garden adaptation disabled",
+      "inclusive landscaping UK",
+      "disability garden transformation",
     ],
-    audience: "Schools, homes, respite and adult SEN day services",
+    audience: "Disabled adults, SEN families and anyone who needs the garden to work with a wheelchair, walker or complex needs",
     outcomes: [
-      "A room that actually regulates, not a cupboard with fairy lights",
-      "Floors and wall protection that survive kicking, rolling and wheelchair traffic",
-      "Clear thresholds so the space is easy to enter and leave",
+      "A garden you can get into and move through, not look at from the back door",
+      "Levels, ramps and widths that match how you actually move",
+      "Planting and finishes that last, with drainage that survives UK rain",
     ],
     includes: [
-      "Floor levelling, acoustic underlay and wipe-clean finishes",
-      "Soft wall protection, blackout options and zoned lighting",
-      "Safe power routes and mounting for projectors or bubble tubes",
-      "Storage so equipment does not become clutter",
+      "Full strip-out, dig offs and re-levelling",
+      "Wheelchair-width paths, turning circles and flush thresholds",
+      "Ramps, graded routes and rest points",
+      "Raised beds, seating and weather-usable outdoor rooms",
+      "Drainage, fencing and lighting as part of the same brief",
     ],
   },
   {
@@ -62,17 +65,18 @@ export const SPACES = [
     title: "Sensory gardens",
     eyebrow: "Outdoor regulation",
     summary:
-      "Sensory gardens with planting, water, texture trails and quiet nooks — built on proper levels so paths stay usable in Merseyside rain.",
-    seoTitle: "SEN Sensory Gardens Wirral, Liverpool & Cheshire | LUNA SEN-Scapes",
+      "Sensory gardens with planting, water, texture trails and quiet nooks — built on proper levels so paths stay usable in British rain.",
+    seoTitle: "Sensory Gardens UK | Disabled & SEN Outdoor Spaces | LUNA SEN-Scapes",
     seoDescription:
-      "Sensory garden design and groundworks for SEN settings across Wirral, Liverpool and Cheshire. Texture trails, planting, drainage and accessible paths.",
+      "LUNA SEN-Scapes builds sensory gardens for disabled and SEN families across the UK. Texture trails, planting, drainage and accessible paths from the first dig.",
     keywords: [
-      "sensory garden Wirral",
-      "SEN sensory garden Liverpool",
-      "inclusive outdoor classroom Cheshire",
-      "sensory garden groundworks",
+      "sensory garden UK",
+      "SEN sensory garden",
+      "disabled sensory garden",
+      "accessible sensory garden",
+      "sensory garden makeover",
     ],
-    audience: "Schools, care settings and family gardens",
+    audience: "Family gardens and private outdoor spaces for SEN children and disabled adults",
     outcomes: [
       "Year-round access, not a pretty garden that turns to mud",
       "Planting and materials chosen for scent, sound, texture and safety",
@@ -87,76 +91,78 @@ export const SPACES = [
   },
   {
     slug: "safe-spaces",
-    title: "Safe spaces",
-    eyebrow: "Containment without panic",
+    title: "Safe play areas",
+    eyebrow: "Secure without panic",
     summary:
-      "Secure outdoor and indoor safe spaces for SEN children and adults who abscond, overload or need a predictable boundary.",
-    seoTitle: "SEN Safe Spaces Wirral & North West | LUNA SEN-Scapes",
+      "Secure safe play areas for SEN and disabled children and adults who abscond, overload or need a predictable boundary at home.",
+    seoTitle: "Safe Play Areas UK | Secure SEN Gardens | LUNA SEN-Scapes",
     seoDescription:
-      "Safe spaces and secure SEN yards in Wirral, Liverpool and Cheshire. Sight-lines, fencing, gates and calm finishes by LUNA SEN-Scapes.",
+      "LUNA SEN-Scapes builds safe play areas and secure family gardens across the UK. Sight-lines, fencing, gates and calm finishes for SEN and disabled households.",
     keywords: [
-      "SEN safe space Wirral",
-      "secure playground SEN school",
-      "absconding fencing school",
-      "safe outdoor space special needs",
+      "safe play area SEN",
+      "secure garden disabled child",
+      "absconding fencing garden",
+      "safe outdoor space special needs UK",
     ],
-    audience: "Settings supporting absconding, high anxiety or complex needs",
+    audience: "Family gardens supporting absconding, high anxiety or complex needs",
     outcomes: [
-      "Boundaries staff can trust without turning the yard into a compound",
+      "Boundaries you can trust without turning the garden into a compound",
       "Soft-fail finishes where someone may drop, kick or run",
-      "Gates, locks and sight-lines agreed with the setting, not guessed",
+      "Gates, locks and sight-lines agreed with you, not guessed",
     ],
     includes: [
-      "Height, climb-resistance and anti-ligature detailing as specified",
-      "Self-closing gates and staff-only routes",
+      "Height, climb-resistance and detailing as specified",
+      "Self-closing gates and clear sight-lines from the house",
       "Even ground so a fall is not a trip into a step",
       "Quiet dens and regulation corners inside the secure line",
     ],
   },
   {
-    slug: "school-spaces",
-    title: "SEN school yards",
-    eyebrow: "Education settings",
+    slug: "sensory-rooms",
+    title: "Sensory rooms",
+    eyebrow: "Indoor regulation",
     summary:
-      "Whole-yard programmes for SEN schools — play, PE, quiet, arrival and outdoor learning — sequenced around term dates.",
-    seoTitle: "SEN School Playgrounds & Yards Wirral | LUNA SEN-Scapes",
+      "Calm, durable sensory rooms for SEN children and disabled adults at home — floors, walls, lighting zones and safe thresholds that stand up to daily use.",
+    seoTitle: "Home Sensory Rooms UK | LUNA SEN-Scapes",
     seoDescription:
-      "SEN school yard and playground programmes across Wirral, Liverpool, Cheshire and North Wales. Phased groundworks around term time.",
+      "LUNA SEN-Scapes builds sensory rooms in family homes across the UK. Safe floors, lighting zones and regulation spaces for SEN children and disabled adults.",
     keywords: [
-      "SEN school playground Wirral",
-      "special school outdoor space Liverpool",
-      "EHCP outdoor provision Cheshire",
+      "sensory room UK",
+      "home sensory room SEN",
+      "disabled sensory room",
+      "sensory room installation UK",
     ],
-    audience: "Maintained and independent SEN schools, ARPs and PRUs",
+    audience: "Family homes and private indoor regulation spaces",
     outcomes: [
-      "A yard that works at break, lunch and for curriculum time",
-      "Phasing so you are not without outdoor space for a whole term",
-      "Paperwork that procurement and governors can follow",
+      "A room that actually regulates, not a cupboard with fairy lights",
+      "Floors and wall protection that survive kicking, rolling and wheelchair traffic",
+      "Clear thresholds so the space is easy to enter and leave",
     ],
     includes: [
-      "Condition survey and priority plan",
-      "Dig offs, drainage and surfacing in phases",
-      "Equipment, markings and shade",
-      "Handover notes for site staff",
+      "Floor levelling, acoustic underlay and wipe-clean finishes",
+      "Soft wall protection, blackout options and zoned lighting",
+      "Safe power routes and mounting for projectors or bubble tubes",
+      "Storage so equipment does not become clutter",
     ],
   },
   {
     slug: "adult-settings",
-    title: "Adult SEN settings",
-    eyebrow: "Lifelong spaces",
+    title: "Gardens for disabled adults",
+    eyebrow: "Lifelong outdoor rooms",
     summary:
-      "Gardens, courtyards and indoor sensory rooms for adult SEN day services, supported living and respite — dignity first, not a scaled-down playground.",
-    seoTitle: "Adult SEN Gardens & Sensory Spaces North West | LUNA SEN-Scapes",
+      "Gardens, courtyards and indoor sensory rooms for disabled adults — dignity first, not a scaled-down playground.",
+    seoTitle: "Disabled Adult Gardens UK | Accessible Outdoor Living | LUNA SEN-Scapes",
     seoDescription:
-      "Outdoor and indoor SEN spaces for adult day services and supported living in Wirral, Liverpool and Cheshire. Accessible gardens, courtyards and sensory rooms.",
+      "LUNA SEN-Scapes builds accessible gardens and sensory rooms for disabled adults across the UK. Paths, seating, privacy and planting that respect adult life.",
     keywords: [
-      "adult SEN garden Wirral",
-      "supported living sensory garden",
-      "day service outdoor space Cheshire",
+      "disabled adult garden UK",
+      "accessible garden for adults",
+      "wheelchair garden UK",
+      "supported living garden makeover",
     ],
-    audience: "Day services, supported living, respite and adult social care",
+    audience: "Disabled adults at home, supported living and family households",
     outcomes: [
-      "Adult-appropriate materials and planting, not primary-school colours by default",
+      "Adult-appropriate materials and planting, not primary colours by default",
       "Wheelchair turning, rest points and weather cover",
       "Spaces people want to be in, not just pass through",
     ],
@@ -164,7 +170,7 @@ export const SPACES = [
       "Accessible paths, seating and raised growing",
       "Sensory rooms scaled for adults",
       "Privacy screening and neighbour-friendly fencing",
-      "Low-maintenance planting where staffing is tight",
+      "Low-maintenance planting where energy and time are tight",
     ],
   },
 ] as const;
@@ -185,12 +191,12 @@ export const GROUNDWORK_SERVICES = [
   {
     slug: "fencing",
     title: "Fencing & gates",
-    summary: "Close-board, featheredge, commercial grade and SEN-safe lines, with gates that actually hang true.",
+    summary: "Close-board, featheredge and SEN-safe lines, with gates that actually hang true.",
   },
   {
     slug: "landscaping",
     title: "Landscaping",
-    summary: "Full garden transformations, turf, sleepers, planting and outdoor rooms for homes and settings.",
+    summary: "Full garden transformations, turf, sleepers, planting and outdoor rooms for family homes.",
   },
   {
     slug: "levelling",
@@ -205,7 +211,7 @@ export const GROUNDWORK_SERVICES = [
   {
     slug: "drainage",
     title: "Drainage",
-    summary: "French drains, gullies and regrading so gardens and SEN yards do not pond after heavy rain.",
+    summary: "French drains, gullies and regrading so gardens and play areas do not pond after heavy rain.",
   },
   {
     slug: "surfacing",
@@ -215,12 +221,12 @@ export const GROUNDWORK_SERVICES = [
   {
     slug: "foundations",
     title: "Foundations & footings",
-    summary: "Concrete pads, sleeper walls and footings for extensions, stores, equipment and new builds.",
+    summary: "Concrete pads, sleeper walls and footings for stores, equipment and new builds.",
   },
   {
     slug: "steps",
     title: "Steps & stonework",
-    summary: "Steps, kerbs and stone detail, with a ramped or graded route where SEN access needs it.",
+    summary: "Steps, kerbs and stone detail, with a ramped or graded route where access needs it.",
   },
   {
     slug: "dropped-kerbs",
@@ -236,70 +242,148 @@ export const GROUNDWORK_SERVICES = [
 
 export const AREAS = [
   {
+    slug: "united-kingdom",
+    name: "United Kingdom",
+    blurb:
+      "LUNA SEN-Scapes works across the UK. Disabled garden makeovers, inclusive playgrounds, safe play areas, sensory gardens and full groundworks — England, Scotland, Wales and Northern Ireland.",
+  },
+  {
+    slug: "england",
+    name: "England",
+    blurb:
+      "Accessible garden makeovers, SEN playgrounds and driveways throughout England. From the North to the South Coast, we start with levels and drainage so the finish lasts.",
+  },
+  {
+    slug: "scotland",
+    name: "Scotland",
+    blurb:
+      "Disabled garden makeovers, safe play areas and groundworks across Scotland. Weather-tight drainage and levels that cope with wet ground.",
+  },
+  {
+    slug: "wales",
+    name: "Wales",
+    blurb:
+      "Inclusive playgrounds, sensory gardens and garden adaptations across Wales, including North Wales and the wider country.",
+  },
+  {
+    slug: "northern-ireland",
+    name: "Northern Ireland",
+    blurb:
+      "LUNA SEN-Scapes takes on disabled garden makeovers, safe play areas and groundworks in Northern Ireland where the brief is right.",
+  },
+  {
+    slug: "london",
+    name: "London",
+    blurb:
+      "Garden makeovers for disabled households in London — tight-access plots, level thresholds, safe play and drainage that works in a small yard.",
+  },
+  {
+    slug: "midlands",
+    name: "Midlands",
+    blurb:
+      "Accessible gardens, inclusive playgrounds and driveways across the Midlands. Family homes that need the outdoor space to work.",
+  },
+  {
+    slug: "yorkshire",
+    name: "Yorkshire",
+    blurb:
+      "Disabled garden transformations, sensory gardens and groundworks across Yorkshire. Clay, slope and rain handled before planting goes in.",
+  },
+  {
+    slug: "south-west",
+    name: "South West",
+    blurb:
+      "Garden makeovers, safe play areas and landscaping across the South West. Coastal drainage and usable paths for wheelchair users.",
+  },
+  {
+    slug: "south-east",
+    name: "South East",
+    blurb:
+      "Inclusive family gardens and disabled garden makeovers across the South East. Levels, fencing and play that fit a real plot.",
+  },
+  {
+    slug: "east-of-england",
+    name: "East of England",
+    blurb:
+      "Accessible garden design and build across the East of England. Sensory planting, safe play and proper groundworks.",
+  },
+  {
+    slug: "north-east",
+    name: "North East",
+    blurb:
+      "SEN playgrounds, garden adaptations and driveways across the North East. Built for weather, wheels and everyday family use.",
+  },
+  {
+    slug: "north-west",
+    name: "North West",
+    blurb:
+      "Based in the Wirral, we cover the North West for disabled garden makeovers, playgrounds, fencing and full groundworks.",
+  },
+  {
     slug: "wirral",
     name: "Wirral",
     blurb:
-      "Our home patch. SEN schools, family gardens and specialist settings from Wallasey and Birkenhead through to West Kirby, Heswall, Neston and Eastham.",
+      "Home base. Family playgrounds, disabled garden makeovers and driveways from Wallasey and Birkenhead through to West Kirby, Heswall, Neston and Eastham.",
   },
   {
     slug: "liverpool",
     name: "Liverpool",
     blurb:
-      "Playgrounds, sensory gardens and dig offs for Liverpool SEN provisions, family homes and adult services across the city.",
+      "Accessible gardens, safe play areas and dig offs for Liverpool family homes. LUNA SEN-Scapes across the city.",
   },
   {
     slug: "merseyside",
     name: "Merseyside",
     blurb:
-      "Groundworks and SEN outdoor spaces across Merseyside — including Sefton, Knowsley and St Helens settings as well as Wirral and Liverpool.",
+      "Garden makeovers and inclusive play spaces across Merseyside, including Sefton, Knowsley and St Helens as well as Wirral and Liverpool.",
   },
   {
     slug: "cheshire",
     name: "Cheshire",
     blurb:
-      "Levelling, drainage and inclusive play spaces for Cheshire schools and gardens, including Ellesmere Port, Chester and Neston.",
+      "Levelling, drainage and disabled garden makeovers for Cheshire family homes, including Ellesmere Port, Chester and Neston.",
   },
   {
     slug: "chester",
     name: "Chester",
     blurb:
-      "SEN gardens, school yards and sensory rooms for Chester and the surrounding villages, built to the same groundworks standard we use across the North West.",
+      "SEN gardens, safe play areas and sensory rooms for Chester and the surrounding villages, built to the same groundworks standard we use across the UK.",
   },
   {
     slug: "ellesmere-port",
     name: "Ellesmere Port",
     blurb:
-      "Local SEN playground and garden projects with straightforward access for plant, spoil and phased school works.",
+      "Local playground, garden makeover and driveway projects with straightforward access for plant and spoil.",
   },
   {
     slug: "wallasey",
     name: "Wallasey",
     blurb:
-      "Safe outdoor spaces and sensory gardens for Wallasey families and settings, including tight-access terraces and school sites.",
+      "Safe play areas and sensory gardens for Wallasey families, including tight-access terraces.",
   },
   {
     slug: "west-kirby",
     name: "West Kirby",
     blurb:
-      "Coastal-plot drainage, levelling and SEN gardens in West Kirby and the west Wirral shoreline.",
+      "Coastal-plot drainage, levelling and accessible gardens in West Kirby and the west Wirral shoreline.",
   },
   {
     slug: "neston",
     name: "Neston",
     blurb:
-      "Family SEN gardens and school outdoor work across Neston and the Dee side of the Wirral.",
+      "Family SEN gardens and disabled garden makeovers across Neston and the Dee side of the Wirral.",
   },
   {
     slug: "birkenhead",
     name: "Birkenhead",
     blurb:
-      "SEN yards, safe spaces and dig offs for Birkenhead schools, homes and community settings.",
+      "Safe play areas, garden adaptations and dig offs for Birkenhead family homes.",
   },
   {
     slug: "north-wales",
     name: "North Wales",
     blurb:
-      "We travel into Flintshire and the North Wales coast for SEN playgrounds, sensory gardens and groundworks where the brief is right.",
+      "We travel into Flintshire and the North Wales coast for playgrounds, sensory gardens and garden makeovers.",
   },
 ] as const;
 
@@ -308,25 +392,25 @@ export type AreaSlug = (typeof AREAS)[number]["slug"];
 export const WORK_ITEMS = [
   {
     src: "/work/dig-off.jpg",
-    alt: "Garden dig off and ground preparation on a North West site",
+    alt: "Garden dig off and ground preparation on a UK site",
     title: "Dig offs",
     caption: "Formation level before surfacing — the part playground suppliers skip.",
   },
   {
     src: "/work/garden-before.jpg",
-    alt: "Garden before landscaping and levelling",
+    alt: "Garden before a disabled garden makeover and levelling",
     title: "Before",
-    caption: "Mud, falls towards the house, nowhere safe to play.",
+    caption: "Mud, falls towards the house, nowhere safe to play or move.",
   },
   {
     src: "/work/garden-after.jpg",
-    alt: "Finished garden after landscaping by LUNA SEN-Scapes",
+    alt: "Finished accessible garden after a LUNA SEN-Scapes makeover",
     title: "After",
     caption: "Levels, planting and a usable outdoor room.",
   },
   {
     src: "/work/garden-2.jpg",
-    alt: "Completed landscaped garden in the North West",
+    alt: "Completed landscaped family garden in the UK",
     title: "Gardens",
     caption: "How we finish a garden before a sensory or play layer goes in.",
   },
@@ -346,17 +430,17 @@ export const WORK_ITEMS = [
     src: "/work/patio-2.jpg",
     alt: "Porcelain patio with charcoal picture-frame border",
     title: "Surfacing",
-    caption: "Clean, durable finishes for high-use settings.",
+    caption: "Clean, durable finishes for high-use family gardens.",
   },
   {
     src: "/work/fencing.jpg",
-    alt: "Timber fencing installed on a domestic plot",
+    alt: "Timber fencing installed on a family plot",
     title: "Fencing",
     caption: "Boundaries that last — specified higher and safer for SEN when needed.",
   },
   {
     src: "/work/driveway.jpg",
-    alt: "Block paving driveway completed in the North West",
+    alt: "Block paving driveway completed in the UK",
     title: "Access",
     caption: "Arrival routes, dropped thresholds and plant access.",
   },
@@ -364,22 +448,22 @@ export const WORK_ITEMS = [
     src: "/work/steps.jpg",
     alt: "Stone steps and garden levels",
     title: "Changes of level",
-    caption: "Where steps stay, we add a ramped or graded alternative for SEN sites.",
+    caption: "Where steps stay, we add a ramped or graded alternative.",
   },
 ] as const;
 
 export const FAQS = [
   {
     q: "What is LUNA SEN-Scapes?",
-    a: "LUNA SEN-Scapes is the environments company of LUNA SEN Group Ltd. We design and build SEN playgrounds, sensory rooms, sensory gardens and safe spaces for children and adults. We also deliver full groundworks: driveways, fencing, patios, landscaping, drainage, levelling, dig offs and foundations. One company. One brief. Across Wirral, Liverpool, Cheshire and the North West.",
+    a: "LUNA SEN-Scapes is the environments company of LUNA SEN Group Ltd. We design and build inclusive playgrounds, safe play areas, sensory gardens, sensory rooms and disabled garden makeovers for families across the UK. We also deliver full groundworks: driveways, fencing, patios, landscaping, drainage, levelling and dig offs. One company. One brief.",
+  },
+  {
+    q: "Do you do garden makeovers for disabled people?",
+    a: "Yes. That is a core LUNA SEN-Scapes brief. We rebuild gardens so wheelchair users, walkers and SEN families can actually use the outdoor space. Paths, ramps, drainage, planting, safe play and fencing sit in the same job.",
   },
   {
     q: "Do you still do driveways, fencing and patios?",
-    a: "Yes. LUNA SEN-Scapes still does the full groundworks package for homes, schools and settings. Driveways, fencing, gates, patios, landscaping, drainage, levelling, dig offs, foundations, dropped kerbs and extension groundworks. SEN spaces sit on that same work.",
-  },
-  {
-    q: "Do you only work with schools?",
-    a: "No. We work with SEN schools and specialist provisions. We also work with families who need a safe garden or a driveway. Adult day services, supported living and respite settings are welcome. The enquiry form asks which kind of site you have.",
+    a: "Yes. LUNA SEN-Scapes still does the full groundworks package for family homes. Driveways, fencing, gates, patios, landscaping, drainage, levelling, dig offs, foundations, dropped kerbs and extension groundworks. Play areas and garden makeovers sit on that same work.",
   },
   {
     q: "Do you only sell play equipment?",
@@ -387,11 +471,11 @@ export const FAQS = [
   },
   {
     q: "Which areas do you cover?",
-    a: "Wirral is home. We regularly work across Liverpool, Merseyside, Cheshire, Chester, Ellesmere Port and into North Wales. If you are slightly further afield with a school or multi-site brief, still get in touch.",
+    a: "The United Kingdom. We are based in the Wirral and travel across England, Scotland, Wales and Northern Ireland for disabled garden makeovers, playgrounds and groundworks. Send the postcode. We will say if a visit makes sense.",
   },
   {
-    q: "Can you work around term time?",
-    a: "Yes. School and setting jobs are planned in phases. Outdoor space is not taken away for a whole term unless you want a single shutdown. We agree plant access, safeguarding induction and noisy works with you before a digger arrives.",
+    q: "Who is this for?",
+    a: "Families. Disabled adults. SEN children who need a safe garden or play area at home. We do not take school contracts. If the brief is a family garden, a driveway or a home sensory room, you are in the right place.",
   },
 ] as const;
 

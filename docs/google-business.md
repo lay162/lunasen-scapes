@@ -27,7 +27,7 @@ Eastham
 CH62 0AF  
 United Kingdom
 
-Service-area business: yes. Add Wirral, Liverpool, Merseyside, Cheshire, Chester, Ellesmere Port, Wallasey, West Kirby, Neston, Birkenhead, North Wales.
+Service-area business: yes. Add the United Kingdom. You can also list England, Scotland, Wales, Northern Ireland, and your home towns (Wirral, Liverpool, Cheshire).
 
 ## Phone
 
@@ -45,14 +45,14 @@ Sunday: closed
 
 ## Description (paste)
 
-LUNA SEN-Scapes designs and builds SEN playgrounds, sensory rooms, sensory gardens and safe outdoor spaces for children and adults across Wirral, Liverpool, Cheshire and the North West. We also deliver driveways, fencing, patios, landscaping, drainage, levelling and dig offs. We start with the ground — then equipment and planting. Part of LUNA SEN Group Ltd (company 17049817).
+LUNA SEN-Scapes designs and builds disabled garden makeovers, inclusive playgrounds, safe play areas, sensory gardens and home sensory rooms for families across the United Kingdom. We also deliver driveways, fencing, patios, landscaping, drainage, levelling and dig offs. We start with the ground — then equipment and planting. Part of LUNA SEN Group Ltd (company 17049817). Based in the Wirral, we work UK wide.
 
 ## Photos to upload first
 
 - Logo (the file you will drop into `public/brand/logo.png`)
 - Exterior / team / plant
 - Before and after gardens and dig offs (files already on this site under `public/work`)
-- Any SEN school or family job you have permission to show
+- Any family garden or play job you have permission to show
 
 ## After the profile is live
 

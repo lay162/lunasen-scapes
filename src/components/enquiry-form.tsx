@@ -9,22 +9,22 @@ import { Textarea } from "@/components/ui/textarea";
 import { SITE } from "@/lib/site";
 
 const SETTINGS = [
-  "SEN school / specialist provision",
-  "Mainstream school with SEN unit",
   "Family home / garden",
+  "Disabled garden makeover",
+  "Safe play area / playground",
   "Home driveway / patio / fencing",
-  "Adult day service or supported living",
-  "Nursery or early years",
-  "Local authority / multi-site",
+  "Supported living / adult home",
   "Commercial groundworks",
   "Other",
 ] as const;
 
 const INTERESTS = [
-  "SEN playground",
-  "Sensory room",
+  "Disabled garden makeover",
+  "Accessible garden",
+  "Inclusive playground",
+  "Safe play area",
   "Sensory garden",
-  "Safe space / secure yard",
+  "Sensory room",
   "Driveway",
   "Fencing & gates",
   "Patio & paving",
@@ -165,7 +165,7 @@ export function EnquiryForm() {
           required
           minLength={20}
           rows={6}
-          placeholder="Ages and needs, what is there now, what you want to change, any term-time constraints."
+          placeholder="How people use the garden now, mobility or SEN needs, what you want to change, photos help."
           className="min-h-32"
         />
       </div>

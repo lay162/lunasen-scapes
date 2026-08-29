@@ -8,11 +8,17 @@ import { lunaLinkClass } from "@/lib/luna-tone";
 import { breadcrumbJsonLd, pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata({
-  title: "SEN Playgrounds, Sensory Rooms & Safe Spaces",
+  title: "Disabled Garden Makeovers, Playgrounds & Safe Play Areas UK",
   description:
-    "LUNA SEN-Scapes builds SEN playgrounds, sensory rooms, sensory gardens, school yards and adult SEN spaces across Wirral, Liverpool, Cheshire and the North West.",
+    "LUNA SEN-Scapes builds disabled garden makeovers, inclusive playgrounds, safe play areas, sensory gardens and home sensory rooms for families across the United Kingdom.",
   path: "/spaces",
-  keywords: ["SEN playground", "sensory room", "sensory garden", "safe space SEN"],
+  keywords: [
+    "disabled garden makeover UK",
+    "inclusive playground",
+    "safe play area",
+    "sensory garden UK",
+    "sensory room UK",
+  ],
 });
 
 export default function SpacesPage() {
@@ -24,11 +30,10 @@ export default function SpacesPage() {
         title="Every brief starts with how people use the ground."
         lines={[
           "Play.",
+          "Move.",
           "Regulate.",
-          "Hide.",
-          "Arrive.",
-          "Learn outdoors.",
-          "We design SEN environments for children and adults, then build them with proper levelling, dig offs and drainage.",
+          "Sit outside.",
+          "We design gardens and play areas for disabled people and SEN families, then build them with proper levelling, dig offs and drainage.",
         ]}
       />
       <section className="mx-auto max-w-6xl px-4 py-12 sm:px-6">

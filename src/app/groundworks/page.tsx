@@ -9,14 +9,14 @@ import { breadcrumbJsonLd, pageMetadata } from "@/lib/seo";
 export const metadata = pageMetadata({
   title: "Groundworks, Driveways, Fencing, Dig Offs & Drainage",
   description:
-    "LUNA SEN-Scapes groundworks across Wirral, Liverpool and Cheshire — driveways, fencing, patios, landscaping, levelling, dig offs, drainage, foundations and inclusive surfacing.",
+    "LUNA SEN-Scapes groundworks across the UK — driveways, fencing, patios, landscaping, levelling, dig offs, drainage, foundations and inclusive surfacing.",
   path: "/groundworks",
   keywords: [
-    "driveways Wirral",
-    "fencing Liverpool",
-    "dig offs Wirral",
-    "patios Cheshire",
-    "SEN playground surfacing",
+    "driveways UK",
+    "fencing UK",
+    "disabled garden drainage",
+    "accessible patio UK",
+    "inclusive playground surfacing",
   ],
 });
 
@@ -31,11 +31,11 @@ export default function GroundworksPage() {
       />
       <PageHero
         eyebrow="On the tools"
-        title="Groundworks for homes, schools and SEN spaces."
+        title="Groundworks for family homes and accessible gardens."
         lines={[
           "The ground has to be right or the finish will fail.",
           "We still do driveways, fencing, patios, landscaping, drainage and dig offs.",
-          "We also build SEN playgrounds and sensory gardens on that same ground.",
+          "We also build playgrounds, safe play areas and disabled garden makeovers on that same ground.",
           "One LUNA SEN-Scapes crew.",
           "One brief.",
         ]}

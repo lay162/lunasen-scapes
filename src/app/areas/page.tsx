@@ -8,11 +8,16 @@ import { lunaLinkClass } from "@/lib/luna-tone";
 import { breadcrumbJsonLd, pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata({
-  title: "SEN Playgrounds, Sensory Spaces & Groundworks near Wirral, Liverpool & Cheshire",
+  title: "Disabled Garden Makeovers, Playgrounds & Groundworks across the UK",
   description:
-    "LUNA SEN-Scapes covers Wirral, Liverpool, Merseyside, Cheshire, Chester, Ellesmere Port, Wallasey, West Kirby, Neston, Birkenhead and North Wales.",
+    "LUNA SEN-Scapes covers the United Kingdom — England, Scotland, Wales and Northern Ireland — for disabled garden makeovers, inclusive playgrounds, safe play areas and groundworks.",
   path: "/areas",
-  keywords: AREAS.map((area) => `SEN playground ${area.name}`),
+  keywords: [
+    "disabled garden makeover UK",
+    "accessible garden England",
+    "SEN playground Scotland",
+    "garden adaptation Wales",
+  ],
 });
 
 export default function AreasPage() {
@@ -21,12 +26,12 @@ export default function AreasPage() {
       <JsonLd data={breadcrumbJsonLd([{ name: "Home", path: "/" }, { name: "Areas", path: "/areas" }])} />
       <PageHero
         eyebrow="Coverage"
-        title="Local enough to know the clay. Specialist enough for SEN."
+        title="Across the UK. Based in the Wirral."
         lines={[
-          "Home is the Wirral.",
-          "We work across Merseyside, Cheshire and into North Wales.",
+          "LUNA SEN-Scapes works nationwide.",
+          "England, Scotland, Wales and Northern Ireland.",
           "Each area page is written for people searching locally.",
-          "SEN playgrounds, sensory spaces, driveways and fencing.",
+          "Disabled garden makeovers, playgrounds, driveways and fencing.",
         ]}
       />
       <section className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
@@ -47,7 +52,7 @@ export default function AreasPage() {
           <Lines
             lines={[
               "SEN spaces and full groundworks.",
-              "The same LUNA SEN-Scapes crew in every town we list.",
+              "The same LUNA SEN-Scapes crew in every area we list.",
             ]}
           />
         </div>

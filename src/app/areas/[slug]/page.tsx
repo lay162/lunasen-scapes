@@ -20,15 +20,15 @@ export async function generateMetadata({ params }: Props) {
   const area = AREAS.find((item) => item.slug === slug);
   if (!area) return {};
   return pageMetadata({
-    title: `SEN Playgrounds, Sensory Spaces & Groundworks in ${area.name}`,
-    description: `LUNA SEN-Scapes builds SEN playgrounds, sensory gardens, sensory rooms, driveways, fencing and safe spaces in ${area.name}. Levelling, dig offs and drainage included.`,
+    title: `Disabled Garden Makeovers, Playgrounds & Groundworks in ${area.name}`,
+    description: `LUNA SEN-Scapes builds disabled garden makeovers, inclusive playgrounds, sensory gardens, driveways, fencing and safe play areas in ${area.name}. Levelling, dig offs and drainage included.`,
     path: `/areas/${area.slug}`,
     keywords: [
-      `SEN playground ${area.name}`,
+      `disabled garden makeover ${area.name}`,
+      `accessible garden ${area.name}`,
+      `inclusive playground ${area.name}`,
       `sensory garden ${area.name}`,
-      `sensory room ${area.name}`,
       `driveways ${area.name}`,
-      `fencing ${area.name}`,
       `groundworks ${area.name}`,
     ],
   });
@@ -54,8 +54,8 @@ export default async function AreaPage({ params }: Props) {
         <div className="mt-4">
           <Lines
             lines={[
-              `From ${SITE.address.city} we run plant, spoil and phased school works into ${area.name}.`,
-              "SEN playgrounds and sensory gardens.",
+              `From ${SITE.address.city} we travel into ${area.name} for family gardens and groundworks.`,
+              "Disabled garden makeovers, playgrounds and sensory gardens.",
               "Driveways, fencing, patios and drainage too.",
             ]}
           />
@@ -88,7 +88,7 @@ export default async function AreaPage({ params }: Props) {
               lines={[
                 "Send it with photos.",
                 "We will say if a visit makes sense.",
-                "SEN space or a driveway — same LUNA SEN-Scapes team.",
+                "Garden makeover, playground or a driveway — same LUNA SEN-Scapes team.",
               ]}
             />
           </div>

@@ -1,6 +1,6 @@
 import { ImageResponse } from "next/og";
 
-export const alt = "LUNA SEN-Scapes — SEN playgrounds, sensory spaces and groundworks, Wirral and North West";
+export const alt = "LUNA SEN-Scapes — disabled garden makeovers, playgrounds and groundworks across the UK";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -59,10 +59,10 @@ export default function OpenGraphImage() {
           </div>
         </div>
         <div style={{ display: "flex", marginTop: 36, fontSize: 28, color: "#7ad7f0" }}>
-          SEN spaces · groundworks · North West
+          SEN spaces · groundworks · UK wide
         </div>
         <div style={{ display: "flex", marginTop: 12, fontSize: 22, color: "rgba(255,255,255,0.55)" }}>
-          Wirral · Liverpool · Cheshire · North Wales
+          Wirral base · United Kingdom
         </div>
       </div>
     ),

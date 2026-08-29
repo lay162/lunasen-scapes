@@ -12,15 +12,15 @@ import { breadcrumbJsonLd, faqJsonLd, pageMetadata } from "@/lib/seo";
 import { SITE } from "@/lib/site";
 
 export const metadata = pageMetadata({
-  title: `${SITE.name} | SEN Spaces, Playgrounds & Groundworks | Wirral & North West`,
+  title: `${SITE.name} | Disabled Garden Makeovers, Playgrounds & Groundworks | UK`,
   description: SITE.description,
   path: "/",
   keywords: [
-    "SEN playground Wirral",
-    "sensory garden Liverpool",
-    "driveways Wirral",
-    "fencing Liverpool",
-    "dig offs Cheshire",
+    "disabled garden makeover UK",
+    "accessible garden UK",
+    "inclusive playground UK",
+    "safe play area",
+    "sensory garden UK",
     "LUNA SEN-Scapes",
   ],
 });
@@ -38,7 +38,7 @@ export default function HomePage() {
         <div className="pointer-events-none absolute bottom-0 left-1/2 h-80 w-80 -translate-x-1/2 rounded-full bg-luna-blue/20 blur-3xl" />
         <div className="relative mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-24">
           <p className="text-[11px] font-bold uppercase tracking-[0.32em] text-luna-pink">
-            Wirral & North West
+            Across the United Kingdom
           </p>
           <h1 className="mt-4">
             <BrandName size="hero" inverted stacked />
@@ -48,11 +48,12 @@ export default function HomePage() {
               tone="light"
               lines={[
                 "This is LUNA SEN-Scapes.",
-                "We build SEN playgrounds, sensory rooms, sensory gardens and safe spaces.",
+                "We rebuild gardens for disabled people and SEN families.",
+                "Inclusive playgrounds, safe play areas, sensory gardens and home sensory rooms.",
                 "We also do the groundworks: driveways, fencing, patios, landscaping, drainage, levelling and dig offs.",
                 "One company.",
                 "One brief.",
-                "From the first dig to the finished space.",
+                "From the first dig to the finished garden.",
               ]}
             />
           </div>
@@ -62,7 +63,7 @@ export default function HomePage() {
               <ArrowRight className="size-4" />
             </Link>
             <Link href="/spaces" className={`${lunaBtnClass(1)} h-12 px-6 text-base`}>
-              SEN spaces
+              Play & gardens
             </Link>
             <Link href="/groundworks" className={`${lunaBtnClass(2)} h-12 px-6 text-base`}>
               Groundworks
@@ -71,9 +72,9 @@ export default function HomePage() {
           <dl className="mt-12 grid grid-cols-2 gap-4 text-sm sm:grid-cols-4">
             {[
               ["On site", "Groundworks included"],
-              ["SEN first", "Children and adults"],
+              ["Families", "Children and adults"],
               ["£5M", "Public liability cover"],
-              ["NW", "Wirral to North Wales"],
+              ["UK", "England to Northern Ireland"],
             ].map(([stat, label], i) => (
               <div key={label}>
                 <dt className={`text-2xl font-black ${lunaLinkClass(i)}`}>{stat}</dt>
@@ -85,12 +86,12 @@ export default function HomePage() {
       </section>
 
       <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
-        <p className="text-[11px] font-bold uppercase tracking-[0.28em] text-luna-pink">SEN spaces</p>
-        <h2 className="mt-2 text-3xl font-black tracking-tight">For schools, families and adult SEN settings.</h2>
+        <p className="text-[11px] font-bold uppercase tracking-[0.28em] text-luna-pink">Spaces</p>
+        <h2 className="mt-2 text-3xl font-black tracking-tight">Garden makeovers, playgrounds and safe play.</h2>
         <div className="mt-6">
           <Lines
             lines={[
-              "If the brief is special educational needs, we start with how people move, regulate and play.",
+              "If the brief is a disabled garden or a SEN play area, we start with how people move.",
               "Then we dig.",
               "Play companies sell kit.",
               "We make the ground fit the people.",
@@ -127,7 +128,7 @@ export default function HomePage() {
               tone="light"
               lines={[
                 "Driveways, fencing, patios, landscaping, drainage, foundations, levelling and dig offs.",
-                "Homes, schools and SEN settings.",
+                "Family homes across the UK.",
                 "A sensory garden on boggy ground will fail.",
                 "A driveway without a proper dig out will fail too.",
                 "We stay on the tools so the finish lasts.",
@@ -154,7 +155,7 @@ export default function HomePage() {
         <div className="mt-6">
           <Lines
             lines={[
-              "These are real North West jobs.",
+              "These are real UK jobs.",
               "Dig offs, paving, gardens, fencing and levels.",
               "The same quality under a playground or a family drive.",
             ]}
@@ -211,7 +212,7 @@ export default function HomePage() {
             tone="light"
             lines={[
               "Send photos, a postcode and what you need doing.",
-              "SEN space or a driveway.",
+              "Garden makeover, playground or a driveway.",
               "We will tell you if a visit is worth it.",
             ]}
           />

@@ -1,10 +1,10 @@
 # LUNA SEN-Scapes
 
-SEN playgrounds, sensory rooms, sensory gardens and safe outdoor spaces for children and adults — plus full groundworks: driveways, fencing, patios, landscaping, drainage, levelling and dig offs.
+Disabled garden makeovers, inclusive playgrounds, safe play areas, sensory gardens and home sensory rooms for families — plus full groundworks: driveways, fencing, patios, landscaping, drainage, levelling and dig offs.
 
-A company of **LUNA SEN Group Ltd**.
+A company of **LUNA SEN Group Ltd**. Nationwide from a Wirral base.
 
-This is a public website (Next.js) for schools, families and adult SEN settings across Wirral, Liverpool, Cheshire and the North West.
+This is a public website (Next.js) for family gardens across the United Kingdom. We do not take school contracts.
 
 GitHub: [lay162/lunasen-scapes](https://github.com/lay162/lunasen-scapes)
 
@@ -48,7 +48,7 @@ Technical SEO is in the site (local business schema, NAP, sitemap, unique area a
 2. Google Search Console + sitemap submit
 3. A Google Business Profile using the **same name, address and phone** as the footer
 4. Photos, categories and reviews on that profile
-5. Links from schools, directories and local partners
+5. Links from directories and local partners
 
 Step-by-step copy for the Business Profile is in [`docs/google-business.md`](docs/google-business.md).
 

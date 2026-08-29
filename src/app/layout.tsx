@@ -19,7 +19,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
   title: {
-    default: `${SITE.name} | SEN Playgrounds, Sensory Spaces & Safe Ground | Wirral & North West`,
+    default: `${SITE.name} | Disabled Garden Makeovers, Playgrounds & Groundworks | UK`,
     template: `%s | ${SITE.name}`,
   },
   description: SITE.description,
@@ -29,13 +29,12 @@ export const metadata: Metadata = {
   publisher: SITE.legalName,
   category: "construction",
   keywords: [
-    "SEN playground Wirral",
-    "sensory garden Liverpool",
-    "sensory room Cheshire",
-    "SEN safe space North West",
-    "inclusive playground",
-    "dig offs",
-    "levelling",
+    "disabled garden makeover UK",
+    "accessible garden UK",
+    "inclusive playground UK",
+    "safe play area SEN",
+    "sensory garden UK",
+    "wheelchair garden makeover",
     "LUNA SEN-Scapes",
     "LUNA SEN Group",
   ],

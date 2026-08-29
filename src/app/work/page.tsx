@@ -6,9 +6,9 @@ import { WORK_ITEMS } from "@/lib/content";
 import { breadcrumbJsonLd, pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata({
-  title: "Our Work | SEN Groundworks, Driveways & Gardens North West",
+  title: "Our Work | Garden Makeovers, Playgrounds & Groundworks UK",
   description:
-    "Groundworks, gardens, paving, fencing and dig offs by LUNA SEN-Scapes — playgrounds and sensory spaces in Wirral, Liverpool and Cheshire.",
+    "Groundworks, garden makeovers, paving, fencing and dig offs by LUNA SEN-Scapes — playgrounds and accessible gardens across the UK.",
   path: "/work",
 });
 
@@ -18,7 +18,7 @@ export default function WorkPage() {
       <JsonLd data={breadcrumbJsonLd([{ name: "Home", path: "/" }, { name: "Work", path: "/work" }])} />
       <PageHero
         eyebrow="Portfolio"
-        title="Real North West ground, not stock playground photos."
+        title="Real UK ground, not stock playground photos."
         lines={[
           "These are real jobs.",
           "Dig offs, paving, gardens, fencing and levels.",
@@ -44,7 +44,7 @@ export default function WorkPage() {
           ))}
         </div>
         <p className="mx-auto mt-10 max-w-2xl text-sm leading-relaxed text-muted-foreground">
-          SEN-specific case studies (named schools and settings) will be published here with permission.
+          Named family garden case studies will be published here with permission.
         </p>
         <p className="mx-auto mt-3 max-w-2xl text-sm leading-relaxed text-muted-foreground">
           Until then we show the groundworks quality, not invented playground photos.
