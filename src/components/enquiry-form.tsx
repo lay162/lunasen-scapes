@@ -7,16 +7,17 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-import { SPACES } from "@/lib/content";
 import { SITE } from "@/lib/site";
 
 const SETTINGS = [
   "SEN school / specialist provision",
   "Mainstream school with SEN unit",
   "Family home / garden",
+  "Home driveway / patio / fencing",
   "Adult day service or supported living",
   "Nursery or early years",
   "Local authority / multi-site",
+  "Commercial groundworks",
   "Other",
 ] as const;
 
@@ -25,9 +26,15 @@ const INTERESTS = [
   "Sensory room",
   "Sensory garden",
   "Safe space / secure yard",
+  "Driveway",
+  "Fencing & gates",
+  "Patio & paving",
+  "Landscaping",
   "Levelling and dig offs",
   "Drainage",
   "Inclusive surfacing",
+  "Foundations",
+  "Dropped kerb",
   "Not sure yet",
 ] as const;
 
@@ -84,7 +91,7 @@ export function EnquiryForm() {
   const fieldClass = "h-11 text-base";
 
   return (
-    <form onSubmit={onSubmit} className="space-y-5" noValidate>
+    <form onSubmit={onSubmit} className="space-y-5 text-center" noValidate>
       <div className="grid gap-5 sm:grid-cols-2">
         <div className="space-y-2">
           <Label htmlFor="name">Your name</Label>
@@ -148,11 +155,6 @@ export function EnquiryForm() {
                 {item}
               </option>
             ))}
-            {SPACES.map((space) => (
-              <option key={space.slug} value={space.title}>
-                {space.title}
-              </option>
-            ))}
           </select>
         </div>
       </div>
@@ -168,10 +170,10 @@ export function EnquiryForm() {
           className="min-h-32"
         />
       </div>
-      <label className="flex items-start gap-2 text-sm text-muted-foreground">
+      <label className="mx-auto flex max-w-xl items-start justify-center gap-2 text-sm text-muted-foreground">
         <input type="checkbox" name="consent" value="yes" required className="mt-1" />
         <span>
-          I agree LUNA SEN Scapes (LUNA SEN Group Ltd) may use these details to quote and contact me about this
+          I agree LUNA SEN-Scapes (LUNA SEN Group Ltd) may use these details to quote and contact me about this
           enquiry. We do not sell your data. See our{" "}
           <a className="underline" href="/privacy">
             privacy notice

@@ -1,23 +1,30 @@
 import Link from "next/link";
 
+import { Lines } from "@/components/lines";
+
 export function PageHero({
   eyebrow,
   title,
-  description,
+  lines,
 }: {
   eyebrow?: string;
   title: string;
-  description: string;
+  lines: string[];
 }) {
   return (
     <section className="border-b border-black/5 bg-[linear-gradient(180deg,#fff5fb_0%,#ffffff_55%)]">
-      <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16">
+      <div className="mx-auto max-w-3xl px-4 py-12 text-center sm:px-6 sm:py-16">
+        <p className="text-[11px] font-bold uppercase tracking-[0.28em]">
+          <span className="luna-gradient-text">LUNA SEN-Scapes</span>
+        </p>
         {eyebrow ? (
-          <p className="mb-3 text-[11px] font-bold uppercase tracking-[0.28em] text-luna-pink">{eyebrow}</p>
+          <p className="mt-3 text-[11px] font-bold uppercase tracking-[0.28em] text-luna-pink">{eyebrow}</p>
         ) : null}
-        <h1 className="max-w-3xl text-4xl font-black tracking-tight text-balance sm:text-5xl">{title}</h1>
-        <p className="mt-4 max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg">{description}</p>
-        <p className="mt-6 text-sm">
+        <h1 className="mt-4 text-4xl font-black tracking-tight text-balance sm:text-5xl">{title}</h1>
+        <div className="mt-6">
+          <Lines lines={lines} />
+        </div>
+        <p className="mt-8 text-sm">
           <Link href="/" className="text-muted-foreground hover:text-foreground">
             Home
           </Link>

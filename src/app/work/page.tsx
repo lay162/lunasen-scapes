@@ -6,20 +6,24 @@ import { WORK_ITEMS } from "@/lib/content";
 import { breadcrumbJsonLd, pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata({
-  title: "Our Work | SEN Groundworks & Gardens North West",
+  title: "Our Work | SEN Groundworks, Driveways & Gardens North West",
   description:
-    "Groundworks, gardens, paving, fencing and dig offs by LUNA SEN Scapes — playgrounds and sensory spaces in Wirral, Liverpool and Cheshire.",
+    "Groundworks, gardens, paving, fencing and dig offs by LUNA SEN-Scapes — playgrounds and sensory spaces in Wirral, Liverpool and Cheshire.",
   path: "/work",
 });
 
 export default function WorkPage() {
   return (
-    <main id="main-content">
+    <main id="main-content" className="text-center">
       <JsonLd data={breadcrumbJsonLd([{ name: "Home", path: "/" }, { name: "Work", path: "/work" }])} />
       <PageHero
         eyebrow="Portfolio"
         title="Real North West ground, not stock playground photos."
-        description="North West jobs that show how we level, drain and finish a site — the same skills every SEN playground and sensory garden needs before equipment arrives."
+        lines={[
+          "These are real jobs.",
+          "Dig offs, paving, gardens, fencing and levels.",
+          "The same quality under a playground or a family drive.",
+        ]}
       />
       <section className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -34,14 +38,16 @@ export default function WorkPage() {
               />
               <figcaption className="p-4">
                 <p className="font-bold">{item.title}</p>
-                <p className="mt-1 text-sm text-muted-foreground">{item.caption}</p>
+                <p className="mt-1 text-sm leading-relaxed text-muted-foreground">{item.caption}</p>
               </figcaption>
             </figure>
           ))}
         </div>
-        <p className="mt-10 text-sm text-muted-foreground">
-          SEN-specific case studies (named schools and settings) will be published here with permission. Until then
-          we show the groundworks quality, not invented playground photos.
+        <p className="mx-auto mt-10 max-w-2xl text-sm leading-relaxed text-muted-foreground">
+          SEN-specific case studies (named schools and settings) will be published here with permission.
+        </p>
+        <p className="mx-auto mt-3 max-w-2xl text-sm leading-relaxed text-muted-foreground">
+          Until then we show the groundworks quality, not invented playground photos.
         </p>
       </section>
     </main>

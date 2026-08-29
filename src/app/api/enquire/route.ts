@@ -44,7 +44,7 @@ export async function POST(request: Request) {
   }
 
   const text = [
-    "LUNA SEN Scapes enquiry",
+    "LUNA SEN-Scapes enquiry",
     "",
     line("Name", name),
     line("Organisation", body.organisation),
@@ -59,7 +59,7 @@ export async function POST(request: Request) {
     message,
   ].join("\n");
 
-  const subject = `SEN Scapes enquiry — ${body.interest || "brief"} — ${postcode}`;
+  const subject = `LUNA SEN-Scapes enquiry — ${body.interest || "brief"} — ${postcode}`;
   const mailto = `mailto:${SITE.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(text)}`;
 
   return NextResponse.json({ ok: true, mailto });

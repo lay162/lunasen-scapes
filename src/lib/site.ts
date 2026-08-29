@@ -1,11 +1,11 @@
 export const SITE = {
-  name: "LUNA SEN Scapes",
-  shortName: "LUNA SEN Scapes",
+  name: "LUNA SEN-Scapes",
+  shortName: "LUNA SEN-Scapes",
   legalName: "LUNA SEN Group Ltd",
   companyNumber: "17049817",
-  tagline: "SEN playgrounds, sensory spaces and safe ground — built properly.",
+  tagline: "SEN spaces and groundworks — built properly.",
   description:
-    "LUNA SEN Scapes designs and builds SEN playgrounds, sensory rooms, sensory gardens and safe outdoor spaces across Wirral, Liverpool, Cheshire and the North West. Levelling, dig offs, drainage and inclusive surfacing included.",
+    "LUNA SEN-Scapes designs and builds SEN playgrounds, sensory rooms, sensory gardens and safe spaces, and delivers groundworks, driveways, fencing, patios, landscaping, drainage, levelling and dig offs across Wirral, Liverpool, Cheshire and the North West.",
   url: process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") || "https://lunasenscapes.co.uk",
   email: process.env.NEXT_PUBLIC_ENQUIRY_EMAIL || "enquiries@lunasenscapes.co.uk",
   phoneDisplay: "07375 996 207",

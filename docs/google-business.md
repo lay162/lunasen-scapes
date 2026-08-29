@@ -1,12 +1,12 @@
-# Google Business Profile — LUNA SEN Scapes
+# Google Business Profile — LUNA SEN-Scapes
 
 Use **exactly** these details on the profile, the website footer, and printed materials. Mismatched name / address / phone (NAP) is the fastest way to confuse Google.
 
 ## Listing name
 
-`LUNA SEN Scapes`
+`LUNA SEN-Scapes`
 
-If Google pushes back on casing, `Luna SEN Scapes` is acceptable. Do not list any other trading name on this profile.
+If Google pushes back on the hyphen, `LUNA SEN Scapes` is acceptable as a search variant. Do not list any other trading name on this profile.
 
 ## Categories
 
@@ -45,7 +45,7 @@ Sunday: closed
 
 ## Description (paste)
 
-LUNA SEN Scapes designs and builds SEN playgrounds, sensory rooms, sensory gardens and safe outdoor spaces for children and adults across Wirral, Liverpool, Cheshire and the North West. We start with levelling, dig offs, drainage and inclusive surfacing — then equipment and planting. Part of LUNA SEN Group Ltd (company 17049817).
+LUNA SEN-Scapes designs and builds SEN playgrounds, sensory rooms, sensory gardens and safe outdoor spaces for children and adults across Wirral, Liverpool, Cheshire and the North West. We also deliver driveways, fencing, patios, landscaping, drainage, levelling and dig offs. We start with the ground — then equipment and planting. Part of LUNA SEN Group Ltd (company 17049817).
 
 ## Photos to upload first
 

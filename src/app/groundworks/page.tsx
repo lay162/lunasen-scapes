@@ -6,21 +6,22 @@ import { GROUNDWORK_SERVICES } from "@/lib/content";
 import { breadcrumbJsonLd, pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata({
-  title: "Levelling, Dig Offs, Drainage & Inclusive Surfacing",
+  title: "Groundworks, Driveways, Fencing, Dig Offs & Drainage",
   description:
-    "SEN groundworks across Wirral, Liverpool and Cheshire — levelling, dig offs, excavations, drainage, foundations and inclusive surfacing by LUNA SEN Scapes.",
+    "LUNA SEN-Scapes groundworks across Wirral, Liverpool and Cheshire — driveways, fencing, patios, landscaping, levelling, dig offs, drainage, foundations and inclusive surfacing.",
   path: "/groundworks",
   keywords: [
+    "driveways Wirral",
+    "fencing Liverpool",
     "dig offs Wirral",
+    "patios Cheshire",
     "SEN playground surfacing",
-    "levelling Liverpool",
-    "school yard drainage Cheshire",
   ],
 });
 
 export default function GroundworksPage() {
   return (
-    <main id="main-content">
+    <main id="main-content" className="text-center">
       <JsonLd
         data={breadcrumbJsonLd([
           { name: "Home", path: "/" },
@@ -28,9 +29,15 @@ export default function GroundworksPage() {
         ])}
       />
       <PageHero
-        eyebrow="One company, first dig to finish"
-        title="The ground has to be right or the SEN space will fail."
-        description="LUNA SEN Scapes is not a catalogue of play towers. We level, dig off, drain and found the site — then the sensory layer goes on. Design and groundworks sit in the same brief."
+        eyebrow="On the tools"
+        title="Groundworks for homes, schools and SEN spaces."
+        lines={[
+          "The ground has to be right or the finish will fail.",
+          "We still do driveways, fencing, patios, landscaping, drainage and dig offs.",
+          "We also build SEN playgrounds and sensory gardens on that same ground.",
+          "One LUNA SEN-Scapes crew.",
+          "One brief.",
+        ]}
       />
       <section className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
         <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
@@ -42,11 +49,9 @@ export default function GroundworksPage() {
           ))}
         </div>
         <div className="mt-12 rounded-3xl bg-black p-8 text-white md:p-10">
-          <h2 className="text-2xl font-black">Send the site, not a shopping list</h2>
-          <p className="mt-3 max-w-2xl text-white/70">
-            Photos, a postcode and how people use the space is enough to start. We will tell you if a visit is
-            worth it before anyone prices equipment that will not sit on the ground you have.
-          </p>
+          <h2 className="text-2xl font-black">Send the site, not a shopping list.</h2>
+          <p className="mx-auto mt-3 max-w-xl text-white/70">Photos and a postcode are enough to start.</p>
+          <p className="mx-auto mt-2 max-w-xl text-white/70">Driveway or SEN yard — tell us what you need.</p>
           <Link href="/enquire" className="mt-6 inline-flex rounded-xl bg-luna-pink px-5 py-3 font-bold">
             Talk to us about the ground
           </Link>

@@ -1,6 +1,8 @@
-# LUNA SEN Scapes
+# LUNA SEN-Scapes
 
-SEN playgrounds, sensory rooms, sensory gardens and safe outdoor spaces for children and adults — built from the first dig. A company of **LUNA SEN Group Ltd**.
+SEN playgrounds, sensory rooms, sensory gardens and safe outdoor spaces for children and adults — plus full groundworks: driveways, fencing, patios, landscaping, drainage, levelling and dig offs.
+
+A company of **LUNA SEN Group Ltd**.
 
 This is a public website (Next.js) for schools, families and adult SEN settings across Wirral, Liverpool, Cheshire and the North West.
 
@@ -20,13 +22,13 @@ npm run build
 npm start
 ```
 
-## Your logo
+## Branding
 
-Do not overwrite the colour system — it matches LUNA SEN Insurance / Pantry (`#ff69b4` → `#7ad7f0` on black).
+Pink `#ff69b4` and blue `#7ad7f0` on black, matching LUNA SEN Insurance and the other Luna SEN sites.
 
-1. Export a square PNG (at least 512×512, transparent or black background).
-2. Save it as `public/brand/logo.png`.
-3. Restart the dev server. The header will pick it up automatically.
+Giant **LUNA** wordmark, then **SEN-Scapes**.
+
+Drop your square logo in later as `public/brand/logo.png`. Favicon can follow the same file once you make it. Until then the header uses the wordmark and the tab icon is a temporary **L**.
 
 ## Enquiry email
 

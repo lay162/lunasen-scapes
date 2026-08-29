@@ -19,49 +19,44 @@ export function SiteHeader({ hasLogo = false }: { hasLogo?: boolean }) {
       >
         Skip to main content
       </a>
-      <div className="mx-auto flex h-20 max-w-6xl items-center justify-between gap-4 px-4 sm:px-6">
+      <div className="relative mx-auto max-w-6xl px-4 py-4 sm:px-6">
         <BrandMark inverted compact hasLogo={hasLogo} />
-        <nav className="hidden items-center gap-7 text-[11px] font-bold uppercase tracking-[0.18em] text-white lg:flex" aria-label="Primary">
+        <nav
+          className="mt-3 hidden flex-wrap items-center justify-center gap-x-7 gap-y-2 text-[11px] font-bold uppercase tracking-[0.18em] text-white lg:flex"
+          aria-label="Primary"
+        >
           {NAV.map((item) => (
             <Link key={item.href} href={item.href} className="transition-colors hover:text-luna-pink">
               {item.label}
             </Link>
           ))}
-        </nav>
-        <div className="flex items-center gap-2">
-          <a
-            href={`tel:${SITE.phoneTel}`}
-            className="hidden items-center gap-2 rounded-xl px-3 py-2 text-sm font-semibold text-white/80 hover:text-white sm:flex"
-          >
-            <Phone className="size-4" />
+          <a href={`tel:${SITE.phoneTel}`} className="inline-flex items-center gap-1 text-white/80 hover:text-white">
+            <Phone className="size-3.5" />
             {SITE.phoneDisplay}
           </a>
-          <Link
-            href="/enquire"
-            className="hidden h-10 items-center rounded-xl bg-luna-pink px-4 text-sm font-medium text-white hover:bg-luna-pink/90 sm:inline-flex"
-          >
+          <Link href="/enquire" className="rounded-xl bg-luna-pink px-3 py-1.5 text-white hover:bg-luna-pink/90">
             Enquire
           </Link>
-          <button
-            type="button"
-            className="inline-flex size-11 items-center justify-center rounded-xl text-white lg:hidden"
-            aria-expanded={open}
-            aria-controls="mobile-nav"
-            aria-label={open ? "Close menu" : "Open menu"}
-            onClick={() => setOpen((v) => !v)}
-          >
-            {open ? <X className="size-7" /> : <Menu className="size-7" />}
-          </button>
-        </div>
+        </nav>
+        <button
+          type="button"
+          className="absolute right-4 top-4 inline-flex size-11 items-center justify-center rounded-xl text-white lg:hidden"
+          aria-expanded={open}
+          aria-controls="mobile-nav"
+          aria-label={open ? "Close menu" : "Open menu"}
+          onClick={() => setOpen((v) => !v)}
+        >
+          {open ? <X className="size-7" /> : <Menu className="size-7" />}
+        </button>
       </div>
       {open ? (
-        <div id="mobile-nav" className="border-t border-white/10 bg-black px-4 pb-6 pt-2 lg:hidden">
-          <nav className="flex flex-col gap-1" aria-label="Mobile">
+        <div id="mobile-nav" className="border-t border-white/10 bg-black px-4 pb-6 pt-2 text-center lg:hidden">
+          <nav className="flex flex-col items-center gap-1" aria-label="Mobile">
             {NAV.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
-                className="rounded-xl px-3 py-3 text-lg font-bold text-white"
+                className="w-full rounded-xl px-3 py-3 text-lg font-bold text-white"
                 onClick={() => setOpen(false)}
               >
                 {item.label}
@@ -69,7 +64,7 @@ export function SiteHeader({ hasLogo = false }: { hasLogo?: boolean }) {
             ))}
             <Link
               href="/enquire"
-              className="mt-2 rounded-xl bg-luna-pink px-3 py-3 text-center text-lg font-bold text-white"
+              className="mt-2 w-full rounded-xl bg-luna-pink px-3 py-3 text-lg font-bold text-white"
               onClick={() => setOpen(false)}
             >
               Enquire

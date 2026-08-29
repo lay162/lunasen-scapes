@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     "inclusive playground",
     "dig offs",
     "levelling",
-    "LUNA SEN Scapes",
+    "LUNA SEN-Scapes",
     "LUNA SEN Group",
   ],
   robots: {

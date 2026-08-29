@@ -65,7 +65,7 @@ export function localBusinessJsonLd() {
         "@type": ["LocalBusiness", "HomeAndConstructionBusiness", "LandscapingBusiness"],
         "@id": id,
         name: SITE.name,
-        alternateName: ["Luna SEN Scapes", "LUNA SEN Scapes"],
+        alternateName: ["LUNA SEN-Scapes", "Luna SEN-Scapes"],
         legalName: SITE.legalName,
         description: SITE.description,
         url: SITE.url,
@@ -112,9 +112,15 @@ export function localBusinessJsonLd() {
           "Safe spaces",
           "Inclusive surfacing",
           "Groundworks",
+          "Driveways",
+          "Fencing",
+          "Patios",
+          "Landscaping",
           "Dig offs",
           "Levelling",
           "Drainage",
+          "Foundations",
+          "Dropped kerbs",
           "Special educational needs outdoor spaces",
         ],
         brand: { "@type": "Brand", name: "LUNA SEN" },
@@ -136,7 +142,7 @@ export function localBusinessJsonLd() {
         ],
         hasOfferCatalog: {
           "@type": "OfferCatalog",
-          name: "SEN spaces and groundworks",
+          name: "LUNA SEN-Scapes services",
           itemListElement: [
             ...SPACES.map((space) => ({
               "@type": "Offer",
