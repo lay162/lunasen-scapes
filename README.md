@@ -62,7 +62,7 @@ Step-by-step copy for the Business Profile is in [`docs/google-business.md`](doc
 
 ## Go live on your domain
 
-You own **lunasen-scapes.co.uk** (main) and **lunasenscapes.com** (redirects to the `.co.uk`). The project is on GitHub at [lay162/lunasen-scapes](https://github.com/lay162/lunasen-scapes). Hosting for the live domain comes next — not Vercel.
+You own **lunasen-scapes.co.uk** (main) and **lunasenscapes.com** (forwards to the `.co.uk`). After purchase, follow [`docs/domains.md`](docs/domains.md). The live card is `https://lunasen-scapes.co.uk/BusinessCard/`. Hosting for the live domain comes next — not Vercel.
 
 ## Stack
 

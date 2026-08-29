@@ -7,6 +7,7 @@ export const SITE = {
   description:
     "LUNA SEN-Scapes builds safe places for SEN children, SEN adults and disabled people across the UK: garden makeovers, playgrounds, driveways, internal works and all aspects of building. Groundworks, fencing, patios, landscaping, drainage and renovations sit in the same brief.",
   url: process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") || "https://lunasen-scapes.co.uk",
+  cardPath: "/BusinessCard/",
   email: process.env.NEXT_PUBLIC_ENQUIRY_EMAIL || "info@lunasen-scapes.co.uk",
   phoneDisplay: "07375 996 207",
   phoneTel: "+447375996207",
@@ -73,4 +74,9 @@ export function fullAddress() {
 export function absoluteUrl(path = "/") {
   const p = path.startsWith("/") ? path : `/${path}`;
   return `${SITE.url}${p}`;
+}
+
+/** Live branded card: https://lunasen-scapes.co.uk/BusinessCard/ */
+export function brandedCardUrl() {
+  return `${SITE.url}${SITE.cardPath}`;
 }

@@ -15,7 +15,7 @@ import {
 } from "lucide-react";
 
 import { BrandName } from "@/components/brand-mark";
-import { SITE, fullAddress } from "@/lib/site";
+import { SITE, brandedCardUrl, fullAddress } from "@/lib/site";
 import { cn } from "@/lib/utils";
 
 import styles from "@/app/BusinessCard/card.module.css";
@@ -55,18 +55,8 @@ const PORTFOLIO = [
   },
 ] as const;
 
-const CARD_PATH = "/BusinessCard/";
-
-function withTrailingSlash(href: string) {
-  return href.endsWith("/") ? href : `${href}/`;
-}
-
 function cardUrl() {
-  if (typeof window === "undefined") return `${SITE.url}${CARD_PATH}`;
-  const url = new URL(window.location.href);
-  url.hash = "";
-  url.search = "";
-  return withTrailingSlash(url.toString());
+  return brandedCardUrl();
 }
 
 function liveCardData() {
@@ -91,7 +81,7 @@ export function DigitalCard() {
   const [modal, setModal] = useState<"copy" | "qr" | null>(null);
   const [copied, setCopied] = useState(false);
   const [nfcMode, setNfcMode] = useState<"tap_n_share" | "tap_n_save" | "tap_n_swap">("tap_n_share");
-  const shareUrl = useMemo(() => (modal ? cardUrl() : `${SITE.url}${CARD_PATH}`), [modal]);
+  const shareUrl = useMemo(() => brandedCardUrl(), [modal]);
   const qrSrc = `https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=${encodeURIComponent(shareUrl)}`;
 
   useEffect(() => {
@@ -281,6 +271,8 @@ export function DigitalCard() {
           <a href="/" target="_top">
             {SITE.url.replace(/^https:\/\//, "")}
           </a>
+          <br />
+          <a href={SITE.cardPath}>{brandedCardUrl().replace(/^https:\/\//, "")}</a>
         </footer>
       </main>
 
