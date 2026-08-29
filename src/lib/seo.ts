@@ -109,6 +109,8 @@ export function localBusinessJsonLd() {
           name,
         })),
         knowsAbout: [
+          "SEN children outdoor spaces",
+          "SEN adults gardens",
           "Disabled garden makeovers",
           "Accessible gardens",
           "Inclusive playgrounds",
