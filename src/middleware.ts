@@ -5,7 +5,13 @@ const MAIN_HOST = "lunasen-scapes.co.uk";
 
 function shouldSendToMain(host: string) {
   const name = host.split(":")[0]?.toLowerCase() ?? "";
-  return name === "lunasenscapes.com" || name === "www.lunasenscapes.com" || name === "www.lunasen-scapes.co.uk";
+  return (
+    name === "lunasenscapes.com" ||
+    name === "www.lunasenscapes.com" ||
+    name === "lunasen-scapes.com" ||
+    name === "www.lunasen-scapes.com" ||
+    name === "www.lunasen-scapes.co.uk"
+  );
 }
 
 export function middleware(request: NextRequest) {

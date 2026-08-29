@@ -28,6 +28,18 @@ const nextConfig: NextConfig = {
         destination: "https://lunasen-scapes.co.uk/:path*",
         permanent: true,
       },
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "lunasen-scapes.com" }],
+        destination: "https://lunasen-scapes.co.uk/:path*",
+        permanent: true,
+      },
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "www.lunasen-scapes.com" }],
+        destination: "https://lunasen-scapes.co.uk/:path*",
+        permanent: true,
+      },
     ];
   },
   async rewrites() {
