@@ -206,7 +206,7 @@ export const GROUNDWORK_SERVICES = [
     slug: "fencing",
     title: "Fencing & gates",
     summary:
-      "Secure lines, staff gates and visual permeability — the same craft S.W.M already does on domestic plots, specified for SEN.",
+      "Secure lines, staff gates and visual permeability — specified for SEN, not just a garden fence.",
   },
 ] as const;
 
@@ -239,7 +239,7 @@ export const AREAS = [
     slug: "chester",
     name: "Chester",
     blurb:
-      "SEN gardens, school yards and sensory rooms for Chester and the surrounding villages, built on the same S.W.M groundworks standard.",
+      "SEN gardens, school yards and sensory rooms for Chester and the surrounding villages, built to the same groundworks standard we use across the North West.",
   },
   {
     slug: "ellesmere-port",
@@ -296,7 +296,7 @@ export const WORK_ITEMS = [
   },
   {
     src: "/work/garden-after.jpg",
-    alt: "Finished garden after landscaping by S.W.M Groundworks",
+    alt: "Finished garden after landscaping by LUNA SEN Scapes",
     title: "After",
     caption: "Levels, planting and a usable outdoor room.",
   },
@@ -304,7 +304,7 @@ export const WORK_ITEMS = [
     src: "/work/garden-2.jpg",
     alt: "Completed landscaped garden in the North West",
     title: "Gardens",
-    caption: "The same crew that will build SEN sensory gardens.",
+    caption: "How we finish a garden before a sensory or play layer goes in.",
   },
   {
     src: "/work/foundations.jpg",
@@ -347,15 +347,15 @@ export const WORK_ITEMS = [
 export const FAQS = [
   {
     q: "What is LUNA SEN Scapes?",
-    a: "LUNA SEN Scapes is the environments arm of LUNA SEN Group Ltd. We design and build SEN playgrounds, sensory rooms, sensory gardens and safe spaces for children and adults across Wirral, Liverpool, Cheshire and the North West. The groundworks — levelling, dig offs, drainage and foundations — are delivered by S.W.M Groundworks, the same local crew behind swm-groundworks.co.uk.",
+    a: "LUNA SEN Scapes is the environments company of LUNA SEN Group Ltd. We design and build SEN playgrounds, sensory rooms, sensory gardens and safe spaces for children and adults across Wirral, Liverpool, Cheshire and the North West. Levelling, dig offs, drainage and foundations are part of the same job — not a play company that subcontracts the hard bit.",
   },
   {
     q: "Do you only work with schools?",
     a: "No. We work with SEN schools and specialist provisions, but also with families who need a safe garden, adult day services, supported living and respite settings. The enquiry form asks which kind of site you have so we send the right person.",
   },
   {
-    q: "Are you the same company as S.W.M Groundworks?",
-    a: "S.W.M Groundworks is the trades engine. LUNA SEN Scapes is the specialist brand for SEN spaces. You get SEN-aware design and a groundworks team that already digs, levels and drains plots across the North West — not a play company that subcontracts the hard bit.",
+    q: "Do you only sell play equipment?",
+    a: "No. We start with the ground — levelling, dig offs, drainage and surfacing — then equipment and planting. You can also ask us to prepare a site for kit you already have a supplier for.",
   },
   {
     q: "Which areas do you cover?",
@@ -364,10 +364,6 @@ export const FAQS = [
   {
     q: "Can you work around term time?",
     a: "Yes. School and setting jobs are planned in phases so outdoor space is not taken away for a whole term unless you want a single shutdown. We agree plant access, safeguarding induction and noisy works with you before a digger arrives.",
-  },
-  {
-    q: "Do you supply play equipment as well as groundworks?",
-    a: "We can specify and install inclusive equipment, surfacing and sensory kit as part of a full package, or prepare the ground for equipment you already have a supplier for. Either way the levels, drainage and safety surface come first.",
   },
 ] as const;
 

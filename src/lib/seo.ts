@@ -123,13 +123,7 @@ export function localBusinessJsonLd() {
           name: SITE.legalName,
           identifier: SITE.companyNumber,
         },
-        department: {
-          "@type": "Organization",
-          name: "S.W.M Groundworks",
-          url: SITE.social.groundworks,
-          description: "Groundworks, excavations, levelling and drainage for LUNA SEN Scapes projects.",
-        },
-        sameAs: [SITE.social.facebook, SITE.social.groundworks, SITE.social.insurance],
+        sameAs: [SITE.social.insurance],
         contactPoint: [
           {
             "@type": "ContactPoint",

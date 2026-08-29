@@ -4,12 +4,11 @@ import { JsonLd } from "@/components/json-ld";
 import { PageHero } from "@/components/page-hero";
 import { GROUNDWORK_SERVICES } from "@/lib/content";
 import { breadcrumbJsonLd, pageMetadata } from "@/lib/seo";
-import { SITE } from "@/lib/site";
 
 export const metadata = pageMetadata({
   title: "Levelling, Dig Offs, Drainage & Inclusive Surfacing",
   description:
-    "SEN groundworks across Wirral, Liverpool and Cheshire — levelling, dig offs, excavations, drainage, foundations and inclusive surfacing by LUNA SEN Scapes and S.W.M Groundworks.",
+    "SEN groundworks across Wirral, Liverpool and Cheshire — levelling, dig offs, excavations, drainage, foundations and inclusive surfacing by LUNA SEN Scapes.",
   path: "/groundworks",
   keywords: [
     "dig offs Wirral",
@@ -29,9 +28,9 @@ export default function GroundworksPage() {
         ])}
       />
       <PageHero
-        eyebrow="S.W.M on the tools"
+        eyebrow="One company, first dig to finish"
         title="The ground has to be right or the SEN space will fail."
-        description="LUNA SEN Scapes is not a catalogue of play towers. We level, dig off, drain and found the site — then the sensory layer goes on. That is why S.W.M Groundworks sits inside this brand."
+        description="LUNA SEN Scapes is not a catalogue of play towers. We level, dig off, drain and found the site — then the sensory layer goes on. Design and groundworks sit in the same brief."
       />
       <section className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
         <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
@@ -43,13 +42,10 @@ export default function GroundworksPage() {
           ))}
         </div>
         <div className="mt-12 rounded-3xl bg-black p-8 text-white md:p-10">
-          <h2 className="text-2xl font-black">Domestic groundworks still exist</h2>
+          <h2 className="text-2xl font-black">Send the site, not a shopping list</h2>
           <p className="mt-3 max-w-2xl text-white/70">
-            Driveways, patios, fencing and family gardens that are not an SEN brief stay with{" "}
-            <a className="text-luna-blue underline" href={SITE.social.groundworks}>
-              S.W.M Groundworks
-            </a>
-            . If you are not sure which door to knock, send the enquiry here — we will route it.
+            Photos, a postcode and how people use the space is enough to start. We will tell you if a visit is
+            worth it before anyone prices equipment that will not sit on the ground you have.
           </p>
           <Link href="/enquire" className="mt-6 inline-flex rounded-xl bg-luna-pink px-5 py-3 font-bold">
             Talk to us about the ground

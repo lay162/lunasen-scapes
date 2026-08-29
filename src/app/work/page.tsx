@@ -8,7 +8,7 @@ import { breadcrumbJsonLd, pageMetadata } from "@/lib/seo";
 export const metadata = pageMetadata({
   title: "Our Work | SEN Groundworks & Gardens North West",
   description:
-    "Groundworks, gardens, paving, fencing and dig offs from S.W.M — the crew behind LUNA SEN Scapes playgrounds and sensory spaces in Wirral, Liverpool and Cheshire.",
+    "Groundworks, gardens, paving, fencing and dig offs by LUNA SEN Scapes — playgrounds and sensory spaces in Wirral, Liverpool and Cheshire.",
   path: "/work",
 });
 
@@ -19,7 +19,7 @@ export default function WorkPage() {
       <PageHero
         eyebrow="Portfolio"
         title="Real North West ground, not stock playground photos."
-        description="These jobs were delivered by S.W.M Groundworks. They are the proof we can level, drain and finish a site — the same skills every SEN playground and sensory garden needs before equipment arrives."
+        description="North West jobs that show how we level, drain and finish a site — the same skills every SEN playground and sensory garden needs before equipment arrives."
       />
       <section className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">

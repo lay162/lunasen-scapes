@@ -6,7 +6,7 @@ Use **exactly** these details on the profile, the website footer, and printed ma
 
 `LUNA SEN Scapes`
 
-If Google pushes back on casing, `Luna SEN Scapes` is acceptable. Do not list it as S.W.M Groundworks. Keep that as a separate listing for domestic driveways.
+If Google pushes back on casing, `Luna SEN Scapes` is acceptable. Do not list any other trading name on this profile.
 
 ## Categories
 
@@ -31,8 +31,7 @@ Service-area business: yes. Add Wirral, Liverpool, Merseyside, Cheshire, Chester
 
 ## Phone
 
-`07375 996 207`  
-(same number as S.W.M so calls are answered)
+`07375 996 207`
 
 ## Website
 
@@ -46,7 +45,7 @@ Sunday: closed
 
 ## Description (paste)
 
-LUNA SEN Scapes designs and builds SEN playgrounds, sensory rooms, sensory gardens and safe outdoor spaces for children and adults across Wirral, Liverpool, Cheshire and the North West. We start with levelling, dig offs, drainage and inclusive surfacing — then equipment and planting. Groundworks are delivered by S.W.M Groundworks. Part of LUNA SEN Group Ltd (company 17049817).
+LUNA SEN Scapes designs and builds SEN playgrounds, sensory rooms, sensory gardens and safe outdoor spaces for children and adults across Wirral, Liverpool, Cheshire and the North West. We start with levelling, dig offs, drainage and inclusive surfacing — then equipment and planting. Part of LUNA SEN Group Ltd (company 17049817).
 
 ## Photos to upload first
 
@@ -59,8 +58,7 @@ LUNA SEN Scapes designs and builds SEN playgrounds, sensory rooms, sensory garde
 
 1. Google Search Console → add the domain → paste the verification code into `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION`
 2. Sitemaps → `https://YOUR-DOMAIN/sitemap.xml`
-3. Ask happy clients for Google reviews **on this listing**, not only on S.W.M
-4. From [swm-groundworks.co.uk](https://swm-groundworks.co.uk) add a clearly labelled link: “SEN playgrounds and sensory spaces — LUNA SEN Scapes”
-5. Optional: Bing Places with the same NAP
+3. Ask happy clients for Google reviews on this listing
+4. Optional: Bing Places with the same NAP
 
 Ranking is slower than a new website feels. Consistent NAP + real reviews + this site on a real domain is the honest path. There is no setting in the code that “makes you number one”.

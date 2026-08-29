@@ -19,7 +19,7 @@ export async function generateMetadata({ params }: Props) {
   if (!area) return {};
   return pageMetadata({
     title: `SEN Playgrounds & Sensory Spaces in ${area.name}`,
-    description: `LUNA SEN Scapes builds SEN playgrounds, sensory gardens, sensory rooms and safe spaces in ${area.name}. Groundworks, levelling and dig offs by S.W.M Groundworks.`,
+    description: `LUNA SEN Scapes builds SEN playgrounds, sensory gardens, sensory rooms and safe spaces in ${area.name}. Levelling, dig offs and drainage included.`,
     path: `/areas/${area.slug}`,
     keywords: [
       `SEN playground ${area.name}`,

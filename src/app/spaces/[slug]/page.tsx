@@ -33,7 +33,7 @@ export default async function SpacePage({ params }: Props) {
   const faqs = [
     {
       q: `Do you build ${space.title.toLowerCase()} on the Wirral?`,
-      a: `Yes. ${space.title} are a core LUNA SEN Scapes service across Wirral, Liverpool, Cheshire and the North West, with groundworks by S.W.M Groundworks.`,
+      a: `Yes. ${space.title} are a core LUNA SEN Scapes service across Wirral, Liverpool, Cheshire and the North West, including the groundworks.`,
     },
     {
       q: "Can families enquire as well as schools?",

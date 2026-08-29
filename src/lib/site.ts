@@ -5,10 +5,9 @@ export const SITE = {
   companyNumber: "17049817",
   tagline: "SEN playgrounds, sensory spaces and safe ground — built properly.",
   description:
-    "LUNA SEN Scapes designs and builds SEN playgrounds, sensory rooms, sensory gardens and safe outdoor spaces across Wirral, Liverpool, Cheshire and the North West. Groundworks by S.W.M Groundworks — levelling, dig offs, drainage and surfacing.",
+    "LUNA SEN Scapes designs and builds SEN playgrounds, sensory rooms, sensory gardens and safe outdoor spaces across Wirral, Liverpool, Cheshire and the North West. Levelling, dig offs, drainage and inclusive surfacing included.",
   url: process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") || "https://lunasenscapes.co.uk",
-  email: process.env.NEXT_PUBLIC_ENQUIRY_EMAIL || "quotes@swm-groundworks.co.uk",
-  displayEmail: "enquiries@lunasenscapes.co.uk",
+  email: process.env.NEXT_PUBLIC_ENQUIRY_EMAIL || "enquiries@lunasenscapes.co.uk",
   phoneDisplay: "07375 996 207",
   phoneTel: "+447375996207",
   priceRange: "££",
@@ -47,9 +46,7 @@ export const SITE = {
     "North Wales",
   ],
   social: {
-    facebook: "https://www.facebook.com/SWMGroundworks/",
     insurance: "https://lunaseninsurance.co.uk",
-    groundworks: "https://swm-groundworks.co.uk",
   },
   google: {
     mapsQuery: "Eastham Hall, Eastham Village Road, Eastham CH62 0AF",
@@ -63,7 +60,7 @@ export const NAP = {
   locality: `${SITE.address.city}, ${SITE.address.region}`,
   postalCode: SITE.address.postalCode,
   phone: SITE.phoneDisplay,
-  email: SITE.displayEmail,
+  email: SITE.email,
 };
 
 export function fullAddress() {

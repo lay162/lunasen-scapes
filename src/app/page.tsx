@@ -41,11 +41,8 @@ export default function HomePage() {
             </h1>
             <p className="mt-5 max-w-xl text-base leading-relaxed text-white/70 sm:text-lg">
               Playgrounds, sensory rooms, sensory gardens and safe yards — designed for special educational
-              needs, then built from the first dig. Levelling, dig offs and drainage by{" "}
-              <a href={SITE.social.groundworks} className="text-luna-blue underline-offset-4 hover:underline">
-                S.W.M Groundworks
-              </a>
-              .
+              needs, then built from the first dig. Levelling, dig offs and drainage are part of the same job,
+              not a subcontract bolted on at the end.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <Link
@@ -64,7 +61,7 @@ export default function HomePage() {
             </div>
             <dl className="mt-10 grid grid-cols-2 gap-4 text-sm sm:grid-cols-4">
               {[
-                ["22Y+", "Groundworks experience"],
+                ["On site", "Groundworks included"],
                 ["SEN first", "Children and adults"],
                 ["£5M", "Public liability cover"],
                 ["NW", "Wirral to North Wales"],
@@ -79,15 +76,15 @@ export default function HomePage() {
           <div className="relative min-h-[280px] overflow-hidden rounded-3xl ring-1 ring-white/10">
             <Image
               src="/work/garden-after.jpg"
-              alt="Finished North West garden after levelling, planting and paving by S.W.M Groundworks"
+              alt="Finished North West garden after levelling, planting and paving by LUNA SEN Scapes"
               fill
               className="object-cover"
               priority
               sizes="(max-width: 1024px) 100vw, 40vw"
             />
             <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-5">
-              <p className="text-xs font-bold uppercase tracking-[0.2em] text-luna-blue">Built on S.W.M ground</p>
-              <p className="mt-1 text-sm text-white/80">Same crew. SEN brief. Proper levels.</p>
+              <p className="text-xs font-bold uppercase tracking-[0.2em] text-luna-blue">Built by LUNA SEN Scapes</p>
+              <p className="mt-1 text-sm text-white/80">SEN brief. Proper levels. One company.</p>
             </div>
           </div>
         </div>
@@ -128,7 +125,7 @@ export default function HomePage() {
             <h2 className="mt-2 text-3xl font-black tracking-tight">Levelling, dig offs, drainage — then the pretty layer.</h2>
             <p className="mt-4 leading-relaxed text-white/70">
               A sensory garden on a boggy Wirral plot will fail. A playground on a slope without falls will pond.
-              LUNA SEN Scapes keeps S.W.M on the tools so inclusive spaces last more than one winter.
+              We stay on the tools so inclusive spaces last more than one winter.
             </p>
             <Link
               href="/groundworks"
@@ -154,8 +151,8 @@ export default function HomePage() {
             <p className="text-[11px] font-bold uppercase tracking-[0.28em] text-luna-pink">Work</p>
             <h2 className="mt-2 text-3xl font-black tracking-tight">Already on the ground.</h2>
             <p className="mt-2 max-w-xl text-muted-foreground">
-              Photos from S.W.M Groundworks jobs across the North West — the same levelling, paving and dig offs
-              that sit under every LUNA SEN Scapes brief.
+              Levelling, paving and dig offs from our North West sites — the ground that sits under every
+              playground and sensory garden we build.
             </p>
           </div>
           <Link href="/work" className="font-semibold text-luna-pink">

@@ -1,6 +1,6 @@
 # LUNA SEN Scapes
 
-SEN playgrounds, sensory rooms, sensory gardens and safe outdoor spaces for children and adults — built from the first dig. Part of **LUNA SEN Group Ltd**, with groundworks by **S.W.M Groundworks**.
+SEN playgrounds, sensory rooms, sensory gardens and safe outdoor spaces for children and adults — built from the first dig. A company of **LUNA SEN Group Ltd**.
 
 This is a public website (Next.js) for schools, families and adult SEN settings across Wirral, Liverpool, Cheshire and the North West.
 
@@ -30,7 +30,7 @@ Do not overwrite the colour system — it matches LUNA SEN Insurance / Pantry (`
 
 ## Enquiry email
 
-Until `lunasenscapes.co.uk` mail is live, enquiries open a mail compose to **quotes@swm-groundworks.co.uk** (the working S.W.M inbox).
+Enquiries go to **enquiries@lunasenscapes.co.uk**. Set that mailbox up on your domain, or change it in `.env.local`.
 
 Copy `.env.example` to `.env.local` to change:
 
@@ -46,7 +46,7 @@ Technical SEO is in the site (local business schema, NAP, sitemap, unique area a
 2. Google Search Console + sitemap submit
 3. A Google Business Profile using the **same name, address and phone** as the footer
 4. Photos, categories and reviews on that profile
-5. Links from schools, directories and the existing [S.W.M Groundworks](https://swm-groundworks.co.uk) site
+5. Links from schools, directories and other Luna SEN sites
 
 Step-by-step copy for the Business Profile is in [`docs/google-business.md`](docs/google-business.md).
 

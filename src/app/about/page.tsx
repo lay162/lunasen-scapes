@@ -8,7 +8,7 @@ import { SITE } from "@/lib/site";
 export const metadata = pageMetadata({
   title: "About LUNA SEN Scapes",
   description:
-    "LUNA SEN Scapes is the SEN environments arm of LUNA SEN Group Ltd, building playgrounds, sensory spaces and safe ground with S.W.M Groundworks across the North West.",
+    "LUNA SEN Scapes is the SEN environments company of LUNA SEN Group Ltd, building playgrounds, sensory spaces and safe ground across Wirral, Liverpool, Cheshire and the North West.",
   path: "/about",
 });
 
@@ -19,7 +19,7 @@ export default function AboutPage() {
       <PageHero
         eyebrow={SITE.legalName}
         title="Luna is the brand. SEN is who it is for. Scapes is the ground."
-        description="LUNA SEN Group Ltd already looks after SEN insurance and related services. Scapes is the environments company — playgrounds, sensory rooms, sensory gardens and safe spaces — delivered with S.W.M Groundworks on the tools."
+        description="LUNA SEN Scapes is a new company under LUNA SEN Group Ltd. We design and build playgrounds, sensory rooms, sensory gardens and safe spaces for children and adults — from the first dig to handover."
       />
       <section className="mx-auto max-w-3xl space-y-6 px-4 py-12 text-muted-foreground sm:px-6">
         <p>
@@ -32,15 +32,11 @@ export default function AboutPage() {
           with levels, water and boundaries because that is what SEN children and adults actually feel underfoot.
         </p>
         <p>
-          Domestic driveways and non-SEN landscaping remain at{" "}
-          <a className="text-luna-pink underline" href={SITE.social.groundworks}>
-            swm-groundworks.co.uk
-          </a>
-          . Learner insurance sits at{" "}
+          Learner insurance for the wider Luna SEN family sits at{" "}
           <a className="text-luna-pink underline" href={SITE.social.insurance}>
             lunaseninsurance.co.uk
           </a>
-          . Scapes is the specialist door for SEN space.
+          . This site is only for SEN spaces and the ground they stand on.
         </p>
         <p>
           Drop your logo into <code className="rounded bg-muted px-1">public/brand/logo.png</code> when you have the

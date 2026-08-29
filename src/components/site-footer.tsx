@@ -12,8 +12,8 @@ export function SiteFooter({ hasLogo = false }: { hasLogo?: boolean }) {
         <div className="md:col-span-1">
           <BrandMark inverted hasLogo={hasLogo} />
           <p className="mt-4 text-sm leading-relaxed text-white/65">
-            SEN playgrounds, sensory rooms, sensory gardens and safe spaces across the North West.
-            Groundworks by S.W.M Groundworks.
+            SEN playgrounds, sensory rooms, sensory gardens and safe spaces across the North West —
+            designed, dug and finished by LUNA SEN Scapes.
           </p>
         </div>
         <div>
@@ -82,9 +82,6 @@ export function SiteFooter({ hasLogo = false }: { hasLogo?: boolean }) {
             <Link href="/accessibility" className="hover:text-white">
               Accessibility
             </Link>
-            <a href={SITE.social.groundworks} className="hover:text-white">
-              S.W.M Groundworks
-            </a>
             <a href={SITE.social.insurance} className="hover:text-white">
               LUNA SEN Insurance
             </a>
