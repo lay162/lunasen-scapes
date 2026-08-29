@@ -236,26 +236,27 @@ export function DigitalCard() {
         </div>
 
         <div className={styles.nfcBar} data-luna-nfc-bar="">
-          <p>
-            <strong>
-              {nfcMode === "tap_n_share" ? "Tap n Share" : nfcMode === "tap_n_save" ? "Tap n Save" : "Tap n Swap"}{" "}
-              active
-            </strong>
-            {" — "}
-            hold phones together on Android. Door and clock readers are supported.
-          </p>
-          <label className={styles.nfcLabel}>
-            Mode
-            <select
-              aria-label="NFC sharing mode"
-              value={nfcMode}
-              onChange={(e) => changeNfcMode(e.target.value as typeof nfcMode)}
-            >
-              <option value="tap_n_share">Tap n Share</option>
-              <option value="tap_n_save">Tap n Save</option>
-              <option value="tap_n_swap">Tap n Swap</option>
-            </select>
-          </label>
+          <p className={styles.nfcTitle}>How this phone shares</p>
+          <div className={styles.nfcModes} role="group" aria-label="NFC sharing mode">
+            {(
+              [
+                ["tap_n_share", "Tap n Share"],
+                ["tap_n_save", "Tap n Save"],
+                ["tap_n_swap", "Tap n Swap"],
+              ] as const
+            ).map(([value, label]) => (
+              <button
+                key={value}
+                type="button"
+                className={cn(styles.nfcMode, nfcMode === value && styles.nfcModeOn)}
+                aria-pressed={nfcMode === value}
+                onClick={() => changeNfcMode(value)}
+              >
+                {label}
+              </button>
+            ))}
+          </div>
+          <p className={styles.nfcHint}>Hold the backs of two Android phones together. Door and clock readers work too.</p>
         </div>
 
         <div className={styles.stream}>
