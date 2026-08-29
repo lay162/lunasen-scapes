@@ -90,16 +90,30 @@ function startNfc() {
 export function DigitalCard() {
   const [modal, setModal] = useState<"copy" | "qr" | null>(null);
   const [copied, setCopied] = useState(false);
+  const [nfcMode, setNfcMode] = useState<"tap_n_share" | "tap_n_save" | "tap_n_swap">("tap_n_share");
   const shareUrl = useMemo(() => (modal ? cardUrl() : `${SITE.url}${CARD_PATH}`), [modal]);
   const qrSrc = `https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=${encodeURIComponent(shareUrl)}`;
 
   useEffect(() => {
-    if (startNfc()) return;
+    const ready = () => {
+      if (!startNfc()) return false;
+      const current = window.SWMDBC?.getNfcSharingPreference?.();
+      if (current === "tap_n_share" || current === "tap_n_save" || current === "tap_n_swap") {
+        setNfcMode(current);
+      }
+      return true;
+    };
+    if (ready()) return;
     const timer = window.setInterval(() => {
-      if (startNfc()) window.clearInterval(timer);
+      if (ready()) window.clearInterval(timer);
     }, 200);
     return () => window.clearInterval(timer);
   }, []);
+
+  function changeNfcMode(mode: "tap_n_share" | "tap_n_save" | "tap_n_swap") {
+    setNfcMode(mode);
+    window.SWMDBC?.setNfcSharingMode?.(mode);
+  }
 
   async function share() {
     if ("NDEFReader" in window && window.SWMNFCRuntime) {
@@ -165,7 +179,7 @@ export function DigitalCard() {
           </div>
           <div className={styles.info}>
             <p className={styles.name}>
-              <BrandName size="md" />
+              <BrandName stacked size="md" />
             </p>
             <p className={styles.subhead}>
               Safe places, gardens and building works for SEN children, SEN adults and disabled people — UK wide.
@@ -221,6 +235,29 @@ export function DigitalCard() {
           </div>
         </div>
 
+        <div className={styles.nfcBar} data-luna-nfc-bar="">
+          <p>
+            <strong>
+              {nfcMode === "tap_n_share" ? "Tap n Share" : nfcMode === "tap_n_save" ? "Tap n Save" : "Tap n Swap"}{" "}
+              active
+            </strong>
+            {" — "}
+            hold phones together on Android. Door and clock readers are supported.
+          </p>
+          <label className={styles.nfcLabel}>
+            Mode
+            <select
+              aria-label="NFC sharing mode"
+              value={nfcMode}
+              onChange={(e) => changeNfcMode(e.target.value as typeof nfcMode)}
+            >
+              <option value="tap_n_share">Tap n Share</option>
+              <option value="tap_n_save">Tap n Save</option>
+              <option value="tap_n_swap">Tap n Swap</option>
+            </select>
+          </label>
+        </div>
+
         <div className={styles.stream}>
           <section className={styles.section}>
             <h3 className={styles.title}>recent work</h3>
@@ -238,10 +275,8 @@ export function DigitalCard() {
         </div>
 
         <footer className={styles.cardFooter}>
-          {SITE.name}
-          <br />
-          {fullAddress()}
-          <br />
+          <BrandName stacked size="sm" />
+          <p className={styles.footerMeta}>{fullAddress()}</p>
           <a href="/">{SITE.url.replace(/^https:\/\//, "")}</a>
         </footer>
       </main>
@@ -281,6 +316,8 @@ declare global {
   interface Window {
     SWMDBC?: {
       getDefaultCardData: () => Record<string, unknown>;
+      setNfcSharingMode?: (mode: string) => void;
+      getNfcSharingPreference?: () => string;
     };
     SWMNFCRuntime?: {
       initLiveCard: (data: Record<string, unknown>) => void;

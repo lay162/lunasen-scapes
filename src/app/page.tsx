@@ -211,7 +211,10 @@ export default function HomePage() {
       <section className="border-y bg-[#fff7fb] py-16">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <p className="text-[11px] font-bold uppercase tracking-[0.28em] text-luna-pink">Areas</p>
-          <h2 className="mt-2 text-3xl font-black tracking-tight">LUNA SEN-Scapes near you.</h2>
+          <h2 className="mt-2 flex flex-col items-center text-3xl font-black tracking-tight">
+            <BrandName stacked size="lg" />
+            <span className="mt-1 text-xl sm:text-2xl">near you.</span>
+          </h2>
           <ul className="mt-8 flex flex-wrap justify-center gap-2">
             {AREAS.map((area, i) => (
               <li key={area.slug}>

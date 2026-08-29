@@ -269,6 +269,9 @@
     if (!global.document || !global.document.body || typeof global.document.createElement !== 'function') {
       return;
     }
+    if (global.document.querySelector('[data-luna-nfc-bar]')) {
+      return;
+    }
     var labels = {
       tap_n_share: 'Tap n Share',
       tap_n_save: 'Tap n Save',
