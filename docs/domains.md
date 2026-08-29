@@ -43,10 +43,9 @@ Do this on **lunasenscapes.com** only. Do **not** forward the `.co.uk` — that 
 8. Type: **Permanent (301)**
 9. Do **not** choose “Forward with masking”. If you see “Forward only”, that is the right one.
 10. Click **Save**.
-11. Add forwarding again, this time as **Subdomain**, name **www**, same destination **https://lunasen-scapes.co.uk**, **Permanent (301)**, no masking.
-12. Save.
+11. If **Add Forwarding** under Subdomains will not save, do not fight it. GoDaddy often blocks a second www forward. Instead: **DNS** → **DNS Records** → find **www**. Set it as a **CNAME** pointing to **@**. Save. That makes `www` follow the same forward as the main name.
 
-Wait. It can be a few minutes, sometimes longer. Then type `lunasenscapes.com` in Chrome. It should jump to `lunasen-scapes.co.uk`.
+Wait. It can be a few minutes, sometimes longer. Then type the `.com` in Chrome. It should jump to `lunasen-scapes.co.uk`.
 
 If GoDaddy asks you to verify with a code, that is normal. Use the code they send.
 
