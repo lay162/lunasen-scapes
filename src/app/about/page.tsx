@@ -43,13 +43,6 @@ export default function AboutPage() {
         <p>
           We start with levels, water and boundaries.
         </p>
-        <p>
-          Learner insurance for the wider Luna SEN family sits at{" "}
-          <a className="text-luna-pink underline" href={SITE.social.insurance}>
-            lunaseninsurance.co.uk
-          </a>
-          .
-        </p>
         <p>Drop your logo into <code className="rounded bg-muted px-1">public/brand/logo.png</code> when you have the artwork.</p>
         <p>Favicon goes in the same place once you make it.</p>
         <Link href="/enquire" className="inline-flex rounded-xl bg-luna-pink px-5 py-3 font-bold text-white">

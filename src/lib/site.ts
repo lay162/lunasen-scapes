@@ -45,9 +45,6 @@ export const SITE = {
     "Heswall",
     "North Wales",
   ],
-  social: {
-    insurance: "https://lunaseninsurance.co.uk",
-  },
   google: {
     mapsQuery: "Eastham Hall, Eastham Village Road, Eastham CH62 0AF",
     verification: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || "",

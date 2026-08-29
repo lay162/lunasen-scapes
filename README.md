@@ -24,9 +24,9 @@ npm start
 
 ## Branding
 
-Pink `#ff69b4` and blue `#7ad7f0` on black, matching LUNA SEN Insurance and the other Luna SEN sites.
+Pink `#ff69b4` and blue `#7ad7f0` on black.
 
-Giant **LUNA** wordmark, then **SEN-Scapes**.
+Giant **LUNA** wordmark in that gradient, then **SEN-Scapes** in white.
 
 Drop your square logo in later as `public/brand/logo.png`. Favicon can follow the same file once you make it. Until then the header uses the wordmark and the tab icon is a temporary **L**.
 
@@ -48,7 +48,7 @@ Technical SEO is in the site (local business schema, NAP, sitemap, unique area a
 2. Google Search Console + sitemap submit
 3. A Google Business Profile using the **same name, address and phone** as the footer
 4. Photos, categories and reviews on that profile
-5. Links from schools, directories and other Luna SEN sites
+5. Links from schools, directories and local partners
 
 Step-by-step copy for the Business Profile is in [`docs/google-business.md`](docs/google-business.md).
 

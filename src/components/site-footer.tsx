@@ -9,7 +9,7 @@ export function SiteFooter({ hasLogo = false }: { hasLogo?: boolean }) {
   return (
     <footer className="bg-black text-center text-white">
       <div className="mx-auto grid max-w-6xl gap-10 px-4 py-14 text-center sm:px-6 md:grid-cols-4">
-        <div className="md:col-span-1">
+        <div className="flex flex-col items-center md:col-span-1">
           <BrandMark inverted hasLogo={hasLogo} />
           <p className="mt-4 text-sm leading-relaxed text-white/65">
             LUNA SEN-Scapes.
@@ -84,9 +84,6 @@ export function SiteFooter({ hasLogo = false }: { hasLogo?: boolean }) {
             <Link href="/accessibility" className="hover:text-white">
               Accessibility
             </Link>
-            <a href={SITE.social.insurance} className="hover:text-white">
-              LUNA SEN Insurance
-            </a>
           </div>
         </div>
       </div>

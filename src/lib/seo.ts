@@ -129,7 +129,6 @@ export function localBusinessJsonLd() {
           name: SITE.legalName,
           identifier: SITE.companyNumber,
         },
-        sameAs: [SITE.social.insurance],
         contactPoint: [
           {
             "@type": "ContactPoint",
