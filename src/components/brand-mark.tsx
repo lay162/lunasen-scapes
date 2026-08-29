@@ -22,16 +22,21 @@ const SCAPES_SIZE = {
 export function BrandName({
   size = "md",
   inverted = false,
+  stacked = false,
   className,
 }: {
   size?: keyof typeof LUNA_SIZE;
   inverted?: boolean;
+  stacked?: boolean;
   className?: string;
 }) {
   return (
     <span
       className={cn(
-        "inline-flex flex-wrap items-baseline justify-center gap-x-2 font-black tracking-tight",
+        "font-black tracking-tight",
+        stacked
+          ? "flex flex-col items-center gap-y-1"
+          : "inline-flex flex-wrap items-baseline justify-center gap-x-2",
         className,
       )}
     >

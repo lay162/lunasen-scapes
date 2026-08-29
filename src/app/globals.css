@@ -110,3 +110,37 @@
 .luna-gradient-bg {
   background: linear-gradient(135deg, #ff69b4 0%, #7ad7f0 100%);
 }
+
+.luna-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  text-decoration: none;
+  border: none;
+  color: #ffffff;
+  -webkit-text-fill-color: #ffffff;
+  transition: transform 0.15s ease, opacity 0.15s ease, box-shadow 0.15s ease;
+}
+
+.luna-btn:hover {
+  opacity: 0.94;
+  transform: translateY(-1px);
+}
+
+.luna-btn-pink {
+  background: #ff69b4;
+  box-shadow: 0 4px 14px -6px rgba(255, 105, 180, 0.5);
+}
+
+.luna-btn-gradient {
+  background: linear-gradient(135deg, #ff69b4 0%, #7ad7f0 100%);
+  box-shadow: 0 4px 18px -4px rgba(255, 105, 180, 0.45);
+}
+
+.luna-btn-blue {
+  background: #7ad7f0;
+  box-shadow: 0 4px 18px -4px rgba(122, 215, 240, 0.5);
+}

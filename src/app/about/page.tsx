@@ -45,7 +45,7 @@ export default function AboutPage() {
         </p>
         <p>Drop your logo into <code className="rounded bg-muted px-1">public/brand/logo.png</code> when you have the artwork.</p>
         <p>Favicon goes in the same place once you make it.</p>
-        <Link href="/enquire" className="inline-flex rounded-xl bg-luna-pink px-5 py-3 font-bold text-white">
+        <Link href="/enquire" className="luna-btn luna-btn-gradient mt-2 h-12 px-5">
           Work with us
         </Link>
       </section>

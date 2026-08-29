@@ -5,6 +5,7 @@ import { JsonLd } from "@/components/json-ld";
 import { Lines, splitSentences } from "@/components/lines";
 import { PageHero } from "@/components/page-hero";
 import { AREAS, GROUNDWORK_SERVICES, SPACES } from "@/lib/content";
+import { lunaLinkClass } from "@/lib/luna-tone";
 import { breadcrumbJsonLd, pageMetadata } from "@/lib/seo";
 import { SITE } from "@/lib/site";
 
@@ -60,9 +61,9 @@ export default async function AreaPage({ params }: Props) {
           />
         </div>
         <ul className="mt-8 space-y-3">
-          {SPACES.map((space) => (
+          {SPACES.map((space, i) => (
             <li key={space.slug} className="rounded-xl border bg-white p-4">
-              <Link href={`/spaces/${space.slug}`} className="font-bold text-luna-pink hover:underline">
+              <Link href={`/spaces/${space.slug}`} className={`font-bold hover:underline ${lunaLinkClass(i)}`}>
                 {space.title} in {area.name}
               </Link>
               <p className="mt-1 text-sm leading-relaxed text-muted-foreground">{space.summary}</p>
@@ -71,9 +72,9 @@ export default async function AreaPage({ params }: Props) {
         </ul>
         <h3 className="mt-10 text-xl font-black">Groundworks in {area.name}</h3>
         <ul className="mt-4 flex flex-wrap justify-center gap-2">
-          {GROUNDWORK_SERVICES.map((service) => (
+          {GROUNDWORK_SERVICES.map((service, i) => (
             <li key={service.slug}>
-              <Link href="/groundworks" className="text-sm font-semibold text-luna-pink hover:underline">
+              <Link href="/groundworks" className={`text-sm font-semibold hover:underline ${lunaLinkClass(i)}`}>
                 {service.title}
               </Link>
             </li>
@@ -91,7 +92,7 @@ export default async function AreaPage({ params }: Props) {
               ]}
             />
           </div>
-          <Link href="/enquire" className="mt-6 inline-flex rounded-xl bg-luna-pink px-4 py-2.5 text-sm font-bold">
+          <Link href="/enquire" className="luna-btn luna-btn-gradient mt-6 h-10 px-4 text-sm">
             Enquire from {area.name}
           </Link>
         </div>

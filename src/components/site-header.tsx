@@ -41,7 +41,7 @@ export function SiteHeader({ hasLogo = false }: { hasLogo?: boolean }) {
           </a>
           <Link
             href="/enquire"
-            className="hidden h-10 items-center rounded-xl bg-luna-pink px-4 text-sm font-medium text-white hover:bg-luna-pink/90 sm:inline-flex"
+            className="luna-btn luna-btn-gradient hidden h-10 px-4 text-sm sm:inline-flex"
           >
             Enquire
           </Link>
@@ -72,7 +72,7 @@ export function SiteHeader({ hasLogo = false }: { hasLogo?: boolean }) {
             ))}
             <Link
               href="/enquire"
-              className="mt-2 rounded-xl bg-luna-pink px-3 py-3 text-lg font-bold text-white"
+              className="luna-btn luna-btn-gradient mt-2 px-3 py-3 text-lg"
               onClick={() => setOpen(false)}
             >
               Enquire

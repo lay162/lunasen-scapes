@@ -7,6 +7,7 @@ import { JsonLd } from "@/components/json-ld";
 import { Lines } from "@/components/lines";
 import { BrandName } from "@/components/brand-mark";
 import { AREAS, FAQS, GROUNDWORK_SERVICES, SPACES, WORK_ITEMS } from "@/lib/content";
+import { lunaBtnClass, lunaLinkClass } from "@/lib/luna-tone";
 import { breadcrumbJsonLd, faqJsonLd, pageMetadata } from "@/lib/seo";
 import { SITE } from "@/lib/site";
 
@@ -40,7 +41,7 @@ export default function HomePage() {
             Wirral & North West
           </p>
           <h1 className="mt-4">
-            <BrandName size="hero" inverted />
+            <BrandName size="hero" inverted stacked />
           </h1>
           <div className="mt-8">
             <Lines
@@ -56,23 +57,14 @@ export default function HomePage() {
             />
           </div>
           <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
-            <Link
-              href="/enquire"
-              className="inline-flex h-12 items-center justify-center gap-2 rounded-xl bg-luna-pink px-6 text-base font-medium text-white hover:bg-luna-pink/90"
-            >
+            <Link href="/enquire" className={`${lunaBtnClass(0)} h-12 px-6 text-base`}>
               Request a site visit
               <ArrowRight className="size-4" />
             </Link>
-            <Link
-              href="/spaces"
-              className="inline-flex h-12 items-center justify-center rounded-xl border border-white/20 px-6 text-base font-medium text-white hover:bg-white/10"
-            >
+            <Link href="/spaces" className={`${lunaBtnClass(1)} h-12 px-6 text-base`}>
               SEN spaces
             </Link>
-            <Link
-              href="/groundworks"
-              className="inline-flex h-12 items-center justify-center rounded-xl border border-white/20 px-6 text-base font-medium text-white hover:bg-white/10"
-            >
+            <Link href="/groundworks" className={`${lunaBtnClass(2)} h-12 px-6 text-base`}>
               Groundworks
             </Link>
           </div>
@@ -82,9 +74,9 @@ export default function HomePage() {
               ["SEN first", "Children and adults"],
               ["£5M", "Public liability cover"],
               ["NW", "Wirral to North Wales"],
-            ].map(([stat, label]) => (
+            ].map(([stat, label], i) => (
               <div key={label}>
-                <dt className="text-2xl font-black text-luna-pink">{stat}</dt>
+                <dt className={`text-2xl font-black ${lunaLinkClass(i)}`}>{stat}</dt>
                 <dd className="text-white/55">{label}</dd>
               </div>
             ))}
@@ -114,10 +106,10 @@ export default function HomePage() {
                 href={`/spaces/${space.slug}`}
                 className="group rounded-2xl border bg-white p-5 text-center shadow-sm transition hover:-translate-y-0.5 hover:border-luna-pink/40 hover:shadow-md"
               >
-                <Icon className="mx-auto size-6 text-luna-pink" />
+                <Icon className={`mx-auto size-6 ${lunaLinkClass(i)}`} />
                 <h3 className="mt-3 text-lg font-bold">{space.title}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{space.summary}</p>
-                <span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-luna-pink">
+                <span className={`mt-4 inline-flex items-center gap-1 text-sm font-semibold ${lunaLinkClass(i)}`}>
                   {space.eyebrow} <ArrowRight className="size-4 transition group-hover:translate-x-0.5" />
                 </span>
               </Link>
@@ -142,10 +134,7 @@ export default function HomePage() {
               ]}
             />
           </div>
-          <Link
-            href="/groundworks"
-            className="mt-8 inline-flex h-11 items-center rounded-xl bg-luna-blue px-5 font-medium text-black hover:bg-luna-blue/90"
-          >
+          <Link href="/groundworks" className={`${lunaBtnClass(1)} mt-8 h-11 px-5`}>
             All groundworks
           </Link>
           <ul className="mt-10 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
@@ -171,7 +160,7 @@ export default function HomePage() {
             ]}
           />
         </div>
-        <Link href="/work" className="mt-6 inline-block font-semibold text-luna-pink">
+        <Link href="/work" className={`${lunaBtnClass(0)} mt-6 h-11 px-5`}>
           Full gallery
         </Link>
         <div className="mt-8 grid grid-cols-2 gap-3 md:grid-cols-4">
@@ -194,11 +183,11 @@ export default function HomePage() {
           <p className="text-[11px] font-bold uppercase tracking-[0.28em] text-luna-pink">Areas</p>
           <h2 className="mt-2 text-3xl font-black tracking-tight">LUNA SEN-Scapes near you.</h2>
           <ul className="mt-8 flex flex-wrap justify-center gap-2">
-            {AREAS.map((area) => (
+            {AREAS.map((area, i) => (
               <li key={area.slug}>
                 <Link
                   href={`/areas/${area.slug}`}
-                  className="inline-flex rounded-full border border-luna-pink/30 bg-white px-4 py-2 text-sm font-semibold hover:bg-luna-pink hover:text-white"
+                  className={`inline-flex rounded-full border bg-white px-4 py-2 text-sm font-semibold ${lunaLinkClass(i)} border-current`}
                 >
                   {area.name}
                 </Link>
@@ -227,10 +216,7 @@ export default function HomePage() {
             ]}
           />
         </div>
-        <Link
-          href="/enquire"
-          className="mt-6 inline-flex h-12 items-center rounded-xl bg-black px-6 font-medium text-white hover:bg-black/80"
-        >
+        <Link href="/enquire" className="mt-6 inline-flex h-12 items-center rounded-xl bg-white px-6 font-bold text-luna-pink hover:bg-white/90">
           Start an enquiry
         </Link>
       </section>

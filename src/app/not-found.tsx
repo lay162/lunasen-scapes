@@ -10,10 +10,10 @@ export default function NotFound() {
       <p className="text-muted-foreground">It may have moved.</p>
       <p className="text-muted-foreground">Head home, or send the brief if you already know what you need built.</p>
       <div className="flex gap-3">
-        <Link href="/" className="rounded-xl bg-luna-pink px-4 py-2.5 font-bold text-white">
+        <Link href="/" className="luna-btn luna-btn-gradient h-10 px-4">
           Home
         </Link>
-        <Link href="/enquire" className="rounded-xl border px-4 py-2.5 font-bold">
+        <Link href="/enquire" className="luna-btn luna-btn-pink h-10 px-4">
           Enquire
         </Link>
       </div>

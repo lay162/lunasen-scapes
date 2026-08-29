@@ -6,6 +6,7 @@ import { JsonLd } from "@/components/json-ld";
 import { Lines, splitSentences } from "@/components/lines";
 import { PageHero } from "@/components/page-hero";
 import { AREAS, SPACES } from "@/lib/content";
+import { lunaLinkClass } from "@/lib/luna-tone";
 import { breadcrumbJsonLd, pageMetadata, serviceJsonLd } from "@/lib/seo";
 import { SITE } from "@/lib/site";
 
@@ -85,16 +86,16 @@ export default async function SpacePage({ params }: Props) {
                 ]}
               />
             </div>
-            <Link href="/enquire" className="mt-5 inline-flex rounded-xl bg-luna-pink px-4 py-2.5 text-sm font-bold">
+            <Link href="/enquire" className="luna-btn luna-btn-gradient mt-5 h-10 px-4 text-sm">
               Enquire
             </Link>
           </div>
           <div className="rounded-2xl border p-6">
             <h2 className="font-bold">Where we build this</h2>
             <ul className="mt-3 flex flex-wrap justify-center gap-2">
-              {AREAS.slice(0, 8).map((area) => (
+              {AREAS.slice(0, 8).map((area, i) => (
                 <li key={area.slug}>
-                  <Link href={`/areas/${area.slug}`} className="text-sm text-luna-pink underline-offset-2 hover:underline">
+                  <Link href={`/areas/${area.slug}`} className={`text-sm underline-offset-2 hover:underline ${lunaLinkClass(i)}`}>
                     {area.name}
                   </Link>
                 </li>

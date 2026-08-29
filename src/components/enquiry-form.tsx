@@ -3,7 +3,6 @@
 import { useState } from "react";
 import { CheckCircle2 } from "lucide-react";
 
-import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
@@ -81,9 +80,9 @@ export function EnquiryForm() {
           </a>{" "}
           or call {SITE.phoneDisplay}.
         </p>
-        <Button className="mt-6 h-10 bg-luna-pink text-white hover:bg-luna-pink/90" onClick={() => setStatus("idle")}>
+        <button type="button" className="luna-btn luna-btn-gradient mt-6 h-10 px-5" onClick={() => setStatus("idle")}>
           Send another
-        </Button>
+        </button>
       </div>
     );
   }
@@ -182,9 +181,9 @@ export function EnquiryForm() {
         </span>
       </label>
       {status === "error" ? <p className="text-sm text-destructive">{error}</p> : null}
-      <Button type="submit" disabled={status === "sending"} className="h-12 w-full bg-luna-pink text-base text-white hover:bg-luna-pink/90 sm:w-auto sm:px-8">
+      <button type="submit" disabled={status === "sending"} className="luna-btn luna-btn-gradient h-12 w-full px-8 text-base sm:w-auto">
         {status === "sending" ? "Preparing…" : "Send enquiry"}
-      </Button>
+      </button>
       <p className="text-xs text-muted-foreground">
         Prefer to talk? Call <a className="font-semibold text-foreground" href={`tel:${SITE.phoneTel}`}>{SITE.phoneDisplay}</a>.
       </p>
