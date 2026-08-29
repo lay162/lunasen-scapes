@@ -1,6 +1,7 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import Script from "next/script";
+import { useEffect, useMemo, useState } from "react";
 import {
   Copy,
   Globe,
@@ -54,21 +55,61 @@ const PORTFOLIO = [
   },
 ] as const;
 
+const CARD_PATH = "/BusinessCard/";
+
+function withTrailingSlash(href: string) {
+  return href.endsWith("/") ? href : `${href}/`;
+}
+
 function cardUrl() {
-  if (typeof window === "undefined") return `${SITE.url}/BusinessCard`;
+  if (typeof window === "undefined") return `${SITE.url}${CARD_PATH}`;
   const url = new URL(window.location.href);
   url.hash = "";
   url.search = "";
-  return url.toString().replace(/\/$/, "") || `${SITE.url}/BusinessCard`;
+  return withTrailingSlash(url.toString());
+}
+
+function liveCardData() {
+  if (window.SWMDBC?.getDefaultCardData) return window.SWMDBC.getDefaultCardData();
+  return {
+    fullName: SITE.name,
+    company: SITE.name,
+    email: SITE.email,
+    phone: SITE.phoneTel,
+    website: SITE.url,
+    cardUrl: cardUrl(),
+  };
+}
+
+function startNfc() {
+  if (!window.SWMNFCRuntime || !window.SWMDBC) return false;
+  window.SWMNFCRuntime.initLiveCard(liveCardData());
+  return true;
 }
 
 export function DigitalCard() {
   const [modal, setModal] = useState<"copy" | "qr" | null>(null);
   const [copied, setCopied] = useState(false);
-  const shareUrl = useMemo(() => (modal ? cardUrl() : `${SITE.url}/BusinessCard`), [modal]);
+  const shareUrl = useMemo(() => (modal ? cardUrl() : `${SITE.url}${CARD_PATH}`), [modal]);
   const qrSrc = `https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=${encodeURIComponent(shareUrl)}`;
 
+  useEffect(() => {
+    if (startNfc()) return;
+    const timer = window.setInterval(() => {
+      if (startNfc()) window.clearInterval(timer);
+    }, 200);
+    return () => window.clearInterval(timer);
+  }, []);
+
   async function share() {
+    if ("NDEFReader" in window && window.SWMNFCRuntime) {
+      try {
+        await window.SWMNFCRuntime.shareCard(liveCardData());
+        return;
+      } catch {
+        /* user cancelled NFC or no tag — fall through */
+      }
+    }
     const url = cardUrl();
     const payload = {
       title: `${SITE.name} — Business Card`,
@@ -104,6 +145,8 @@ export function DigitalCard() {
 
   return (
     <div className={styles.page} data-digital-card="">
+      <Script src="/BusinessCard/luna-dbc-core.js" strategy="afterInteractive" />
+      <Script src="/BusinessCard/luna-nfc-runtime.js" strategy="afterInteractive" />
       <header className={styles.header}>
         <div className={styles.topActions}>
           <button type="button" className={styles.topBtn} aria-label="Share business card" onClick={share}>
@@ -134,7 +177,12 @@ export function DigitalCard() {
 
         <div className={styles.actions}>
           <div className={styles.ctaWrap}>
-            <a className={cn(styles.cta, styles.ctaPink)} href="/BusinessCard/contact.vcf" download>
+            <a
+              className={cn(styles.cta, styles.ctaPink)}
+              href="/BusinessCard/contact.vcf"
+              download
+              onClick={() => window.SWMNFCRuntime?.logTap?.("tap_save", liveCardData())}
+            >
               <UserPlus className="size-5" />
               Save Contact
             </a>
@@ -227,4 +275,17 @@ export function DigitalCard() {
       ) : null}
     </div>
   );
+}
+
+declare global {
+  interface Window {
+    SWMDBC?: {
+      getDefaultCardData: () => Record<string, unknown>;
+    };
+    SWMNFCRuntime?: {
+      initLiveCard: (data: Record<string, unknown>) => void;
+      shareCard: (data: Record<string, unknown>) => Promise<void>;
+      logTap?: (type: string, data: Record<string, unknown>) => void;
+    };
+  }
 }

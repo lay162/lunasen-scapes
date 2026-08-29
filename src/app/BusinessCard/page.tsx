@@ -8,7 +8,7 @@ export const metadata: Metadata = pageMetadata({
   title: `${SITE.name} — Business Card`,
   description:
     "Save LUNA SEN-Scapes to your phone. Call, email or request a quote for gardens, playgrounds, driveways and building works.",
-  path: "/BusinessCard",
+  path: "/BusinessCard/",
 });
 
 export default function BusinessCardPage() {

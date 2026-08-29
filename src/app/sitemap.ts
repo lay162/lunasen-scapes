@@ -14,7 +14,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/areas",
     "/enquire",
     "/about",
-    "/BusinessCard",
+    "/BusinessCard/",
     "/privacy",
     "/accessibility",
   ];

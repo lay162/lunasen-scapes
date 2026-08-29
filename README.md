@@ -30,9 +30,13 @@ Drop your square logo in later as `public/brand/logo.png`. Favicon can follow th
 
 ## Digital business card
 
-Same style as the existing trades card: save-to-phone, call, email, WhatsApp, QR share and recent work.
+Same layout as the existing trades card: save-to-phone, call, email, WhatsApp, QR, Tap n Share / NFC, and recent work.
 
-Open [http://127.0.0.1:43127/BusinessCard](http://127.0.0.1:43127/BusinessCard) locally. Live it will be `https://lunasen-scapes.co.uk/BusinessCard`.
+Live URL (same style as the old card): `https://lunasen-scapes.co.uk/BusinessCard/`
+
+Locally: [http://127.0.0.1:43127/BusinessCard/](http://127.0.0.1:43127/BusinessCard/)
+
+Android phone-to-phone tap uses the companion app in `android-nfc-share`. Open that folder in Android Studio and install it on both phones — the old trades app will not open this new card.
 
 ## Enquiry email
 

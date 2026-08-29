@@ -75,7 +75,7 @@ export function SiteFooter({ hasLogo = false }: { hasLogo?: boolean }) {
             Serving {AREAS.slice(0, 6).map((a) => a.name).join(", ")} and {AREAS[AREAS.length - 1].name}.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Link href="/BusinessCard" className="hover:text-white">
+            <Link href="/BusinessCard/" className="hover:text-white">
               Digital card
             </Link>
             <Link href="/privacy" className="hover:text-white">
