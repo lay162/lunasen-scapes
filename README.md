@@ -30,7 +30,7 @@ Drop your square logo in later as `public/brand/logo.png`. Favicon can follow th
 
 ## Enquiry email
 
-Enquiries go to **enquiries@lunasen-scapes.co.uk**. Set that mailbox up on your domain, or change it in `.env.local`.
+Enquiries go to **info@lunasen-scapes.co.uk**. Set that mailbox up on your domain, or change it in `.env.local`.
 
 Copy `.env.example` to `.env.local` to change:
 
@@ -52,7 +52,7 @@ Step-by-step copy for the Business Profile is in [`docs/google-business.md`](doc
 
 ## Go live on your domain
 
-You own **lunasen-scapes.co.uk** (main) and **lunasenscapes.com** (redirects to the `.co.uk`). Follow [`docs/domains.md`](docs/domains.md): push to GitHub, deploy on Vercel, then point GoDaddy DNS at Vercel.
+You own **lunasen-scapes.co.uk** (main) and **lunasenscapes.com** (redirects to the `.co.uk`). The project is on GitHub at [lay162/lunasen-scapes](https://github.com/lay162/lunasen-scapes). Hosting for the live domain comes next — not Vercel.
 
 ## Stack
 
@@ -60,4 +60,4 @@ Next.js, TypeScript, Tailwind CSS, shadcn/ui. No database or login.
 
 ## Legal
 
-LUNA SEN Group Ltd, company 17049817. Registered office: 109, Eastham Hall, Eastham Village Road, Eastham, CH62 0AF.
+LUNA SEN Group Ltd, company 17049817. Based in Eastham Village, Wirral.

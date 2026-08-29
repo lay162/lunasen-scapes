@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { SITE, absoluteUrl, fullAddress } from "@/lib/site";
+import { SITE, absoluteUrl } from "@/lib/site";
 import { AREAS, BUILDING_SERVICES, GROUNDWORK_SERVICES, SPACES } from "@/lib/content";
 
 const defaultOg = {
@@ -84,10 +84,10 @@ export function localBusinessJsonLd() {
         identifier: SITE.companyNumber,
         address: {
           "@type": "PostalAddress",
-          streetAddress: `${SITE.address.line1}, ${SITE.address.line2}`,
+          streetAddress: SITE.address.line1,
           addressLocality: SITE.address.city,
           addressRegion: SITE.address.region,
-          postalCode: SITE.address.postalCode,
+          ...(SITE.address.postalCode ? { postalCode: SITE.address.postalCode } : {}),
           addressCountry: SITE.address.country,
         },
         geo: {
@@ -207,9 +207,10 @@ export function localBusinessJsonLd() {
         identifier: SITE.companyNumber,
         address: {
           "@type": "PostalAddress",
-          streetAddress: fullAddress(),
+          streetAddress: SITE.address.line1,
           addressLocality: SITE.address.city,
-          postalCode: SITE.address.postalCode,
+          addressRegion: SITE.address.region,
+          ...(SITE.address.postalCode ? { postalCode: SITE.address.postalCode } : {}),
           addressCountry: SITE.address.country,
         },
         url: SITE.url,

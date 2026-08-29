@@ -19,12 +19,10 @@ Additional:
 - Irrigation service (only if you want drainage discoverability — skip if it feels wrong)
 - School — no
 
-## Address (must match Companies House)
+## Address
 
-109, Eastham Hall  
-Eastham Village Road  
-Eastham  
-CH62 0AF  
+Eastham Village  
+Wirral  
 United Kingdom
 
 Service-area business: yes. Add the United Kingdom. You can also list England, Scotland, Wales, Northern Ireland, and your home towns (Wirral, Liverpool, Cheshire).

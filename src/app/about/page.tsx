@@ -30,7 +30,7 @@ export default function AboutPage() {
       <section className="mx-auto max-w-3xl space-y-5 px-4 py-12 text-muted-foreground sm:px-6">
         <p>Company number {SITE.companyNumber}.</p>
         <p>
-          Registered office {SITE.address.line1}, {SITE.address.line2}, {SITE.address.city}, {SITE.address.postalCode}.
+          Based in Eastham Village, Wirral. We work UK wide.
         </p>
         <p>Play suppliers often arrive with equipment and hope the existing tarmac will do.</p>
         <p>Families get a pretty garden that ponds.</p>

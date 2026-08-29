@@ -65,7 +65,7 @@ export const metadata: Metadata = {
   },
   other: {
     "geo.region": "GB-WRL",
-    "geo.placename": "Eastham, Wirral",
+    "geo.placename": "Eastham Village, Wirral",
     "geo.position": `${SITE.geo.latitude};${SITE.geo.longitude}`,
     ICBM: `${SITE.geo.latitude}, ${SITE.geo.longitude}`,
   },
