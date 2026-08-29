@@ -1,0 +1,364 @@
+.page {
+  min-height: 100vh;
+  width: 100%;
+  background: linear-gradient(135deg, #09090b 0%, #000 100%);
+  background-attachment: fixed;
+  overflow-x: hidden;
+  font-family: var(--font-inter), -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.header {
+  position: relative;
+  height: 80px;
+  z-index: 5;
+}
+
+.topActions {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 1000;
+  display: flex;
+  gap: 0.75rem;
+}
+
+.topBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border: 0;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  color: #111;
+  transition: transform 0.2s;
+}
+
+.topBtn:hover {
+  transform: scale(1.05);
+}
+
+.card {
+  background: #fff;
+  margin: 0 auto 2rem;
+  max-width: 420px;
+  width: 90%;
+  min-width: 280px;
+  border-radius: 12px;
+  padding-bottom: 1rem;
+  position: relative;
+  z-index: 10;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border: 3px solid transparent;
+  background-image: linear-gradient(#fff, #fff), linear-gradient(135deg, #ff69b4, #7ad7f0);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+}
+
+@media (min-width: 768px) {
+  .card {
+    max-width: 400px;
+    width: auto;
+  }
+
+  .topActions {
+    right: calc((100vw - 400px) / 2 + 1rem);
+  }
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: -22px;
+  margin-bottom: 1rem;
+}
+
+.mark {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 14px;
+  text-align: center;
+}
+
+.info {
+  text-align: center;
+  padding: 0 1rem;
+  margin-top: 1rem;
+  width: 100%;
+}
+
+.name {
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin: 0.5rem 0 0.25rem;
+  letter-spacing: -0.02em;
+}
+
+.subhead {
+  margin: 0.5rem 0 0;
+  padding: 0 0.5rem;
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: #111;
+  line-height: 1.5;
+}
+
+.desc {
+  text-align: center;
+  line-height: 1.5;
+  color: #111;
+  margin: 1rem 0;
+  padding: 1rem;
+  background: #fff;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 105, 180, 0.35);
+}
+
+.actions {
+  margin: 1.5rem 0;
+}
+
+.ctaWrap {
+  text-align: center;
+  margin-bottom: 1.25rem;
+}
+
+.cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 0.95rem;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.ctaPink {
+  background: #ff69b4;
+}
+
+.ctaGradient {
+  background: linear-gradient(135deg, #ff69b4, #7ad7f0);
+}
+
+.actionGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  max-width: 320px;
+  margin: 1rem auto 0;
+  justify-items: center;
+  gap: 0.375rem;
+}
+
+.actionBtn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.actionBtn a {
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  background: #ff69b4;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  box-shadow: 0 4px 14px rgba(255, 105, 180, 0.28);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.actionBtn:nth-child(2) a {
+  background: linear-gradient(135deg, #ff69b4, #7ad7f0);
+}
+
+.actionBtn:nth-child(3) a {
+  background: #7ad7f0;
+  color: #111;
+}
+
+.actionBtn:nth-child(4) a {
+  background: #ff69b4;
+}
+
+.actionBtn a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.18);
+}
+
+.actionBtn p {
+  margin: 0.5rem 0 0;
+  font-size: 0.85rem;
+  color: #111;
+  font-weight: 700;
+}
+
+.stream {
+  padding: 0 1rem 0.75rem;
+}
+
+.section {
+  margin: 1.25rem 0;
+  padding: 0.75rem;
+  border: 1px solid rgba(255, 105, 180, 0.35);
+  border-radius: 12px;
+  background: #fafafa;
+}
+
+.title {
+  margin: 0.25rem 0 0.75rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.75rem;
+  color: #111;
+  text-align: center;
+}
+
+.group {
+  background: #fff;
+  border-radius: 12px;
+  border: 1px solid #e4e4e7;
+  padding: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.group:last-child {
+  margin-bottom: 0;
+}
+
+.label {
+  margin: 0 0 0.5rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.7rem;
+  color: #71717a;
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
+}
+
+.grid img {
+  width: 100%;
+  height: 92px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid #e4e4e7;
+}
+
+.cardFooter {
+  margin-top: 1.25rem;
+  padding: 1rem;
+  border-top: 1px solid rgba(122, 215, 240, 0.65);
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  font-weight: 800;
+  text-align: center;
+  background: #f9fafb;
+  line-height: 1.5;
+}
+
+.cardFooter a {
+  color: #000;
+  text-underline-offset: 3px;
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  z-index: 9999;
+}
+
+.modalOpen {
+  display: flex;
+}
+
+.modalView {
+  width: 100%;
+  max-width: 420px;
+  background: #fff;
+  border-radius: 16px;
+  padding: 1.25rem 1rem 1rem;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  text-align: center;
+}
+
+.close {
+  position: absolute;
+  top: -3.2rem;
+  right: 0;
+  width: 44px;
+  height: 44px;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.85);
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.copyBtn {
+  width: 100%;
+  margin-top: 0.75rem;
+  background: #000;
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  padding: 0.8rem 0.9rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.qr {
+  background: #fff;
+  border-radius: 12px;
+  padding: 0.75rem;
+  display: flex;
+  justify-content: center;
+}
+
+.qr img {
+  width: 220px;
+  height: 220px;
+}

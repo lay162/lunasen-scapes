@@ -5,7 +5,19 @@ import { absoluteUrl } from "@/lib/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
-  const staticPaths = ["/", "/spaces", "/groundworks", "/building", "/work", "/areas", "/enquire", "/about", "/privacy", "/accessibility"];
+  const staticPaths = [
+    "/",
+    "/spaces",
+    "/groundworks",
+    "/building",
+    "/work",
+    "/areas",
+    "/enquire",
+    "/about",
+    "/BusinessCard",
+    "/privacy",
+    "/accessibility",
+  ];
   const spacePaths = SPACES.map((space) => `/spaces/${space.slug}`);
   const areaPaths = AREAS.map((area) => `/areas/${area.slug}`);
 

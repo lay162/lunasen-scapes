@@ -28,6 +28,12 @@ The name is always **LUNA SEN-Scapes**. **LUNA** uses the pink-to-blue header gr
 
 Drop your square logo in later as `public/brand/logo.png`. Favicon can follow the same file once you make it. Until then the header uses the wordmark and the tab icon is a temporary **L**.
 
+## Digital business card
+
+Same style as the existing trades card: save-to-phone, call, email, WhatsApp, QR share and recent work.
+
+Open [http://127.0.0.1:43127/BusinessCard](http://127.0.0.1:43127/BusinessCard) locally. Live it will be `https://lunasen-scapes.co.uk/BusinessCard`.
+
 ## Enquiry email
 
 Enquiries go to **info@lunasen-scapes.co.uk**. Set that mailbox up on your domain, or change it in `.env.local`.

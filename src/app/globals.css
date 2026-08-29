@@ -144,3 +144,12 @@
   background: #7ad7f0;
   box-shadow: 0 4px 18px -4px rgba(122, 215, 240, 0.5);
 }
+
+body:has([data-digital-card]) {
+  background: #000;
+}
+
+body:has([data-digital-card]) > header,
+body:has([data-digital-card]) > footer {
+  display: none;
+}

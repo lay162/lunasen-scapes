@@ -9,7 +9,11 @@ const nextConfig: NextConfig = {
     formats: ["image/avif", "image/webp"],
   },
   async redirects() {
-    return [{ source: "/spaces/school-spaces", destination: "/spaces/garden-makeovers", permanent: true }];
+    return [
+      { source: "/spaces/school-spaces", destination: "/spaces/garden-makeovers", permanent: true },
+      { source: "/card", destination: "/BusinessCard", permanent: false },
+      { source: "/business-card", destination: "/BusinessCard", permanent: false },
+    ];
   },
 };
 
