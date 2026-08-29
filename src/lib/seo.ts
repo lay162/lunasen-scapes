@@ -123,7 +123,7 @@ export function localBusinessJsonLd() {
           "Dropped kerbs",
           "Special educational needs outdoor spaces",
         ],
-        brand: { "@type": "Brand", name: "LUNA SEN" },
+        brand: { "@type": "Brand", name: "LUNA SEN-Scapes" },
         parentOrganization: {
           "@type": "Organization",
           name: SITE.legalName,

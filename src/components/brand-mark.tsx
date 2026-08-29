@@ -4,6 +4,43 @@ import Link from "next/link";
 import { SITE } from "@/lib/site";
 import { cn } from "@/lib/utils";
 
+const LUNA_SIZE = {
+  sm: "text-xl",
+  md: "text-2xl sm:text-3xl",
+  lg: "text-3xl sm:text-4xl",
+  hero: "text-5xl sm:text-7xl md:text-8xl",
+} as const;
+
+const SCAPES_SIZE = {
+  sm: "text-lg",
+  md: "text-lg sm:text-xl",
+  lg: "text-xl sm:text-2xl",
+  hero: "text-3xl sm:text-5xl md:text-6xl",
+} as const;
+
+/** Always “LUNA SEN-Scapes”. Only LUNA uses the header pink-to-blue gradient. */
+export function BrandName({
+  size = "md",
+  inverted = false,
+  className,
+}: {
+  size?: keyof typeof LUNA_SIZE;
+  inverted?: boolean;
+  className?: string;
+}) {
+  return (
+    <span
+      className={cn(
+        "inline-flex flex-wrap items-baseline justify-center gap-x-2 font-black tracking-tight",
+        className,
+      )}
+    >
+      <span className={cn("luna-gradient-text", LUNA_SIZE[size])}>LUNA</span>
+      <span className={cn(inverted ? "text-white" : "text-foreground", SCAPES_SIZE[size])}>SEN-Scapes</span>
+    </span>
+  );
+}
+
 export function BrandMark({
   href = "/",
   inverted = false,
@@ -32,12 +69,7 @@ export function BrandMark({
         />
       ) : null}
       <span className="leading-none">
-        <span className="flex flex-wrap items-baseline gap-x-2 font-black tracking-tight">
-          <span className={cn("luna-gradient-text", compact ? "text-2xl sm:text-3xl" : "text-3xl")}>LUNA</span>
-          <span className={cn(inverted ? "text-white" : "text-foreground", compact ? "text-lg sm:text-xl" : "text-xl")}>
-            SEN-Scapes
-          </span>
-        </span>
+        <BrandName size={compact ? "md" : "lg"} inverted={inverted} className="justify-start" />
         {!compact ? (
           <span
             className={cn(

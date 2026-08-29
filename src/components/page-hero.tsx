@@ -1,5 +1,6 @@
 import Link from "next/link";
 
+import { BrandName } from "@/components/brand-mark";
 import { Lines } from "@/components/lines";
 
 export function PageHero({
@@ -14,8 +15,8 @@ export function PageHero({
   return (
     <section className="border-b border-black/5 bg-[linear-gradient(180deg,#fff5fb_0%,#ffffff_55%)]">
       <div className="mx-auto max-w-3xl px-4 py-12 text-center sm:px-6 sm:py-16">
-        <p className="text-[11px] font-bold uppercase tracking-[0.28em]">
-          <span className="luna-gradient-text text-xl tracking-tight">LUNA</span>
+        <p>
+          <BrandName size="md" />
         </p>
         {eyebrow ? (
           <p className="mt-3 text-[11px] font-bold uppercase tracking-[0.28em] text-luna-pink">{eyebrow}</p>

@@ -26,7 +26,7 @@ npm start
 
 Pink `#ff69b4` and blue `#7ad7f0` on black.
 
-Giant **LUNA** wordmark in that gradient, then **SEN-Scapes** in white.
+The name is always **LUNA SEN-Scapes**. **LUNA** uses the pink-to-blue header gradient; **SEN-Scapes** sits next to it in white (or black on light pages). Never write LUNA on its own.
 
 Drop your square logo in later as `public/brand/logo.png`. Favicon can follow the same file once you make it. Until then the header uses the wordmark and the tab icon is a temporary **L**.
 

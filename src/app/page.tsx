@@ -5,6 +5,7 @@ import { ArrowRight, Fence, LandPlot, ShieldCheck, Shovel, Trees, Waves } from "
 import { FaqList } from "@/components/faq-list";
 import { JsonLd } from "@/components/json-ld";
 import { Lines } from "@/components/lines";
+import { BrandName } from "@/components/brand-mark";
 import { AREAS, FAQS, GROUNDWORK_SERVICES, SPACES, WORK_ITEMS } from "@/lib/content";
 import { breadcrumbJsonLd, faqJsonLd, pageMetadata } from "@/lib/seo";
 import { SITE } from "@/lib/site";
@@ -36,11 +37,10 @@ export default function HomePage() {
         <div className="pointer-events-none absolute bottom-0 left-1/2 h-80 w-80 -translate-x-1/2 rounded-full bg-luna-blue/20 blur-3xl" />
         <div className="relative mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-24">
           <p className="text-[11px] font-bold uppercase tracking-[0.32em] text-luna-pink">
-            LUNA SEN Group · Wirral & North West
+            Wirral & North West
           </p>
-          <h1 className="mt-4 font-black tracking-tighter">
-            <span className="luna-gradient-text block text-7xl sm:text-9xl">LUNA</span>
-            <span className="mt-2 block text-2xl uppercase tracking-tight sm:text-4xl">SEN-Scapes</span>
+          <h1 className="mt-4">
+            <BrandName size="hero" inverted />
           </h1>
           <div className="mt-8">
             <Lines
@@ -84,7 +84,7 @@ export default function HomePage() {
               ["NW", "Wirral to North Wales"],
             ].map(([stat, label]) => (
               <div key={label}>
-                <dt className="luna-gradient-text text-2xl font-black">{stat}</dt>
+                <dt className="text-2xl font-black text-luna-pink">{stat}</dt>
                 <dd className="text-white/55">{label}</dd>
               </div>
             ))}

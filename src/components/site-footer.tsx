@@ -12,9 +12,6 @@ export function SiteFooter({ hasLogo = false }: { hasLogo?: boolean }) {
         <div className="flex flex-col items-center md:col-span-1">
           <BrandMark inverted hasLogo={hasLogo} />
           <p className="mt-4 text-sm leading-relaxed text-white/65">
-            LUNA SEN-Scapes.
-          </p>
-          <p className="mt-2 text-sm leading-relaxed text-white/65">
             SEN spaces and full groundworks across the North West.
           </p>
         </div>

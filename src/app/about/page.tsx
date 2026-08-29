@@ -18,7 +18,7 @@ export default function AboutPage() {
       <JsonLd data={breadcrumbJsonLd([{ name: "Home", path: "/" }, { name: "About", path: "/about" }])} />
       <PageHero
         eyebrow={SITE.legalName}
-        title="Luna is the brand. SEN is who it is for. Scapes is the ground."
+        title="SEN spaces and groundworks, built as one job."
         lines={[
           "LUNA SEN-Scapes is the environments company of LUNA SEN Group Ltd.",
           "We build playgrounds, sensory rooms, sensory gardens and safe spaces.",
