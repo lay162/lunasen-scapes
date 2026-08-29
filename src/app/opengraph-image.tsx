@@ -1,5 +1,6 @@
 import { ImageResponse } from "next/og";
 
+export const dynamic = "force-static";
 export const alt = "LUNA SEN-Scapes — disabled garden makeovers, playgrounds and groundworks across the UK";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";

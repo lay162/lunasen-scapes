@@ -1,8 +1,6 @@
-import { NextResponse } from "next/server";
-
 import { SITE } from "@/lib/site";
 
-type Body = {
+export type EnquiryFields = {
   name?: string;
   organisation?: string;
   email?: string;
@@ -19,14 +17,7 @@ function line(label: string, value?: string) {
   return `${label}: ${String(value || "").trim()}`;
 }
 
-export async function POST(request: Request) {
-  let body: Body;
-  try {
-    body = (await request.json()) as Body;
-  } catch {
-    return NextResponse.json({ ok: false, error: "Invalid form data" }, { status: 400 });
-  }
-
+export function enquiryMailto(body: EnquiryFields) {
   const name = String(body.name || "").trim();
   const email = String(body.email || "").trim();
   const phone = String(body.phone || "").trim();
@@ -34,13 +25,10 @@ export async function POST(request: Request) {
   const postcode = String(body.postcode || "").trim();
 
   if (name.length < 2 || !email.includes("@") || phone.length < 7 || message.length < 20 || postcode.length < 3) {
-    return NextResponse.json(
-      { ok: false, error: "Please complete name, email, phone, postcode and a short description." },
-      { status: 400 },
-    );
+    throw new Error("Please complete name, email, phone, postcode and a short description.");
   }
   if (body.consent !== "yes") {
-    return NextResponse.json({ ok: false, error: "Please agree so we can use your details to reply." }, { status: 400 });
+    throw new Error("Please agree so we can use your details to reply.");
   }
 
   const text = [
@@ -60,7 +48,5 @@ export async function POST(request: Request) {
   ].join("\n");
 
   const subject = `LUNA SEN-Scapes enquiry — ${body.interest || "brief"} — ${postcode}`;
-  const mailto = `mailto:${SITE.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(text)}`;
-
-  return NextResponse.json({ ok: true, mailto });
+  return `mailto:${SITE.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(text)}`;
 }

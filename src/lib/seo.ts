@@ -14,17 +14,20 @@ export function pageMetadata({
   description,
   path,
   keywords = [],
+  robots,
 }: {
   title: string;
   description: string;
   path: string;
   keywords?: string[];
+  robots?: Metadata["robots"];
 }): Metadata {
   const url = absoluteUrl(path);
   const fullTitle = title.includes(SITE.name) ? title : `${title} | ${SITE.name}`;
   return {
     title: fullTitle,
     description,
+    ...(robots ? { robots } : {}),
     keywords: [
       SITE.name,
       SITE.legalName,

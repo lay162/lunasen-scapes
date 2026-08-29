@@ -12,6 +12,8 @@ import { SITE } from "@/lib/site";
 
 type Props = { params: Promise<{ slug: string }> };
 
+export const dynamicParams = false;
+
 export async function generateStaticParams() {
   return SPACES.map((space) => ({ slug: space.slug }));
 }

@@ -6,6 +6,7 @@ import { CheckCircle2 } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
+import { enquiryMailto } from "@/lib/enquiry";
 import { SITE } from "@/lib/site";
 
 const SETTINGS = [
@@ -41,25 +42,14 @@ export function EnquiryForm() {
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
   const [error, setError] = useState("");
 
-  async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
+  function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setError("");
     const form = e.currentTarget;
     const data = Object.fromEntries(new FormData(form).entries());
     setStatus("sending");
     try {
-      const res = await fetch("/api/enquire", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
-      });
-      const json = (await res.json()) as { ok?: boolean; mailto?: string; error?: string };
-      if (!res.ok || !json.ok) {
-        throw new Error(json.error || "Could not send enquiry");
-      }
-      if (json.mailto) {
-        window.location.href = json.mailto;
-      }
+      window.location.href = enquiryMailto(data);
       setStatus("sent");
       form.reset();
     } catch (err) {

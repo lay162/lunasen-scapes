@@ -4,7 +4,11 @@ Safe places for SEN children, SEN adults and disabled people: garden makeovers, 
 
 A company of **LUNA SEN Group Ltd**. We do not take school contracts.
 
+Live site: [lunasen-scapes.co.uk](https://lunasen-scapes.co.uk)
+
 GitHub: [lay162/lunasen-scapes](https://github.com/lay162/lunasen-scapes)
+
+Hosted on **GitHub Pages**. Push to `main` and the site rebuilds. Domain clicks are in [`docs/domains.md`](docs/domains.md).
 
 ## Run locally
 
@@ -17,8 +21,10 @@ Open [http://127.0.0.1:43127](http://127.0.0.1:43127).
 
 ```bash
 npm run build
-npm start
+npx --yes serve out -l 43127
 ```
+
+`npm start` is not used. The live site is static files.
 
 ## Branding
 
@@ -32,7 +38,7 @@ Drop your square logo in later as `public/brand/logo.png`. Favicon can follow th
 
 Same layout as the existing trades card: save-to-phone, call, email, WhatsApp, QR, Tap n Share / NFC, and recent work.
 
-Live URL (same style as the old card): `https://lunasen-scapes.co.uk/BusinessCard/`
+Live URL: `https://lunasen-scapes.co.uk/BusinessCard/`
 
 Locally: [http://127.0.0.1:43127/BusinessCard/](http://127.0.0.1:43127/BusinessCard/)
 
@@ -40,7 +46,7 @@ Android phone-to-phone tap uses the companion app in `android-nfc-share`. Open t
 
 ## Enquiry email
 
-Enquiries go to **info@lunasen-scapes.co.uk**. Set that mailbox up on your domain, or change it in `.env.local`.
+The enquire page opens your email app to **info@lunasen-scapes.co.uk**. Set that mailbox up on your domain, or change it in `.env.local`.
 
 Copy `.env.example` to `.env.local` to change:
 
@@ -62,11 +68,11 @@ Step-by-step copy for the Business Profile is in [`docs/google-business.md`](doc
 
 ## Go live on your domain
 
-You own **lunasen-scapes.co.uk** (main) and **lunasenscapes.com** (forwards to the `.co.uk`). After purchase, follow [`docs/domains.md`](docs/domains.md). The live card is `https://lunasen-scapes.co.uk/BusinessCard/`. Hosting for the live domain comes next — not Vercel.
+You own **lunasen-scapes.co.uk** (main) and the `.com` names (they forward to the `.co.uk`). Paste the GitHub Pages DNS records from [`docs/domains.md`](docs/domains.md) onto the `.co.uk` in GoDaddy. The live card is `https://lunasen-scapes.co.uk/BusinessCard/`.
 
 ## Stack
 
-Next.js, TypeScript, Tailwind CSS, shadcn/ui. No database or login.
+Next.js (static export), TypeScript, Tailwind CSS, shadcn/ui. No database or login. GitHub Pages serves the built files.
 
 ## Legal
 
