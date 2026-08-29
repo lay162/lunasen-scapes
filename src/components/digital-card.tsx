@@ -240,15 +240,15 @@ export function DigitalCard() {
           <div className={styles.nfcModes} role="group" aria-label="NFC sharing mode">
             {(
               [
-                ["tap_n_share", "Tap n Share"],
-                ["tap_n_save", "Tap n Save"],
-                ["tap_n_swap", "Tap n Swap"],
+                ["tap_n_share", "Tap n Share", styles.nfcPink],
+                ["tap_n_save", "Tap n Save", styles.nfcGradient],
+                ["tap_n_swap", "Tap n Swap", styles.nfcBlue],
               ] as const
-            ).map(([value, label]) => (
+            ).map(([value, label, tone]) => (
               <button
                 key={value}
                 type="button"
-                className={cn(styles.nfcMode, nfcMode === value && styles.nfcModeOn)}
+                className={cn(styles.nfcMode, tone, nfcMode === value && styles.nfcModeOn)}
                 aria-pressed={nfcMode === value}
                 onClick={() => changeNfcMode(value)}
               >
