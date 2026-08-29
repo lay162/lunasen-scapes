@@ -77,7 +77,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: LayoutProps<"/">) {
   const hasLogo = customLogoExists();
   return (
-    <html lang="en-GB" className={`${inter.variable} h-full scroll-smooth`}>
+    <html lang="en-GB" className={`${inter.variable} h-full scroll-smooth`} data-scroll-behavior="smooth">
       <body className="flex min-h-full flex-col bg-background font-sans text-foreground antialiased">
         <JsonLd data={localBusinessJsonLd()} />
         <SiteHeader hasLogo={hasLogo} />
