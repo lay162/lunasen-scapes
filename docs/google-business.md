@@ -35,7 +35,8 @@ Service-area business: yes. Add the United Kingdom. You can also list England, S
 
 ## Website
 
-Production URL of this site, e.g. `https://lunasenscapes.co.uk`
+Production URL of this site: `https://lunasen-scapes.co.uk`  
+(`lunasenscapes.com` should redirect here.)
 
 ## Hours
 

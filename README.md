@@ -50,6 +50,10 @@ Technical SEO is in the site (local business schema, NAP, sitemap, unique area a
 
 Step-by-step copy for the Business Profile is in [`docs/google-business.md`](docs/google-business.md).
 
+## Go live on your domain
+
+You own **lunasen-scapes.co.uk** (main) and **lunasenscapes.com** (redirects to the `.co.uk`). Follow [`docs/domains.md`](docs/domains.md): push to GitHub, deploy on Vercel, then point GoDaddy DNS at Vercel.
+
 ## Stack
 
 Next.js, TypeScript, Tailwind CSS, shadcn/ui. No database or login.

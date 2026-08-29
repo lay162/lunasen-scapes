@@ -6,8 +6,8 @@ export const SITE = {
   tagline: "Safe places, gardens and building works for SEN and disabled people — UK wide.",
   description:
     "LUNA SEN-Scapes builds safe places for SEN children, SEN adults and disabled people across the UK: garden makeovers, playgrounds, driveways, internal works and all aspects of building. Groundworks, fencing, patios, landscaping, drainage and renovations sit in the same brief.",
-  url: process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") || "https://lunasenscapes.co.uk",
-  email: process.env.NEXT_PUBLIC_ENQUIRY_EMAIL || "enquiries@lunasenscapes.co.uk",
+  url: process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") || "https://lunasen-scapes.co.uk",
+  email: process.env.NEXT_PUBLIC_ENQUIRY_EMAIL || "enquiries@lunasen-scapes.co.uk",
   phoneDisplay: "07375 996 207",
   phoneTel: "+447375996207",
   priceRange: "££",
