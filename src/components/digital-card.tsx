@@ -221,7 +221,7 @@ export function DigitalCard() {
               <p>Email</p>
             </div>
             <div className={styles.actionBtn}>
-              <a href="/" aria-label="Website">
+              <a href="/" aria-label="Website" target="_top">
                 <Globe className="size-6" />
               </a>
               <p>Website</p>
@@ -277,7 +277,9 @@ export function DigitalCard() {
         <footer className={styles.cardFooter}>
           <BrandName stacked size="sm" />
           <p className={styles.footerMeta}>{fullAddress()}</p>
-          <a href="/">{SITE.url.replace(/^https:\/\//, "")}</a>
+          <a href="/" target="_top">
+            {SITE.url.replace(/^https:\/\//, "")}
+          </a>
         </footer>
       </main>
 
