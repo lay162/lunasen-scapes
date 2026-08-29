@@ -4,6 +4,8 @@ SEN playgrounds, sensory rooms, sensory gardens and safe outdoor spaces for chil
 
 This is a public website (Next.js) for schools, families and adult SEN settings across Wirral, Liverpool, Cheshire and the North West.
 
+GitHub: [lay162/lunasen-scapes](https://github.com/lay162/lunasen-scapes)
+
 ## Run locally
 
 ```bash

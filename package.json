@@ -2,6 +2,14 @@
   "name": "lunasen-scapes",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://github.com/lay162/lunasen-scapes",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lay162/lunasen-scapes.git"
+  },
+  "bugs": {
+    "url": "https://github.com/lay162/lunasen-scapes/issues"
+  },
   "scripts": {
     "dev": "next dev --hostname 0.0.0.0 --port 43127",
     "build": "next build",
