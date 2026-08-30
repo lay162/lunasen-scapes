@@ -2,11 +2,11 @@ import { JsonLd } from "@/components/json-ld";
 import { Lines } from "@/components/lines";
 import { PageHero } from "@/components/page-hero";
 import { breadcrumbJsonLd, pageMetadata } from "@/lib/seo";
-import { SITE, fullAddress } from "@/lib/site";
+import { SITE, fullAddress, legalLine } from "@/lib/site";
 
 export const metadata = pageMetadata({
   title: "Privacy notice",
-  description: `How ${SITE.name} uses enquiry data. ${SITE.legalName}, company ${SITE.companyNumber}.`,
+  description: `How ${SITE.name} uses enquiry data. ${SITE.legalName}.`,
   path: "/privacy",
 });
 
@@ -47,7 +47,7 @@ export default function PrivacyPage() {
         <Lines
           lines={[
             `Controller: ${SITE.legalName}, ${fullAddress()}.`,
-            `Company number ${SITE.companyNumber}.`,
+            legalLine(),
           ]}
         />
       </article>

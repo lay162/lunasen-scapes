@@ -3,7 +3,7 @@ import { Mail, MapPin, Phone } from "lucide-react";
 
 import { BrandMark } from "@/components/brand-mark";
 import { AREAS, NAV, SPACES } from "@/lib/content";
-import { SITE, fullAddress } from "@/lib/site";
+import { SITE, fullAddress, legalLine } from "@/lib/site";
 
 export function SiteFooter({ hasLogo = false }: { hasLogo?: boolean }) {
   return (
@@ -65,7 +65,7 @@ export function SiteFooter({ hasLogo = false }: { hasLogo?: boolean }) {
             </p>
           </address>
           <p className="mt-4 text-xs text-white/45">
-            {SITE.legalName} · Company no. {SITE.companyNumber}
+            {legalLine()}
           </p>
         </div>
       </div>

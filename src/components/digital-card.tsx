@@ -17,7 +17,7 @@ import {
 } from "lucide-react";
 
 import { BrandName } from "@/components/brand-mark";
-import { SITE, brandedCardUrl, fullAddress } from "@/lib/site";
+import { SITE, brandedCardUrl, fullAddress, legalLine } from "@/lib/site";
 import { cn } from "@/lib/utils";
 
 import styles from "@/app/BusinessCard/card.module.css";
@@ -276,6 +276,7 @@ export function DigitalCard() {
 
         <footer className={styles.cardFooter}>
           <BrandName stacked size="sm" />
+          <p className={styles.footerMeta}>{legalLine()}</p>
           <p className={styles.footerMeta}>{fullAddress()}</p>
           <Link href="/">{SITE.url.replace(/^https:\/\//, "")}</Link>
           <br />

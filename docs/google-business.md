@@ -45,7 +45,7 @@ Sunday: closed
 
 ## Description (paste)
 
-LUNA SEN-Scapes makes safe places for SEN children, SEN adults and disabled people across the UK: gardens, playgrounds, driveways, internal works and all aspects of building. We start with the ground — then the finish. Part of LUNA SEN Group Ltd (company 17049817). Based in the Wirral, we work UK wide.
+LUNA SEN-Scapes makes safe places for SEN children, SEN adults and disabled people across the UK: gardens, playgrounds, driveways, internal works and all aspects of building. We start with the ground — then the finish. LUNA SEN-Scapes Ltd. Based in the Wirral, we work UK wide.
 
 ## Photos to upload first
 

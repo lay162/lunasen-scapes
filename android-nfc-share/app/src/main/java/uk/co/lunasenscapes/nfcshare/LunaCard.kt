@@ -5,7 +5,7 @@ package uk.co.lunasenscapes.nfcshare
  */
 object LunaCard {
     const val BASE_URL = "https://lunasen-scapes.co.uk/BusinessCard/"
-    const val ORG = "LUNA SEN-Scapes"
+    const val ORG = "LUNA SEN-Scapes Ltd"
     const val EMAIL = "info@lunasen-scapes.co.uk"
     const val PHONE = "+447375996207"
     const val WEBSITE = "https://lunasen-scapes.co.uk/"

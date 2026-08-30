@@ -3,12 +3,12 @@ import Link from "next/link";
 import { JsonLd } from "@/components/json-ld";
 import { PageHero } from "@/components/page-hero";
 import { breadcrumbJsonLd, pageMetadata } from "@/lib/seo";
-import { SITE, fullAddress } from "@/lib/site";
+import { SITE, fullAddress, legalLine } from "@/lib/site";
 
 export const metadata = pageMetadata({
   title: "About LUNA SEN-Scapes",
   description:
-    "LUNA SEN-Scapes is a LUNA SEN Group Ltd company making safe places for SEN children, SEN adults and disabled people — gardens, driveways, internal works and all aspects of building across the UK.",
+    "LUNA SEN-Scapes is LUNA SEN-Scapes Ltd — making safe places for SEN children, SEN adults and disabled people: gardens, driveways, internal works and all aspects of building across the UK.",
   path: "/about",
 });
 
@@ -20,7 +20,7 @@ export default function AboutPage() {
         eyebrow={SITE.legalName}
         title="Gardens that work. Rooms that work. Ground that lasts."
         lines={[
-          "LUNA SEN-Scapes is the environments and building company of LUNA SEN Group Ltd.",
+          "LUNA SEN-Scapes is the trading name of LUNA SEN-Scapes Ltd.",
           "For SEN children, SEN adults and disabled people.",
           "Anyone who needs a safe garden, play area, driveway or safer rooms inside.",
           "We do the groundworks and all aspects of building works.",
@@ -28,7 +28,7 @@ export default function AboutPage() {
         ]}
       />
       <section className="mx-auto max-w-3xl space-y-5 px-4 py-12 text-muted-foreground sm:px-6">
-        <p>Company number {SITE.companyNumber}.</p>
+        <p>{legalLine()}.</p>
         <p>
           Based in {fullAddress()}. We work UK wide.
         </p>

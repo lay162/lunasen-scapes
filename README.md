@@ -2,7 +2,7 @@
 
 Safe places for SEN children, SEN adults and disabled people: garden makeovers, playgrounds, driveways, internal works and all aspects of building. Nationwide from a Wirral base.
 
-A company of **LUNA SEN Group Ltd**. We do not take school contracts.
+**LUNA SEN-Scapes Ltd.** We do not take school contracts.
 
 Live site: [lunasen-scapes.co.uk](https://lunasen-scapes.co.uk)
 
@@ -76,4 +76,4 @@ Next.js (static export), TypeScript, Tailwind CSS, shadcn/ui. No database or log
 
 ## Legal
 
-LUNA SEN Group Ltd, company 17049817. Based in Wirral, Merseyside.
+LUNA SEN-Scapes Ltd. Based in Wirral, Merseyside. Companies House number to be added when issued.

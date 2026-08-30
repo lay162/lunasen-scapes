@@ -1,8 +1,9 @@
 export const SITE = {
   name: "LUNA SEN-Scapes",
   shortName: "LUNA SEN-Scapes",
-  legalName: "LUNA SEN Group Ltd",
-  companyNumber: "17049817",
+  legalName: "LUNA SEN-Scapes Ltd",
+  /** Leave empty until Lauren supplies the official Companies House number. */
+  companyNumber: "",
   tagline: "Safe places, gardens and building works for SEN and disabled people — UK wide.",
   description:
     "LUNA SEN-Scapes builds safe places for SEN children, SEN adults and disabled people across the UK: garden makeovers, playgrounds, driveways, internal works and all aspects of building. Groundworks, fencing, patios, landscaping, drainage and renovations sit in the same brief.",
@@ -71,6 +72,18 @@ export const NAP = {
   phone: SITE.phoneDisplay,
   email: SITE.email,
 };
+
+export function hasCompanyNumber() {
+  return Boolean(SITE.companyNumber);
+}
+
+/** Footer / legal line. Never invents a Companies House number. */
+export function legalLine(separator = " · ") {
+  if (SITE.companyNumber) {
+    return `${SITE.legalName}${separator}Company no. ${SITE.companyNumber}`;
+  }
+  return `${SITE.legalName}${separator}Registration pending`;
+}
 
 export function fullAddress() {
   return [SITE.address.line1, SITE.address.line2, SITE.address.city, SITE.address.region, SITE.address.postalCode]

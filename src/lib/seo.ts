@@ -85,8 +85,9 @@ export function localBusinessJsonLd() {
         currenciesAccepted: "GBP",
         paymentAccepted: "Bank transfer, invoice",
         foundingDate: String(SITE.foundedYear),
-        taxID: SITE.companyNumber,
-        identifier: SITE.companyNumber,
+        ...(SITE.companyNumber
+          ? { taxID: SITE.companyNumber, identifier: SITE.companyNumber }
+          : {}),
         address: postalAddressJsonLd(),
         geo: {
           "@type": "GeoCoordinates",
@@ -138,7 +139,8 @@ export function localBusinessJsonLd() {
         parentOrganization: {
           "@type": "Organization",
           name: SITE.legalName,
-          identifier: SITE.companyNumber,
+          legalName: SITE.legalName,
+          ...(SITE.companyNumber ? { identifier: SITE.companyNumber } : {}),
         },
         contactPoint: [
           {
@@ -202,7 +204,7 @@ export function localBusinessJsonLd() {
         "@id": `${SITE.url}/#org`,
         name: SITE.legalName,
         legalName: SITE.legalName,
-        identifier: SITE.companyNumber,
+        ...(SITE.companyNumber ? { identifier: SITE.companyNumber } : {}),
         address: postalAddressJsonLd(),
         url: SITE.url,
       },

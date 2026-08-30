@@ -508,7 +508,7 @@ export const WORK_ITEMS = [
 export const FAQS = [
   {
     q: "What is LUNA SEN-Scapes?",
-    a: "LUNA SEN-Scapes is the environments and building company of LUNA SEN Group Ltd. We make safe places for SEN children, SEN adults and disabled people: gardens, play areas, driveways and internal rooms. We also carry out all aspects of building works. One company. One brief. Across the UK.",
+    a: "LUNA SEN-Scapes is the trading name of LUNA SEN-Scapes Ltd. We make safe places for SEN children, SEN adults and disabled people: gardens, play areas, driveways and internal rooms. We also carry out all aspects of building works. One company. One brief. Across the UK.",
   },
   {
     q: "Who is this for?",

@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     "building works UK",
     "internal adaptations disabled",
     "LUNA SEN-Scapes",
-    "LUNA SEN Group",
+    "LUNA SEN-Scapes Ltd",
   ],
   robots: {
     index: true,

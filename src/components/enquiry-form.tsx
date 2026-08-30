@@ -162,7 +162,7 @@ export function EnquiryForm() {
       <label className="mx-auto flex max-w-xl items-start justify-center gap-2 text-sm text-muted-foreground">
         <input type="checkbox" name="consent" value="yes" required className="mt-1" />
         <span>
-          I agree LUNA SEN-Scapes (LUNA SEN Group Ltd) may use these details to quote and contact me about this
+          I agree LUNA SEN-Scapes (LUNA SEN-Scapes Ltd) may use these details to quote and contact me about this
           enquiry. We do not sell your data. See our{" "}
           <a className="underline" href="/privacy">
             privacy notice
