@@ -19,7 +19,7 @@ export function PageHero({
           <BrandName size="md" />
         </p>
         {eyebrow ? (
-          <p className="mt-3 text-[11px] font-bold uppercase tracking-[0.28em] text-luna-pink">{eyebrow}</p>
+          <p className="mt-3 text-[11px] font-bold uppercase tracking-[0.28em] text-luna-pink-ink">{eyebrow}</p>
         ) : null}
         <h1 className="mt-4 text-4xl font-black tracking-tight text-balance sm:text-5xl">{title}</h1>
         <div className="mt-6">

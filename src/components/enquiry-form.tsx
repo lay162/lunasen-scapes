@@ -65,7 +65,7 @@ export function EnquiryForm() {
         <h2 className="text-xl font-black">Enquiry ready</h2>
         <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
           Your email app should have opened with the brief filled in. If it did not, write to{" "}
-          <a className="font-semibold text-luna-pink underline" href={`mailto:${SITE.email}`}>
+          <a className="font-semibold text-luna-pink-ink underline" href={`mailto:${SITE.email}`}>
             {SITE.email}
           </a>{" "}
           or call {SITE.phoneDisplay}.

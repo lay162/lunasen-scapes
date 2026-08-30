@@ -69,6 +69,7 @@ export function BrandMark({
           alt=""
           width={44}
           height={44}
+          sizes="44px"
           className="h-11 w-11 shrink-0 rounded-full object-cover ring-1 ring-white/20"
           priority
         />

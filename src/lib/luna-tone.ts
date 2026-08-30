@@ -10,9 +10,9 @@ export function lunaTone(index: number): LunaTone {
 /** Clickable card text / icons — pink, pink-to-blue, then blue, repeating. */
 export function lunaLinkClass(index: number) {
   const tone = lunaTone(index);
-  if (tone === "pink") return "text-luna-pink";
-  if (tone === "blue") return "text-luna-blue";
-  return "luna-gradient-text";
+  if (tone === "pink") return "text-luna-pink-ink";
+  if (tone === "blue") return "text-luna-blue-ink";
+  return "text-luna-pink-ink";
 }
 
 /** Filled CTAs — pink, gradient, blue, repeating. */

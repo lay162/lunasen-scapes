@@ -82,7 +82,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       <body className="flex min-h-full flex-col bg-background font-sans text-foreground antialiased">
         <JsonLd data={localBusinessJsonLd()} />
         <SiteHeader hasLogo={hasLogo} />
-        <div className="flex flex-1 flex-col">{children}</div>
+        <div className="flex flex-1 flex-col pb-20 lg:pb-0">{children}</div>
         <SiteFooter hasLogo={hasLogo} />
       </body>
     </html>

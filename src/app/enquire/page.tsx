@@ -38,12 +38,12 @@ export default function EnquirePage() {
           <div className="rounded-2xl border p-6">
             <h2 className="font-black">Call or write</h2>
             <p className="mt-3 text-sm">
-              <a className="font-semibold text-luna-pink" href={`tel:${SITE.phoneTel}`}>
+              <a className="font-semibold text-luna-pink-ink underline" href={`tel:${SITE.phoneTel}`}>
                 {SITE.phoneDisplay}
               </a>
             </p>
             <p className="mt-1 text-sm">
-              <a className="font-semibold text-luna-pink" href={`mailto:${SITE.email}`}>
+              <a className="font-semibold text-luna-pink-ink underline" href={`mailto:${SITE.email}`}>
                 {SITE.email}
               </a>
             </p>

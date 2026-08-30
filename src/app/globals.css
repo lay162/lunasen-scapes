@@ -9,6 +9,8 @@
   --color-foreground: var(--foreground);
   --color-luna-pink: #ff69b4;
   --color-luna-blue: #7ad7f0;
+  --color-luna-pink-ink: #b01068;
+  --color-luna-blue-ink: #0a6580;
   --color-luna-ink: #000000;
   --font-sans: var(--font-inter);
   --font-heading: var(--font-inter);

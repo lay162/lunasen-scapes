@@ -1,8 +1,9 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import Script from "next/script";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 import {
   Copy,
   Globe,
@@ -82,7 +83,7 @@ export function DigitalCard() {
   const [modal, setModal] = useState<"copy" | "qr" | null>(null);
   const [copied, setCopied] = useState(false);
   const [nfcMode, setNfcMode] = useState<"tap_n_share" | "tap_n_save" | "tap_n_swap">("tap_n_share");
-  const shareUrl = useMemo(() => brandedCardUrl(), [modal]);
+  const shareUrl = brandedCardUrl();
   const qrSrc = `https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=${encodeURIComponent(shareUrl)}`;
 
   useEffect(() => {
@@ -258,7 +259,14 @@ export function DigitalCard() {
                 <p className={styles.label}>{group.label}</p>
                 <div className={styles.grid}>
                   {group.images.map((image) => (
-                    <img key={image.src} src={image.src} alt={image.alt} loading="lazy" />
+                    <Image
+                      key={image.src}
+                      src={image.src}
+                      alt={image.alt}
+                      width={400}
+                      height={184}
+                      sizes="(max-width: 480px) 45vw, 160px"
+                    />
                   ))}
                 </div>
               </div>
@@ -293,7 +301,14 @@ export function DigitalCard() {
               <>
                 <div className={styles.qr}>
                   {/* External QR image is a share helper, not user-uploaded content. */}
-                  <img src={qrSrc} alt={`QR code for the ${SITE.name} business card`} width={220} height={220} />
+                  <Image
+                    src={qrSrc}
+                    alt={`QR code for the ${SITE.name} business card`}
+                    width={220}
+                    height={220}
+                    sizes="220px"
+                    unoptimized
+                  />
                 </div>
                 <h2>Scan the QR Code</h2>
                 <p>to view my Business Card on another device</p>

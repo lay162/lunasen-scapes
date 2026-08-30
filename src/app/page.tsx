@@ -89,7 +89,7 @@ export default function HomePage() {
       </section>
 
       <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
-        <p className="text-[11px] font-bold uppercase tracking-[0.28em] text-luna-pink">Spaces</p>
+        <p className="text-[11px] font-bold uppercase tracking-[0.28em] text-luna-pink-ink">Spaces</p>
         <h2 className="mt-2 text-3xl font-black tracking-tight">Safe places for SEN children, SEN adults and disabled people.</h2>
         <div className="mt-6">
           <Lines
@@ -154,7 +154,7 @@ export default function HomePage() {
       </section>
 
       <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
-        <p className="text-[11px] font-bold uppercase tracking-[0.28em] text-luna-pink">Building</p>
+        <p className="text-[11px] font-bold uppercase tracking-[0.28em] text-luna-pink-ink">Building</p>
         <h2 className="mt-2 text-3xl font-black tracking-tight">All aspects of building works.</h2>
         <div className="mt-6">
           <Lines
@@ -179,7 +179,7 @@ export default function HomePage() {
       </section>
 
       <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
-        <p className="text-[11px] font-bold uppercase tracking-[0.28em] text-luna-pink">Work</p>
+        <p className="text-[11px] font-bold uppercase tracking-[0.28em] text-luna-pink-ink">Work</p>
         <h2 className="mt-2 text-3xl font-black tracking-tight">Already on the ground.</h2>
         <div className="mt-6">
           <Lines
@@ -201,6 +201,7 @@ export default function HomePage() {
                 alt={item.alt}
                 width={640}
                 height={480}
+                sizes="(max-width: 768px) 50vw, 25vw"
                 className="aspect-[4/3] w-full object-cover"
               />
             </figure>
@@ -210,7 +211,7 @@ export default function HomePage() {
 
       <section className="border-y bg-[#fff7fb] py-16">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
-          <p className="text-[11px] font-bold uppercase tracking-[0.28em] text-luna-pink">Areas</p>
+          <p className="text-[11px] font-bold uppercase tracking-[0.28em] text-luna-pink-ink">Areas</p>
           <h2 className="mt-2 flex flex-col items-center text-3xl font-black tracking-tight">
             <BrandName stacked size="lg" />
             <span className="mt-1 text-xl sm:text-2xl">near you.</span>
@@ -249,7 +250,7 @@ export default function HomePage() {
             ]}
           />
         </div>
-        <Link href="/enquire" className="mt-6 inline-flex h-12 items-center rounded-xl bg-white px-6 font-bold text-luna-pink hover:bg-white/90">
+        <Link href="/enquire" className="mt-6 inline-flex h-12 items-center rounded-xl bg-white px-6 font-bold text-luna-pink-ink hover:bg-white/90">
           Start an enquiry
         </Link>
       </section>

@@ -34,6 +34,7 @@ export default function WorkPage() {
                 alt={item.alt}
                 width={800}
                 height={600}
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 className="aspect-[4/3] w-full object-cover"
               />
               <figcaption className="p-4">
