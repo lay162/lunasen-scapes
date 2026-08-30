@@ -66,10 +66,11 @@ export const metadata: Metadata = {
   },
   other: {
     "geo.region": "GB-WRL",
-    "geo.placename": "Eastham Village, Wirral",
+    "geo.placename": "Wirral, Merseyside",
     "geo.position": `${SITE.geo.latitude};${SITE.geo.longitude}`,
     ICBM: `${SITE.geo.latitude}, ${SITE.geo.longitude}`,
   },
+  // Set NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION (Search Console HTML-tag content) to emit google-site-verification.
   ...(SITE.google.verification
     ? { verification: { google: SITE.google.verification } }
     : {}),

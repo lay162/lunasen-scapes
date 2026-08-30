@@ -14,17 +14,17 @@ export const SITE = {
   priceRange: "££",
   foundedYear: 2026,
   address: {
-    line1: "Eastham Village",
+    line1: "",
     line2: "",
-    city: "Eastham Village",
-    region: "Wirral",
+    city: "Wirral",
+    region: "Merseyside",
     postalCode: "",
     country: "GB",
     countryName: "United Kingdom",
   },
   geo: {
-    latitude: 53.3136,
-    longitude: -2.9608,
+    latitude: 53.3727,
+    longitude: -3.0738,
   },
   openingHours: [
     { days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], opens: "08:00", closes: "17:00" },
@@ -58,8 +58,8 @@ export const SITE = {
     "Birkenhead",
   ],
   google: {
-    mapsQuery: "Eastham Village, Wirral",
-    verification: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || "",
+    mapsQuery: "Wirral, Merseyside",
+    verification: (process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || "").trim(),
   },
 } as const;
 
@@ -76,6 +76,18 @@ export function fullAddress() {
   return [SITE.address.line1, SITE.address.line2, SITE.address.city, SITE.address.region, SITE.address.postalCode]
     .filter((part, index, all) => Boolean(part) && all.indexOf(part) === index)
     .join(", ");
+}
+
+/** Schema.org PostalAddress — omits empty street and postcode. */
+export function postalAddressJsonLd() {
+  return {
+    "@type": "PostalAddress" as const,
+    ...(SITE.address.line1 ? { streetAddress: SITE.address.line1 } : {}),
+    addressLocality: SITE.address.city,
+    ...(SITE.address.region ? { addressRegion: SITE.address.region } : {}),
+    ...(SITE.address.postalCode ? { postalCode: SITE.address.postalCode } : {}),
+    addressCountry: SITE.address.country,
+  };
 }
 
 /** Page URLs get a trailing slash to match `trailingSlash: true`. Asset paths do not. */

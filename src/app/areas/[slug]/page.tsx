@@ -63,7 +63,7 @@ export default async function AreaPage({ params }: Props) {
     },
     {
       q: `Is this only for the Wirral?`,
-      a: "No. LUNA SEN-Scapes is based in Eastham Village, Wirral, and works across the United Kingdom. Each area page is written for that place — England, Scotland, Wales, Northern Ireland and the English regions included.",
+      a: "No. LUNA SEN-Scapes is based in Wirral and works across the United Kingdom. Each area page is written for that place — England, Scotland, Wales, Northern Ireland and the English regions included.",
     },
   ];
 

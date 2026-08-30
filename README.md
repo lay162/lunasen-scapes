@@ -76,4 +76,4 @@ Next.js (static export), TypeScript, Tailwind CSS, shadcn/ui. No database or log
 
 ## Legal
 
-LUNA SEN Group Ltd, company 17049817. Based in Eastham Village, Wirral.
+LUNA SEN Group Ltd, company 17049817. Based in Wirral, Merseyside.

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import type { CaseStudy } from "@/lib/case-studies";
 import { AREAS, BUILDING_SERVICES, GROUNDWORK_SERVICES, SPACES } from "@/lib/content";
 import type { AreaLocal } from "@/lib/local-areas";
-import { SITE, absoluteUrl } from "@/lib/site";
+import { SITE, absoluteUrl, postalAddressJsonLd } from "@/lib/site";
 
 const defaultOg = {
   url: absoluteUrl("/opengraph-image", { asset: true }),
@@ -87,14 +87,7 @@ export function localBusinessJsonLd() {
         foundingDate: String(SITE.foundedYear),
         taxID: SITE.companyNumber,
         identifier: SITE.companyNumber,
-        address: {
-          "@type": "PostalAddress",
-          streetAddress: SITE.address.line1,
-          addressLocality: SITE.address.city,
-          addressRegion: SITE.address.region,
-          ...(SITE.address.postalCode ? { postalCode: SITE.address.postalCode } : {}),
-          addressCountry: SITE.address.country,
-        },
+        address: postalAddressJsonLd(),
         geo: {
           "@type": "GeoCoordinates",
           latitude: SITE.geo.latitude,
@@ -210,14 +203,7 @@ export function localBusinessJsonLd() {
         name: SITE.legalName,
         legalName: SITE.legalName,
         identifier: SITE.companyNumber,
-        address: {
-          "@type": "PostalAddress",
-          streetAddress: SITE.address.line1,
-          addressLocality: SITE.address.city,
-          addressRegion: SITE.address.region,
-          ...(SITE.address.postalCode ? { postalCode: SITE.address.postalCode } : {}),
-          addressCountry: SITE.address.country,
-        },
+        address: postalAddressJsonLd(),
         url: SITE.url,
       },
     ],

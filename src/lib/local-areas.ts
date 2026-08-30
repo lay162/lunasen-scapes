@@ -67,7 +67,7 @@ export const AREA_LOCAL: Record<AreaSlug, AreaLocal> = {
       "LUNA SEN-Scapes builds disabled garden makeovers, sensory gardens, inclusive play and groundworks across the United Kingdom from a Wirral base.",
     heroLines: [
       "England, Scotland, Wales and Northern Ireland.",
-      "We travel from Eastham Village, Wirral.",
+      "We travel from Wirral.",
       "Send the postcode. We will say if a visit makes sense.",
     ],
     intro: [
@@ -402,9 +402,9 @@ export const AREA_LOCAL: Record<AreaSlug, AreaLocal> = {
     headline: "SEN garden makeovers and groundworks in Wirral",
     seoTitle: "Disabled Garden Makeovers & SEN Landscapes Wirral",
     seoDescription:
-      "LUNA SEN-Scapes is based in Eastham Village, Wirral. Disabled garden makeovers, sensory gardens, inclusive play and groundworks across the peninsula.",
+      "LUNA SEN-Scapes is based in Wirral. Disabled garden makeovers, sensory gardens, inclusive play and groundworks across the peninsula.",
     heroLines: [
-      "Home base. Eastham Village.",
+      "Home base. Wirral.",
       "Wallasey to West Kirby, Birkenhead to Neston.",
       "Call for a Wirral site visit.",
     ],
@@ -510,7 +510,7 @@ export const AREA_LOCAL: Record<AreaSlug, AreaLocal> = {
     heroLines: [
       "Chester and the villages around it.",
       "Same groundworks standard as the rest of the UK.",
-      "A short hop from Eastham Village.",
+      "A short hop from our Wirral base.",
     ],
     intro: [
       "Chester jobs sit next to our Wirral and Cheshire work.",
@@ -588,7 +588,7 @@ export const AREA_LOCAL: Record<AreaSlug, AreaLocal> = {
     heroLines: [
       "Coastal plots. Serious drainage.",
       "West Wirral shoreline and inland.",
-      "Local to our Eastham base.",
+      "Local to our Wirral base.",
     ],
     intro: [
       "West Kirby gardens fail when salt, sand and water are ignored.",
@@ -614,7 +614,7 @@ export const AREA_LOCAL: Record<AreaSlug, AreaLocal> = {
     heroLines: [
       "Dee side of the Wirral.",
       "Neston, Parkgate and the villages.",
-      "Short run from Eastham Village.",
+      "Short run from our Wirral base.",
     ],
     intro: [
       "Neston sits between our Wirral base and Cheshire jobs.",

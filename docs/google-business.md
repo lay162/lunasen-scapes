@@ -21,8 +21,8 @@ Additional:
 
 ## Address
 
-Eastham Village  
 Wirral  
+Merseyside  
 United Kingdom
 
 Service-area business: yes. Add the United Kingdom. You can also list England, Scotland, Wales, Northern Ireland, and your home towns (Wirral, Liverpool, Cheshire).

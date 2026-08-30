@@ -27,10 +27,12 @@ jobs:
         env:
           NEXT_PUBLIC_SITE_URL: https://lunasen-scapes.co.uk
           NEXT_PUBLIC_ENQUIRY_EMAIL: info@lunasen-scapes.co.uk
+          NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION: ${{ secrets.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION }}
       - run: npm run build
         env:
           NEXT_PUBLIC_SITE_URL: https://lunasen-scapes.co.uk
           NEXT_PUBLIC_ENQUIRY_EMAIL: info@lunasen-scapes.co.uk
+          NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION: ${{ secrets.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION }}
       - uses: actions/upload-pages-artifact@v3
         with:
           path: out
