@@ -53,18 +53,16 @@ Then add these exact records:
 
 That is all four **A** records, plus **www**. Save each one.
 
-Optional IPv6 (only if GoDaddy offers AAAA and you want it):
+GitHub also needs these four **AAAA** rows for the padlock. **Add New Record** four times:
 
-| Type | Name | Value |
-| --- | --- | --- |
-| AAAA | @ | `2606:50c0:8000::153` |
-| AAAA | @ | `2606:50c0:8001::153` |
-| AAAA | @ | `2606:50c0:8002::153` |
-| AAAA | @ | `2606:50c0:8003::153` |
+| Type | Name | Value | TTL |
+| --- | --- | --- | --- |
+| AAAA | @ | `2606:50c0:8000::153` | 1 Hour |
+| AAAA | @ | `2606:50c0:8001::153` | 1 Hour |
+| AAAA | @ | `2606:50c0:8002::153` | 1 Hour |
+| AAAA | @ | `2606:50c0:8003::153` | 1 Hour |
 
-Wait. It can be a few minutes, sometimes a few hours. Then type `https://lunasen-scapes.co.uk` in Chrome. You should see this site, not GoDaddy’s launching page.
-
-GitHub then adds the padlock. If Chrome still says “not secure”, wait and refresh. Do not buy a GoDaddy SSL add-on for this.
+Do not buy a GoDaddy SSL add-on. GitHub issues the certificate. If Chrome says **Your connection is not private** / `NET::ERR_CERT_COMMON_NAME_INVALID`, the site is already on GitHub — the padlock is still being made. Wait, then try a new Incognito window.
 
 ## 3. Company mailbox
 
