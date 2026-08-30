@@ -51,8 +51,8 @@ export default async function SpacePage({ params }: Props) {
       <JsonLd
         data={breadcrumbJsonLd([
           { name: "Home", path: "/" },
-          { name: "Spaces", path: "/spaces" },
-          { name: space.title, path: `/spaces/${space.slug}` },
+          { name: "Spaces", path: "/spaces/" },
+          { name: space.title, path: `/spaces/${space.slug}/` },
         ])}
       />
       <JsonLd data={serviceJsonLd(space)} />
@@ -94,10 +94,11 @@ export default async function SpacePage({ params }: Props) {
           </div>
           <div className="rounded-2xl border p-6">
             <h2 className="font-bold">Where we build this</h2>
+            <p className="mt-2 text-sm text-muted-foreground">The whole UK — not only the Wirral.</p>
             <ul className="mt-3 flex flex-wrap justify-center gap-2">
-              {AREAS.slice(0, 8).map((area, i) => (
+              {AREAS.map((area, i) => (
                 <li key={area.slug}>
-                  <Link href={`/areas/${area.slug}`} className={`text-sm underline-offset-2 hover:underline ${lunaLinkClass(i)}`}>
+                  <Link href={`/areas/${area.slug}/`} className={`text-sm underline-offset-2 hover:underline ${lunaLinkClass(i)}`}>
                     {area.name}
                   </Link>
                 </li>

@@ -7,11 +7,17 @@ export function PageHero({
   eyebrow,
   title,
   lines,
+  crumbs,
 }: {
   eyebrow?: string;
   title: string;
   lines: string[];
+  crumbs?: { name: string; href?: string }[];
 }) {
+  const trail = crumbs ?? [
+    { name: "Home", href: "/" },
+    { name: title },
+  ];
   return (
     <section className="border-b border-black/5 bg-[linear-gradient(180deg,#fff5fb_0%,#ffffff_55%)]">
       <div className="mx-auto max-w-3xl px-4 py-12 text-center sm:px-6 sm:py-16">
@@ -26,11 +32,18 @@ export function PageHero({
           <Lines lines={lines} />
         </div>
         <p className="mt-8 text-sm">
-          <Link href="/" className="text-muted-foreground hover:text-foreground">
-            Home
-          </Link>
-          <span className="px-2 text-muted-foreground">/</span>
-          <span className="font-medium">{title}</span>
+          {trail.map((crumb, i) => (
+            <span key={`${crumb.name}-${i}`}>
+              {i > 0 ? <span className="px-2 text-muted-foreground">/</span> : null}
+              {crumb.href ? (
+                <Link href={crumb.href} className="text-muted-foreground hover:text-foreground">
+                  {crumb.name}
+                </Link>
+              ) : (
+                <span className="font-medium">{crumb.name}</span>
+              )}
+            </span>
+          ))}
         </p>
       </div>
     </section>

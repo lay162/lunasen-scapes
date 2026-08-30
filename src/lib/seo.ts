@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
-import { SITE, absoluteUrl } from "@/lib/site";
 import { AREAS, BUILDING_SERVICES, GROUNDWORK_SERVICES, SPACES } from "@/lib/content";
+import type { AreaLocal } from "@/lib/local-areas";
+import { SITE, absoluteUrl } from "@/lib/site";
 
 const defaultOg = {
   url: absoluteUrl("/opengraph-image", { asset: true }),
@@ -258,5 +259,47 @@ export function serviceJsonLd(space: (typeof SPACES)[number]) {
     areaServed: AREAS.map((area) => area.name),
     audience: { "@type": "Audience", audienceType: space.audience },
     serviceType: space.title,
+  };
+}
+
+export function areaPlaceJsonLd(area: (typeof AREAS)[number], local: AreaLocal) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Place",
+    name: area.name,
+    description: local.seoDescription,
+    url: absoluteUrl(`/areas/${area.slug}/`),
+    containedInPlace: { "@type": "AdministrativeArea", name: local.containedIn },
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: local.geo.latitude,
+      longitude: local.geo.longitude,
+    },
+  };
+}
+
+export function areaServiceJsonLd(area: (typeof AREAS)[number], local: AreaLocal) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: `SEN and accessible landscape services in ${area.name}`,
+    description: local.seoDescription,
+    url: absoluteUrl(`/areas/${area.slug}/`),
+    provider: { "@id": `${SITE.url}/#business` },
+    areaServed: {
+      "@type": "Place",
+      name: area.name,
+      geo: {
+        "@type": "GeoCoordinates",
+        latitude: local.geo.latitude,
+        longitude: local.geo.longitude,
+      },
+    },
+    serviceType: [
+      "Disabled garden makeovers",
+      "Sensory gardens",
+      "Inclusive playgrounds",
+      "Groundworks",
+    ],
   };
 }

@@ -1,12 +1,20 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
+import { FaqList } from "@/components/faq-list";
 import { JsonLd } from "@/components/json-ld";
-import { Lines, splitSentences } from "@/components/lines";
+import { Lines } from "@/components/lines";
 import { PageHero } from "@/components/page-hero";
-import { AREAS, GROUNDWORK_SERVICES, SPACES } from "@/lib/content";
-import { lunaLinkClass } from "@/lib/luna-tone";
-import { breadcrumbJsonLd, pageMetadata } from "@/lib/seo";
+import { AREAS, type AreaSlug } from "@/lib/content";
+import { areaPath, getAreaLocal, relatedAreas } from "@/lib/local-areas";
+import { lunaBtnClass, lunaLinkClass } from "@/lib/luna-tone";
+import {
+  areaPlaceJsonLd,
+  areaServiceJsonLd,
+  breadcrumbJsonLd,
+  faqJsonLd,
+  pageMetadata,
+} from "@/lib/seo";
 import { SITE } from "@/lib/site";
 
 type Props = { params: Promise<{ slug: string }> };
@@ -21,10 +29,11 @@ export async function generateMetadata({ params }: Props) {
   const { slug } = await params;
   const area = AREAS.find((item) => item.slug === slug);
   if (!area) return {};
+  const local = getAreaLocal(area.slug);
   return pageMetadata({
-    title: `Disabled Garden Makeovers, Playgrounds & Groundworks in ${area.name}`,
-    description: `LUNA SEN-Scapes builds disabled garden makeovers, inclusive playgrounds, sensory gardens, driveways, fencing and safe play areas in ${area.name}. Levelling, dig offs and drainage included.`,
-    path: `/areas/${area.slug}`,
+    title: `${local.seoTitle} | ${SITE.name}`,
+    description: local.seoDescription,
+    path: areaPath(area.slug),
     keywords: [
       `disabled garden makeover ${area.name}`,
       `accessible garden ${area.name}`,
@@ -32,6 +41,7 @@ export async function generateMetadata({ params }: Props) {
       `sensory garden ${area.name}`,
       `driveways ${area.name}`,
       `groundworks ${area.name}`,
+      ...local.towns.map((town) => `SEN garden ${town}`),
     ],
   });
 }
@@ -40,49 +50,131 @@ export default async function AreaPage({ params }: Props) {
   const { slug } = await params;
   const area = AREAS.find((item) => item.slug === slug);
   if (!area) notFound();
+  const local = getAreaLocal(area.slug);
+  const related = relatedAreas(area.slug as AreaSlug);
+  const faqs = [
+    {
+      q: `Do you work in ${area.name}?`,
+      a: `${local.intro[0]} ${local.intro[1] ?? "Send a postcode and photos and we will say if a visit makes sense."}`,
+    },
+    {
+      q: `What do you build in ${area.name}?`,
+      a: `Disabled garden makeovers, sensory gardens, inclusive play and full groundworks in ${area.name}. Driveways, fencing, patios, levelling, dig offs and drainage sit in the same brief.`,
+    },
+    {
+      q: `Is this only for the Wirral?`,
+      a: "No. LUNA SEN-Scapes is based in Eastham Village, Wirral, and works across the United Kingdom. Each area page is written for that place — England, Scotland, Wales, Northern Ireland and the English regions included.",
+    },
+  ];
 
   return (
     <main id="main-content" className="text-center">
       <JsonLd
         data={breadcrumbJsonLd([
           { name: "Home", path: "/" },
-          { name: "Areas", path: "/areas" },
-          { name: area.name, path: `/areas/${area.slug}` },
+          { name: "Areas", path: "/areas/" },
+          { name: area.name, path: areaPath(area.slug) },
         ])}
       />
-      <PageHero eyebrow={area.name} title={`LUNA SEN-Scapes in ${area.name}`} lines={splitSentences(area.blurb)} />
+      <JsonLd data={areaPlaceJsonLd(area, local)} />
+      <JsonLd data={areaServiceJsonLd(area, local)} />
+      <JsonLd data={faqJsonLd(faqs)} />
+      <PageHero
+        eyebrow={area.name}
+        title={local.headline}
+        lines={local.heroLines}
+        crumbs={[
+          { name: "Home", href: "/" },
+          { name: "Areas", href: "/areas/" },
+          { name: area.name },
+        ]}
+      />
       <section className="mx-auto max-w-3xl px-4 py-12 sm:px-6">
-        <h2 className="text-2xl font-black">What we can build here</h2>
+        <h2 className="text-2xl font-black">Why this page is for {area.name}</h2>
+        <div className="mt-4">
+          <Lines lines={local.intro} />
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-6xl px-4 pb-12 sm:px-6">
+        <h2 className="text-2xl font-black">What we can build in {area.name}</h2>
+        <div className="mt-6 grid gap-4 sm:grid-cols-2">
+          {local.highlights.map((item, i) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              className="rounded-2xl border bg-white p-5 hover:border-luna-pink/50"
+            >
+              <h3 className={`text-lg font-black ${lunaLinkClass(i)}`}>{item.title}</h3>
+              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{item.copy}</p>
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      <section className="border-y bg-[#fff7fb] py-12">
+        <div className="mx-auto max-w-3xl px-4 sm:px-6">
+          <h2 className="text-2xl font-black">Places we cover from here</h2>
+          <div className="mt-4">
+            <Lines
+              lines={[
+                `${area.name} sits inside ${local.containedIn}.`,
+                "These are the places people usually mean when they search this page.",
+              ]}
+            />
+          </div>
+          <ul className="mt-6 flex flex-wrap justify-center gap-2">
+            {local.towns.map((town, i) => (
+              <li
+                key={town}
+                className={`rounded-full border bg-white px-4 py-2 text-sm font-semibold ${lunaLinkClass(i)} border-current`}
+              >
+                {town}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-3xl px-4 py-12 sm:px-6">
+        <h2 className="text-2xl font-black">Nearby and related areas</h2>
         <div className="mt-4">
           <Lines
             lines={[
-              `From ${SITE.address.city} we travel into ${area.name} for family gardens and groundworks.`,
-              "Disabled garden makeovers, playgrounds and sensory gardens.",
-              "Driveways, fencing, patios and drainage too.",
+              "Every UK nation and region has the same treatment — unique copy, not a copied Wirral page.",
+              "Open another area if that is closer to the postcode.",
             ]}
           />
         </div>
-        <ul className="mt-8 space-y-3">
-          {SPACES.map((space, i) => (
-            <li key={space.slug} className="rounded-xl border bg-white p-4">
-              <Link href={`/spaces/${space.slug}`} className={`font-bold hover:underline ${lunaLinkClass(i)}`}>
-                {space.title} in {area.name}
-              </Link>
-              <p className="mt-1 text-sm leading-relaxed text-muted-foreground">{space.summary}</p>
-            </li>
-          ))}
-        </ul>
-        <h3 className="mt-10 text-xl font-black">Groundworks in {area.name}</h3>
-        <ul className="mt-4 flex flex-wrap justify-center gap-2">
-          {GROUNDWORK_SERVICES.map((service, i) => (
-            <li key={service.slug}>
-              <Link href="/groundworks" className={`text-sm font-semibold hover:underline ${lunaLinkClass(i)}`}>
-                {service.title}
+        <ul className="mt-6 flex flex-wrap justify-center gap-2">
+          {related.map((item, i) => (
+            <li key={item.slug}>
+              <Link
+                href={areaPath(item.slug)}
+                className={`inline-flex rounded-full border bg-white px-4 py-2 text-sm font-semibold hover:underline ${lunaLinkClass(i)} border-current`}
+              >
+                {item.name}
               </Link>
             </li>
           ))}
+          <li>
+            <Link
+              href="/areas/"
+              className="inline-flex rounded-full border bg-white px-4 py-2 text-sm font-semibold text-luna-pink-ink border-current hover:underline"
+            >
+              All UK areas
+            </Link>
+          </li>
         </ul>
-        <div className="mt-10 rounded-2xl bg-black p-6 text-white">
+      </section>
+
+      <section className="mx-auto max-w-3xl px-4 pb-12 sm:px-6">
+        <h2 className="mb-6 text-2xl font-black">Quick answers for {area.name}</h2>
+        <FaqList items={faqs} />
+      </section>
+
+      <section className="mx-auto max-w-3xl px-4 pb-16 sm:px-6">
+        <div className="rounded-2xl bg-black p-6 text-white">
           <p className="font-bold">Got a {area.name} postcode?</p>
           <div className="mt-4">
             <Lines
@@ -94,7 +186,7 @@ export default async function AreaPage({ params }: Props) {
               ]}
             />
           </div>
-          <Link href="/enquire" className="luna-btn luna-btn-gradient mt-6 h-10 px-4 text-sm">
+          <Link href="/enquire/" className={`${lunaBtnClass(1)} mt-6 h-10 px-4 text-sm`}>
             Enquire from {area.name}
           </Link>
         </div>

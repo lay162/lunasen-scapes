@@ -49,6 +49,13 @@ export const SITE = {
     "Liverpool",
     "Merseyside",
     "Cheshire",
+    "Chester",
+    "Ellesmere Port",
+    "North Wales",
+    "Wallasey",
+    "West Kirby",
+    "Neston",
+    "Birkenhead",
   ],
   google: {
     mapsQuery: "Eastham Village, Wirral",

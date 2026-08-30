@@ -214,13 +214,22 @@ export default function HomePage() {
           <p className="text-[11px] font-bold uppercase tracking-[0.28em] text-luna-pink-ink">Areas</p>
           <h2 className="mt-2 flex flex-col items-center text-3xl font-black tracking-tight">
             <BrandName stacked size="lg" />
-            <span className="mt-1 text-xl sm:text-2xl">near you.</span>
+            <span className="mt-1 text-xl sm:text-2xl">across the UK.</span>
           </h2>
+          <div className="mt-4">
+            <Lines
+              lines={[
+                "England, Scotland, Wales and Northern Ireland.",
+                "Every English region has its own page.",
+                "Wirral is the base, not the only place we work.",
+              ]}
+            />
+          </div>
           <ul className="mt-8 flex flex-wrap justify-center gap-2">
             {AREAS.map((area, i) => (
               <li key={area.slug}>
                 <Link
-                  href={`/areas/${area.slug}`}
+                  href={`/areas/${area.slug}/`}
                   className={`inline-flex rounded-full border bg-white px-4 py-2 text-sm font-semibold ${lunaLinkClass(i)} border-current`}
                 >
                   {area.name}
@@ -228,6 +237,9 @@ export default function HomePage() {
               </li>
             ))}
           </ul>
+          <Link href="/areas/" className={`${lunaBtnClass(1)} mt-8 h-11 px-5`}>
+            Every UK area
+          </Link>
         </div>
       </section>
 

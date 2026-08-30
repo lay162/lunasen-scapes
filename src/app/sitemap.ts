@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 
 import { AREAS, SPACES } from "@/lib/content";
+import { areaPath } from "@/lib/local-areas";
 import { absoluteUrl } from "@/lib/site";
 
 export const dynamic = "force-static";
@@ -21,7 +22,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/accessibility/",
   ];
   const spacePaths = SPACES.map((space) => `/spaces/${space.slug}/`);
-  const areaPaths = AREAS.map((area) => `/areas/${area.slug}/`);
+  const areaPaths = AREAS.map((area) => areaPath(area.slug));
 
   return [...staticPaths, ...spacePaths, ...areaPaths].map((path) => ({
     url: absoluteUrl(path),
