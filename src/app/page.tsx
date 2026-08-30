@@ -6,7 +6,8 @@ import { FaqList } from "@/components/faq-list";
 import { JsonLd } from "@/components/json-ld";
 import { Lines } from "@/components/lines";
 import { BrandName } from "@/components/brand-mark";
-import { AREAS, BUILDING_SERVICES, FAQS, GROUNDWORK_SERVICES, SPACES, WORK_ITEMS } from "@/lib/content";
+import { CASE_STUDIES, workPath } from "@/lib/case-studies";
+import { AREAS, BUILDING_SERVICES, FAQS, GROUNDWORK_SERVICES, SPACES } from "@/lib/content";
 import { lunaBtnClass, lunaLinkClass } from "@/lib/luna-tone";
 import { breadcrumbJsonLd, faqJsonLd, pageMetadata } from "@/lib/seo";
 import { SITE } from "@/lib/site";
@@ -190,22 +191,25 @@ export default function HomePage() {
             ]}
           />
         </div>
-        <Link href="/work" className={`${lunaBtnClass(0)} mt-6 h-11 px-5`}>
-          Full gallery
+        <Link href="/work/" className={`${lunaBtnClass(0)} mt-6 h-11 px-5`}>
+          Case studies
         </Link>
         <div className="mt-8 grid grid-cols-2 gap-3 md:grid-cols-4">
-          {WORK_ITEMS.slice(0, 8).map((item) => (
-            <figure key={item.src} className="overflow-hidden rounded-2xl">
-              <Image
-                src={item.src}
-                alt={item.alt}
-                width={640}
-                height={480}
-                sizes="(max-width: 768px) 50vw, 25vw"
-                className="aspect-[4/3] w-full object-cover"
-              />
-            </figure>
-          ))}
+          {CASE_STUDIES.map((study) => {
+            const hero = study.images[0];
+            return (
+              <Link key={study.slug} href={workPath(study.slug)} className="overflow-hidden rounded-2xl">
+                <Image
+                  src={hero.src}
+                  alt={hero.alt}
+                  width={hero.width}
+                  height={hero.height}
+                  sizes="(max-width: 768px) 50vw, 25vw"
+                  className="aspect-[4/3] w-full object-cover"
+                />
+              </Link>
+            );
+          })}
         </div>
       </section>
 

@@ -1,55 +1,75 @@
-import Image from "next/image";
+import Link from "next/link";
 
+import { CaseStudyCard } from "@/components/case-study-card";
 import { JsonLd } from "@/components/json-ld";
+import { Lines } from "@/components/lines";
 import { PageHero } from "@/components/page-hero";
-import { WORK_ITEMS } from "@/lib/content";
+import { CASE_STUDIES, workPath } from "@/lib/case-studies";
+import { lunaBtnClass } from "@/lib/luna-tone";
 import { breadcrumbJsonLd, pageMetadata } from "@/lib/seo";
+import { SITE, absoluteUrl } from "@/lib/site";
 
 export const metadata = pageMetadata({
-  title: "Our Work | Garden Makeovers, Playgrounds & Groundworks UK",
+  title: "Project Case Studies | Garden Makeovers, Patios, Fencing & Groundworks",
   description:
-    "Groundworks, garden makeovers, paving, fencing and dig offs by LUNA SEN-Scapes — playgrounds and accessible gardens across the UK.",
-  path: "/work",
+    "Real LUNA SEN-Scapes case studies: accessible garden makeovers, sandstone and porcelain patios, SEN-safe fencing, dig offs, concrete foundations and block paving across the UK.",
+  path: "/work/",
+  keywords: [
+    "garden makeover case study UK",
+    "accessible patio groundworks",
+    "SEN fencing case study",
+    "garden dig off",
+    "block paving driveway UK",
+  ],
 });
 
 export default function WorkPage() {
   return (
     <main id="main-content" className="text-center">
-      <JsonLd data={breadcrumbJsonLd([{ name: "Home", path: "/" }, { name: "Work", path: "/work" }])} />
+      <JsonLd data={breadcrumbJsonLd([{ name: "Home", path: "/" }, { name: "Work", path: "/work/" }])} />
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "ItemList",
+          name: `${SITE.name} project case studies`,
+          itemListElement: CASE_STUDIES.map((study, i) => ({
+            "@type": "ListItem",
+            position: i + 1,
+            url: absoluteUrl(workPath(study.slug)),
+            name: study.title,
+          })),
+        }}
+      />
       <PageHero
-        eyebrow="Portfolio"
+        eyebrow="Case studies"
         title="Real UK ground, not stock playground photos."
         lines={[
           "These are real jobs.",
           "Dig offs, paving, gardens, fencing and levels.",
-          "The same quality under a playground or a family drive.",
+          "Each page is a case study — brief, build and outcome.",
+        ]}
+        crumbs={[
+          { name: "Home", href: "/" },
+          { name: "Work" },
         ]}
       />
       <section className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {WORK_ITEMS.map((item) => (
-            <figure key={item.src} className="overflow-hidden rounded-2xl border bg-white shadow-sm">
-              <Image
-                src={item.src}
-                alt={item.alt}
-                width={800}
-                height={600}
-                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                className="aspect-[4/3] w-full object-cover"
-              />
-              <figcaption className="p-4">
-                <p className="font-bold">{item.title}</p>
-                <p className="mt-1 text-sm leading-relaxed text-muted-foreground">{item.caption}</p>
-              </figcaption>
-            </figure>
+          {CASE_STUDIES.map((study, i) => (
+            <CaseStudyCard key={study.slug} study={study} index={i} />
           ))}
         </div>
-        <p className="mx-auto mt-10 max-w-2xl text-sm leading-relaxed text-muted-foreground">
-          Named family garden case studies will be published here with permission.
-        </p>
-        <p className="mx-auto mt-3 max-w-2xl text-sm leading-relaxed text-muted-foreground">
-          Until then we show the groundworks quality, not invented playground photos.
-        </p>
+        <div className="mx-auto mt-12 max-w-2xl">
+          <Lines
+            lines={[
+              "Named family stories will be added here with permission.",
+              "Until then these pages show the groundworks quality on real UK plots.",
+            ]}
+          />
+        </div>
+        <Link href="/enquire/" className={`${lunaBtnClass(1)} mt-8 h-11 px-5`}>
+          Request a Site Visit
+        </Link>
       </section>
     </main>
   );

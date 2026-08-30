@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import type { CaseStudy } from "@/lib/case-studies";
 import { AREAS, BUILDING_SERVICES, GROUNDWORK_SERVICES, SPACES } from "@/lib/content";
 import type { AreaLocal } from "@/lib/local-areas";
 import { SITE, absoluteUrl } from "@/lib/site";
@@ -300,6 +301,57 @@ export function areaServiceJsonLd(area: (typeof AREAS)[number], local: AreaLocal
       "Sensory gardens",
       "Inclusive playgrounds",
       "Groundworks",
+    ],
+  };
+}
+
+export function caseStudyJsonLd(study: CaseStudy) {
+  const url = absoluteUrl(`/work/${study.slug}/`);
+  const images = study.images.map((image) => absoluteUrl(image.src, { asset: true }));
+  const places = study.areaSlugs.map((slug) => {
+    const area = AREAS.find((item) => item.slug === slug);
+    return { "@type": "Place" as const, name: area?.name ?? slug };
+  });
+  return {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "CreativeWork",
+        "@id": `${url}#work`,
+        name: study.title,
+        headline: study.title,
+        description: study.seoDescription,
+        url,
+        inLanguage: "en-GB",
+        creator: { "@id": `${SITE.url}/#business` },
+        publisher: { "@id": `${SITE.url}/#business` },
+        author: { "@type": "Organization", name: SITE.name, url: SITE.url },
+        about: { "@id": `${url}#service` },
+        contentLocation: places,
+        image: images,
+        thumbnailUrl: images[0],
+      },
+      {
+        "@type": "VisualArtwork",
+        "@id": `${url}#artwork`,
+        name: study.title,
+        artform: "Landscape photography of completed groundworks",
+        artMedium: study.materials.join(", "),
+        creator: { "@id": `${SITE.url}/#business` },
+        image: images,
+        contentLocation: places[0],
+      },
+      {
+        "@type": "Service",
+        "@id": `${url}#service`,
+        name: study.title,
+        description: study.seoDescription,
+        url,
+        provider: { "@id": `${SITE.url}/#business` },
+        areaServed: places,
+        serviceType: study.eyebrow,
+        image: images[0],
+      },
     ],
   };
 }
