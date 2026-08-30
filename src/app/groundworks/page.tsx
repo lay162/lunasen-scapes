@@ -1,10 +1,13 @@
 import Link from "next/link";
 
+import { FaqList } from "@/components/faq-list";
 import { JsonLd } from "@/components/json-ld";
 import { PageHero } from "@/components/page-hero";
-import { GROUNDWORK_SERVICES } from "@/lib/content";
+import { FAQS, GROUNDWORK_SERVICES } from "@/lib/content";
 import { lunaLinkClass } from "@/lib/luna-tone";
-import { breadcrumbJsonLd, pageMetadata } from "@/lib/seo";
+import { breadcrumbJsonLd, faqJsonLd, pageMetadata } from "@/lib/seo";
+
+const GROUNDWORK_FAQS = [FAQS[2], FAQS[4], FAQS[5]];
 
 export const metadata = pageMetadata({
   title: "Groundworks, Driveways, Fencing, Dig Offs & Drainage",
@@ -26,9 +29,10 @@ export default function GroundworksPage() {
       <JsonLd
         data={breadcrumbJsonLd([
           { name: "Home", path: "/" },
-          { name: "Groundworks", path: "/groundworks" },
+          { name: "Groundworks", path: "/groundworks/" },
         ])}
       />
+      <JsonLd data={faqJsonLd([...GROUNDWORK_FAQS])} />
       <PageHero
         eyebrow="On the tools"
         title="Groundworks for family homes and accessible gardens."
@@ -48,6 +52,9 @@ export default function GroundworksPage() {
               <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{service.summary}</p>
             </article>
           ))}
+        </div>
+        <div className="mx-auto mt-12 max-w-3xl">
+          <FaqList items={[...GROUNDWORK_FAQS]} />
         </div>
         <div className="mt-12 rounded-3xl bg-black p-8 text-white md:p-10">
           <h2 className="text-2xl font-black">Send the site, not a shopping list.</h2>

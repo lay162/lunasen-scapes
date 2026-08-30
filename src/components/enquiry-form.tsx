@@ -87,7 +87,7 @@ export function EnquiryForm() {
           <Input id="name" name="name" required autoComplete="name" className={fieldClass} />
         </div>
         <div className="space-y-2">
-          <Label htmlFor="organisation">School / organisation (optional)</Label>
+          <Label htmlFor="organisation">Household or organisation (optional)</Label>
           <Input id="organisation" name="organisation" autoComplete="organization" className={fieldClass} />
         </div>
         <div className="space-y-2">

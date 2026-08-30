@@ -71,9 +71,15 @@ export function fullAddress() {
     .join(", ");
 }
 
-export function absoluteUrl(path = "/") {
+/** Page URLs get a trailing slash to match `trailingSlash: true`. Asset paths do not. */
+export function absoluteUrl(path = "/", opts?: { asset?: boolean }) {
   const p = path.startsWith("/") ? path : `/${path}`;
-  return `${SITE.url}${p}`;
+  if (p === "/") return `${SITE.url}/`;
+  if (opts?.asset || /\.[a-z0-9]+$/i.test(p)) {
+    return `${SITE.url}${p}`;
+  }
+  const slashed = p.endsWith("/") ? p : `${p}/`;
+  return `${SITE.url}${slashed}`;
 }
 
 /** Live branded card: https://lunasen-scapes.co.uk/BusinessCard/ */

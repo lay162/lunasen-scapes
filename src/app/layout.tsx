@@ -20,6 +20,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
   title: {
     default: `${SITE.name} | Safe Places, Gardens & Building Works for SEN & Disabled People | UK`,
+    // Child pages pass a short title. pageMetadata() uses `absolute` when the title already includes the brand.
     template: `%s | ${SITE.name}`,
   },
   description: SITE.description,

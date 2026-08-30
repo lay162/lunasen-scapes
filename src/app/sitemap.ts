@@ -9,19 +9,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
   const staticPaths = [
     "/",
-    "/spaces",
-    "/groundworks",
-    "/building",
-    "/work",
-    "/areas",
-    "/enquire",
-    "/about",
+    "/spaces/",
+    "/groundworks/",
+    "/building/",
+    "/work/",
+    "/areas/",
+    "/enquire/",
+    "/about/",
     "/BusinessCard/",
-    "/privacy",
-    "/accessibility",
+    "/privacy/",
+    "/accessibility/",
   ];
-  const spacePaths = SPACES.map((space) => `/spaces/${space.slug}`);
-  const areaPaths = AREAS.map((area) => `/areas/${area.slug}`);
+  const spacePaths = SPACES.map((space) => `/spaces/${space.slug}/`);
+  const areaPaths = AREAS.map((area) => `/areas/${area.slug}/`);
 
   return [...staticPaths, ...spacePaths, ...areaPaths].map((path) => ({
     url: absoluteUrl(path),

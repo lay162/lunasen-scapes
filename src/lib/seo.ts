@@ -3,7 +3,7 @@ import { SITE, absoluteUrl } from "@/lib/site";
 import { AREAS, BUILDING_SERVICES, GROUNDWORK_SERVICES, SPACES } from "@/lib/content";
 
 const defaultOg = {
-  url: absoluteUrl("/opengraph-image"),
+  url: absoluteUrl("/opengraph-image", { asset: true }),
   width: 1200,
   height: 630,
   alt: `${SITE.name} — disabled garden makeovers, playgrounds and groundworks across the UK`,
@@ -23,9 +23,9 @@ export function pageMetadata({
   robots?: Metadata["robots"];
 }): Metadata {
   const url = absoluteUrl(path);
-  const fullTitle = title.includes(SITE.name) ? title : `${title} | ${SITE.name}`;
+  const brandedTitle = title.includes(SITE.name) ? title : `${title} | ${SITE.name}`;
   return {
-    title: fullTitle,
+    title: title.includes(SITE.name) ? { absolute: title } : title,
     description,
     ...(robots ? { robots } : {}),
     keywords: [
@@ -49,13 +49,13 @@ export function pageMetadata({
       locale: "en_GB",
       url,
       siteName: SITE.name,
-      title: fullTitle,
+      title: brandedTitle,
       description,
       images: [defaultOg],
     },
     twitter: {
       card: "summary_large_image",
-      title: fullTitle,
+      title: brandedTitle,
       description,
       images: [defaultOg.url],
     },
@@ -77,8 +77,8 @@ export function localBusinessJsonLd() {
         url: SITE.url,
         email: SITE.email,
         telephone: SITE.phoneTel,
-        image: absoluteUrl("/opengraph-image"),
-        logo: absoluteUrl("/icon"),
+        image: absoluteUrl("/opengraph-image", { asset: true }),
+        logo: absoluteUrl("/icon", { asset: true }),
         priceRange: SITE.priceRange,
         currenciesAccepted: "GBP",
         paymentAccepted: "Bank transfer, invoice",

@@ -1,9 +1,13 @@
 import { EnquiryForm } from "@/components/enquiry-form";
+import { FaqList } from "@/components/faq-list";
 import { JsonLd } from "@/components/json-ld";
 import { Lines } from "@/components/lines";
 import { PageHero } from "@/components/page-hero";
-import { breadcrumbJsonLd, pageMetadata } from "@/lib/seo";
+import { FAQS } from "@/lib/content";
+import { breadcrumbJsonLd, faqJsonLd, pageMetadata } from "@/lib/seo";
 import { SITE, fullAddress } from "@/lib/site";
+
+const ENQUIRE_FAQS = [FAQS[0], FAQS[1], FAQS[5]];
 
 export const metadata = pageMetadata({
   title: "Enquire | Disabled Garden Makeover, Playground & Groundworks Quotes UK",
@@ -15,7 +19,8 @@ export const metadata = pageMetadata({
 export default function EnquirePage() {
   return (
     <main id="main-content" className="text-center">
-      <JsonLd data={breadcrumbJsonLd([{ name: "Home", path: "/" }, { name: "Enquire", path: "/enquire" }])} />
+      <JsonLd data={breadcrumbJsonLd([{ name: "Home", path: "/" }, { name: "Enquire", path: "/enquire/" }])} />
+      <JsonLd data={faqJsonLd([...ENQUIRE_FAQS])} />
       <PageHero
         eyebrow="Free visit where it is useful"
         title="Tell us the site. We will tell you if we should come."
@@ -49,6 +54,12 @@ export default function EnquirePage() {
             <p className="mt-1 text-xs text-muted-foreground">
               Weekdays {SITE.openingHours[0].opens}–{SITE.openingHours[0].closes}.
             </p>
+          </div>
+          <div className="rounded-2xl border p-6 text-left">
+            <h2 className="text-center font-black">Common questions</h2>
+            <div className="mt-4">
+              <FaqList items={[...ENQUIRE_FAQS]} />
+            </div>
           </div>
           <div className="rounded-2xl bg-[#e8f8fd] p-6">
             <h2 className="font-black">What happens next</h2>

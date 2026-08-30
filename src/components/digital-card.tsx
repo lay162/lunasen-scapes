@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import Script from "next/script";
 import { useEffect, useMemo, useState } from "react";
 import {
@@ -162,7 +163,7 @@ export function DigitalCard() {
         </div>
       </header>
 
-      <main className={styles.card}>
+      <main id="main-content" className={styles.card}>
         <div className={styles.profile}>
           <div className={styles.mark} aria-hidden="true">
             <BrandName stacked size="sm" inverted />
@@ -192,9 +193,9 @@ export function DigitalCard() {
             </a>
           </div>
           <div className={styles.ctaWrap}>
-            <a className={cn(styles.cta, styles.ctaGradient)} href="/enquire">
+            <Link className={cn(styles.cta, styles.ctaGradient)} href="/enquire/">
               Request Quote
-            </a>
+            </Link>
           </div>
 
           <div className={styles.actionGrid}>
@@ -211,9 +212,9 @@ export function DigitalCard() {
               <p>Email</p>
             </div>
             <div className={styles.actionBtn}>
-              <a href="/" aria-label="Website" target="_top">
+              <Link href="/" aria-label="Website">
                 <Globe className="size-6" />
-              </a>
+              </Link>
               <p>Website</p>
             </div>
             <div className={styles.actionBtn}>
@@ -268,9 +269,7 @@ export function DigitalCard() {
         <footer className={styles.cardFooter}>
           <BrandName stacked size="sm" />
           <p className={styles.footerMeta}>{fullAddress()}</p>
-          <a href="/" target="_top">
-            {SITE.url.replace(/^https:\/\//, "")}
-          </a>
+          <Link href="/">{SITE.url.replace(/^https:\/\//, "")}</Link>
           <br />
           <a href={SITE.cardPath}>{brandedCardUrl().replace(/^https:\/\//, "")}</a>
         </footer>

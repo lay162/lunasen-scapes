@@ -1,10 +1,13 @@
 import Link from "next/link";
 
+import { FaqList } from "@/components/faq-list";
 import { JsonLd } from "@/components/json-ld";
 import { PageHero } from "@/components/page-hero";
-import { BUILDING_SERVICES } from "@/lib/content";
+import { BUILDING_SERVICES, FAQS } from "@/lib/content";
 import { lunaLinkClass } from "@/lib/luna-tone";
-import { breadcrumbJsonLd, pageMetadata } from "@/lib/seo";
+import { breadcrumbJsonLd, faqJsonLd, pageMetadata } from "@/lib/seo";
+
+const BUILDING_FAQS = [FAQS[1], FAQS[3], FAQS[5]];
 
 export const metadata = pageMetadata({
   title: "Building Works, Internal Adaptations & Extensions UK",
@@ -26,9 +29,10 @@ export default function BuildingPage() {
       <JsonLd
         data={breadcrumbJsonLd([
           { name: "Home", path: "/" },
-          { name: "Building", path: "/building" },
+          { name: "Building", path: "/building/" },
         ])}
       />
+      <JsonLd data={faqJsonLd([...BUILDING_FAQS])} />
       <PageHero
         eyebrow="All aspects of building"
         title="Internal works and building, not just the garden."
@@ -49,6 +53,9 @@ export default function BuildingPage() {
               <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{service.summary}</p>
             </article>
           ))}
+        </div>
+        <div className="mx-auto mt-12 max-w-3xl">
+          <FaqList items={[...BUILDING_FAQS]} />
         </div>
         <div className="mt-12 rounded-3xl bg-black p-8 text-white md:p-10">
           <h2 className="text-2xl font-black">Garden, drive or inside the house.</h2>
