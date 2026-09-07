@@ -34,6 +34,8 @@ The name is always **LUNA SEN-Scapes**. **LUNA** uses the pink-to-blue header gr
 
 The circular LUNA SEN-Scapes Ltd badge is `public/brand/logo.png`. It is the header mark, the browser tab icon, and the schema.org logo.
 
+Social profile URLs go in `src/lib/site.ts` under `social` (Instagram, Facebook, TikTok, LinkedIn, YouTube, X, Google Business). Leave them blank until the pages exist. Once pasted, they show on the website footer, the digital card, saved-contact vCard, and LocalBusiness schema.
+
 ## Digital business card
 
 Same layout as the existing trades card: save-to-phone, call, email, WhatsApp, QR, Tap n Share / NFC, and recent work.

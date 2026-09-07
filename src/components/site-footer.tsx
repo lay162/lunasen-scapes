@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Mail, MapPin, Phone } from "lucide-react";
 
 import { BrandMark } from "@/components/brand-mark";
+import { SocialLinks } from "@/components/social-links";
 import { AREAS, NAV, SPACES } from "@/lib/content";
 import { SITE, fullAddress, legalLine } from "@/lib/site";
 
@@ -14,6 +15,7 @@ export function SiteFooter({ hasLogo = false }: { hasLogo?: boolean }) {
           <p className="mt-4 text-sm leading-relaxed text-white/65">
             Safe places, gardens and building works across the UK.
           </p>
+          <SocialLinks inverted className="mt-4" />
         </div>
         <div>
           <h2 className="text-[11px] font-bold uppercase tracking-[0.2em] text-luna-pink">Explore</h2>

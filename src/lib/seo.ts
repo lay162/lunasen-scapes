@@ -3,6 +3,7 @@ import type { CaseStudy } from "@/lib/case-studies";
 import { AREAS, BUILDING_SERVICES, GROUNDWORK_SERVICES, SPACES } from "@/lib/content";
 import type { AreaLocal } from "@/lib/local-areas";
 import { SITE, absoluteUrl, postalAddressJsonLd } from "@/lib/site";
+import { socialSameAs } from "@/lib/social";
 
 const defaultOg = {
   url: absoluteUrl("/opengraph-image", { asset: true }),
@@ -66,6 +67,7 @@ export function pageMetadata({
 
 export function localBusinessJsonLd() {
   const id = `${SITE.url}/#business`;
+  const sameAs = socialSameAs();
   return {
     "@context": "https://schema.org",
     "@graph": [
@@ -84,6 +86,7 @@ export function localBusinessJsonLd() {
           absoluteUrl("/opengraph-image", { asset: true }),
         ],
         logo: absoluteUrl("/brand/logo.png", { asset: true }),
+        ...(sameAs ? { sameAs } : {}),
         priceRange: SITE.priceRange,
         currenciesAccepted: "GBP",
         paymentAccepted: "Bank transfer, invoice",
@@ -210,6 +213,7 @@ export function localBusinessJsonLd() {
         ...(SITE.companyNumber ? { identifier: SITE.companyNumber } : {}),
         address: postalAddressJsonLd(),
         url: SITE.url,
+        ...(sameAs ? { sameAs } : {}),
       },
     ],
   };

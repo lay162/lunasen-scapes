@@ -62,6 +62,19 @@ export const SITE = {
     mapsQuery: "Wirral, Merseyside",
     verification: (process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || "").trim(),
   },
+  /**
+   * Paste full https:// profile URLs when the pages exist.
+   * Empty values stay off the website, card, vCard and schema until filled.
+   */
+  social: {
+    instagram: "",
+    facebook: "",
+    tiktok: "",
+    linkedin: "",
+    youtube: "",
+    x: "",
+    googleBusiness: "",
+  },
 } as const;
 
 export const NAP = {

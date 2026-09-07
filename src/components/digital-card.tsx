@@ -17,7 +17,9 @@ import {
 } from "lucide-react";
 
 import { BrandLogo, BrandName } from "@/components/brand-mark";
+import { SocialLinks } from "@/components/social-links";
 import { SITE, brandedCardUrl, fullAddress, legalLine } from "@/lib/site";
+import { socialProfiles } from "@/lib/social";
 import { cn } from "@/lib/utils";
 
 import styles from "@/app/BusinessCard/card.module.css";
@@ -62,7 +64,10 @@ function cardUrl() {
 }
 
 function liveCardData() {
-  if (window.SWMDBC?.getDefaultCardData) return window.SWMDBC.getDefaultCardData();
+  const social = socialProfiles();
+  if (window.SWMDBC?.getDefaultCardData) {
+    return { ...window.SWMDBC.getDefaultCardData(), socialProfiles: social };
+  }
   return {
     fullName: SITE.name,
     company: SITE.name,
@@ -71,6 +76,7 @@ function liveCardData() {
     website: SITE.url,
     cardUrl: cardUrl(),
     profilePhoto: `${SITE.url}/brand/logo.png`,
+    socialProfiles: social,
   };
 }
 
@@ -227,6 +233,12 @@ export function DigitalCard() {
             </div>
           </div>
         </div>
+
+        {socialProfiles().length ? (
+          <div className={styles.socialWrap}>
+            <SocialLinks />
+          </div>
+        ) : null}
 
         <div className={styles.nfcBar} data-luna-nfc-bar="">
           <p className={styles.nfcTitle}>How this phone shares</p>

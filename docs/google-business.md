@@ -54,6 +54,15 @@ Google matches the profile to the site using the same **name, address and phone 
 
 If Google asks you to verify the website, add the Search Console HTML-tag code as the GitHub Actions secret `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION` and push — do not paste a different domain.
 
+## Social profiles
+
+When the company pages exist, paste the same full `https://` URLs in two places:
+
+1. Google Business Profile → profile links / social profiles
+2. `src/lib/site.ts` → `social` (Instagram, Facebook, TikTok, LinkedIn, YouTube, X, Google Business)
+
+Empty values stay hidden. Filled values appear on the website footer, the digital card, and the schema `sameAs` list so Google can match the profiles to the site.
+
 ## Hours
 
 Monday–Friday 08:00–17:00  

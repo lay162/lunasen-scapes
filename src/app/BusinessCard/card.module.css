@@ -220,6 +220,11 @@
   font-weight: 700;
 }
 
+.socialWrap {
+  padding: 0 1rem 0.25rem;
+  text-align: center;
+}
+
 .stream {
   padding: 0 1rem 0.75rem;
 }

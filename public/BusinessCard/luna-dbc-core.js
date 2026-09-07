@@ -209,6 +209,16 @@
     if (cardData.profilePhoto) {
       lines.splice(lines.length - 1, 0, 'PHOTO;VALUE=URI;TYPE=PNG:' + cardData.profilePhoto);
     }
+    var social = cardData.socialProfiles;
+    if (Array.isArray(social)) {
+      social.forEach(function (item) {
+        if (!item || !item.href) return;
+        lines.splice(lines.length - 1, 0, 'URL:' + item.href);
+        if (item.id) {
+          lines.splice(lines.length - 1, 0, 'X-SOCIALPROFILE;TYPE=' + item.id + ':' + item.href);
+        }
+      });
+    }
     return lines
       .filter(function (l) {
         return l.indexOf(':') !== l.length - 1;
