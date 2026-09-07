@@ -1,5 +1,4 @@
-Drop your square LUNA SEN-Scapes logo here as logo.png (512px or larger).
+Circular LUNA SEN-Scapes Ltd badge.
 
-The site uses LUNA SEN-Scapes colours (pink #ff69b4 and blue #7ad7f0). A circular badge on black works best in the header.
-
-Favicon can use the same artwork later. Until then the tab icon is a temporary L.
+Used as the header mark, footer mark, favicon and schema.org logo.
+Keep this file as logo.png (square, 512px or larger). The site shows it as a circle.

@@ -70,6 +70,14 @@ export const metadata: Metadata = {
     "geo.position": `${SITE.geo.latitude};${SITE.geo.longitude}`,
     ICBM: `${SITE.geo.latitude}, ${SITE.geo.longitude}`,
   },
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "48x48" },
+      { url: "/brand/logo.png", type: "image/png", sizes: "500x500" },
+    ],
+    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180" }],
+    shortcut: "/brand/logo.png",
+  },
   // Set NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION (Search Console HTML-tag content) to emit google-site-verification.
   ...(SITE.google.verification
     ? { verification: { google: SITE.google.verification } }

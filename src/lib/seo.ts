@@ -79,8 +79,11 @@ export function localBusinessJsonLd() {
         url: SITE.url,
         email: SITE.email,
         telephone: SITE.phoneTel,
-        image: absoluteUrl("/opengraph-image", { asset: true }),
-        logo: absoluteUrl("/icon", { asset: true }),
+        image: [
+          absoluteUrl("/brand/logo.png", { asset: true }),
+          absoluteUrl("/opengraph-image", { asset: true }),
+        ],
+        logo: absoluteUrl("/brand/logo.png", { asset: true }),
         priceRange: SITE.priceRange,
         currenciesAccepted: "GBP",
         paymentAccepted: "Bank transfer, invoice",

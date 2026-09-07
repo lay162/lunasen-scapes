@@ -31,11 +31,28 @@ Service-area business: yes. Add the United Kingdom. You can also list England, S
 
 `07375 996 207`
 
-## Website
+## Website (this is the Google link)
 
-Production URL of this site: `https://lunasen-scapes.co.uk`  
-Digital card: `https://lunasen-scapes.co.uk/BusinessCard/`  
-(`lunasenscapes.com` should redirect here.)
+Paste **exactly** this into the Business Profile website field:
+
+`https://lunasen-scapes.co.uk`
+
+Do not use the GitHub Pages URL, `www`, or the `.com` as the listed website. The `.com` names already forward here.
+
+Digital card (optional extra link, not the main website): `https://lunasen-scapes.co.uk/BusinessCard/`
+
+Google matches the profile to the site using the same **name, address and phone (NAP)** as the website footer and the LocalBusiness schema. Those must stay identical:
+
+| Field | Value on the website |
+| --- | --- |
+| Name | `LUNA SEN-Scapes` |
+| Legal name | `LUNA SEN-Scapes Ltd` |
+| Address | Wirral, Merseyside, United Kingdom |
+| Phone | `07375 996 207` |
+| Email | `info@lunasen-scapes.co.uk` |
+| Hours | Monday–Friday 08:00–17:00; Saturday by appointment |
+
+If Google asks you to verify the website, add the Search Console HTML-tag code as the GitHub Actions secret `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION` and push — do not paste a different domain.
 
 ## Hours
 
@@ -49,7 +66,7 @@ LUNA SEN-Scapes makes safe places for SEN children, SEN adults and disabled peop
 
 ## Photos to upload first
 
-- Logo (the file you will drop into `public/brand/logo.png`)
+- Logo (same circular badge as the website: `public/brand/logo.png`)
 - Exterior / team / plant
 - Before and after gardens and dig offs (files already on this site under `public/work`)
 - Any family garden or play job you have permission to show
@@ -57,7 +74,7 @@ LUNA SEN-Scapes makes safe places for SEN children, SEN adults and disabled peop
 ## After the profile is live
 
 1. Google Search Console → add the domain → paste the verification code into `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION`
-2. Sitemaps → `https://YOUR-DOMAIN/sitemap.xml`
+2. Sitemaps → `https://lunasen-scapes.co.uk/sitemap.xml`
 3. Ask happy clients for Google reviews on this listing
 4. Optional: Bing Places with the same NAP
 

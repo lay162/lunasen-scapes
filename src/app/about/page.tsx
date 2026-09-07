@@ -37,11 +37,6 @@ export default function AboutPage() {
         <p>A wheelchair stops at the back step.</p>
         <p>We start with levels, water and boundaries.</p>
         <p>Then the play, the planting and the finish.</p>
-        <p>
-          Drop your logo into <code className="rounded bg-muted px-1">public/brand/logo.png</code> when you have the
-          artwork.
-        </p>
-        <p>Favicon goes in the same place once you make it.</p>
         <Link href="/enquire" className="luna-btn luna-btn-gradient mt-2 h-12 px-5">
           Work with us
         </Link>
