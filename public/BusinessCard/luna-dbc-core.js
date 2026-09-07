@@ -48,6 +48,7 @@
       'Safe places, gardens and building works for SEN children, SEN adults and disabled people — UK wide.',
     note: 'Gardens, playgrounds, driveways, fencing, patios and building works.',
     cardUrl: 'https://lunasen-scapes.co.uk/BusinessCard/',
+    profilePhoto: 'https://lunasen-scapes.co.uk/brand/logo.png',
   };
 
   function getUserId() {
@@ -206,7 +207,7 @@
       'END:VCARD',
     ];
     if (cardData.profilePhoto) {
-      lines.splice(lines.length - 1, 0, 'PHOTO;VALUE=URI:' + cardData.profilePhoto);
+      lines.splice(lines.length - 1, 0, 'PHOTO;VALUE=URI;TYPE=PNG:' + cardData.profilePhoto);
     }
     return lines
       .filter(function (l) {

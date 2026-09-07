@@ -16,7 +16,7 @@ import {
   X,
 } from "lucide-react";
 
-import { BrandName } from "@/components/brand-mark";
+import { BrandLogo, BrandName } from "@/components/brand-mark";
 import { SITE, brandedCardUrl, fullAddress, legalLine } from "@/lib/site";
 import { cn } from "@/lib/utils";
 
@@ -70,6 +70,7 @@ function liveCardData() {
     phone: SITE.phoneTel,
     website: SITE.url,
     cardUrl: cardUrl(),
+    profilePhoto: `${SITE.url}/brand/logo.png`,
   };
 }
 
@@ -166,8 +167,8 @@ export function DigitalCard() {
 
       <main id="main-content" className={styles.card}>
         <div className={styles.profile}>
-          <div className={styles.mark} aria-hidden="true">
-            <BrandName stacked size="sm" inverted />
+          <div className={styles.mark}>
+            <BrandLogo size={160} alt={`${SITE.name} Ltd`} className={styles.markImg} priority />
           </div>
           <div className={styles.info}>
             <p className={styles.name}>
@@ -275,6 +276,7 @@ export function DigitalCard() {
         </div>
 
         <footer className={styles.cardFooter}>
+          <BrandLogo size={56} alt="" className={styles.footerLogo} />
           <BrandName stacked size="sm" />
           <p className={styles.footerMeta}>{legalLine()}</p>
           <p className={styles.footerMeta}>{fullAddress()}</p>

@@ -18,6 +18,30 @@ const SCAPES_SIZE = {
   hero: "text-3xl sm:text-5xl md:text-6xl",
 } as const;
 
+export function BrandLogo({
+  size = 44,
+  className,
+  alt = "",
+  priority = false,
+}: {
+  size?: number;
+  className?: string;
+  alt?: string;
+  priority?: boolean;
+}) {
+  return (
+    <Image
+      src="/brand/logo.png"
+      alt={alt}
+      width={size}
+      height={size}
+      sizes={`${size}px`}
+      className={cn("shrink-0 rounded-full object-cover", className)}
+      priority={priority}
+    />
+  );
+}
+
 /** Always “LUNA SEN-Scapes”. Only LUNA uses the header pink-to-blue gradient. */
 export function BrandName({
   size = "md",
@@ -63,17 +87,7 @@ export function BrandMark({
       className="group flex items-center gap-3 rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-luna-pink"
       aria-label={`${SITE.name} home`}
     >
-      {hasLogo ? (
-        <Image
-          src="/brand/logo.png"
-          alt=""
-          width={44}
-          height={44}
-          sizes="44px"
-          className="h-11 w-11 shrink-0 rounded-full object-cover ring-1 ring-white/20"
-          priority
-        />
-      ) : null}
+      {hasLogo ? <BrandLogo size={44} className="h-11 w-11 ring-1 ring-white/20" priority /> : null}
       <span className="leading-none">
         <BrandName size={compact ? "md" : "lg"} inverted={inverted} className="justify-start" />
         {!compact ? (
