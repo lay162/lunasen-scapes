@@ -78,4 +78,4 @@ Next.js (static export), TypeScript, Tailwind CSS, shadcn/ui. No database or log
 
 ## Legal
 
-LUNA SEN-Scapes Ltd. Based in Wirral, Merseyside. Companies House number to be added when issued.
+LUNA SEN-Scapes Ltd. Company no. 17450329. Based in Wirral, Merseyside.

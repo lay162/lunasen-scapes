@@ -47,6 +47,7 @@ Google matches the profile to the site using the same **name, address and phone 
 | --- | --- |
 | Name | `LUNA SEN-Scapes` |
 | Legal name | `LUNA SEN-Scapes Ltd` |
+| Company number | `17450329` |
 | Address | Wirral, Merseyside, United Kingdom |
 | Phone | `07375 996 207` |
 | Email | `info@lunasen-scapes.co.uk` |
