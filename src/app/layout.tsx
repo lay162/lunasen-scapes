@@ -73,10 +73,11 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       { url: "/favicon.ico", sizes: "48x48" },
-      { url: "/brand/logo.png", type: "image/png", sizes: "500x500" },
+      { url: "/favicon-48x48.png", type: "image/png", sizes: "48x48" },
+      { url: "/favicon-96x96.png", type: "image/png", sizes: "96x96" },
+      { url: "/brand/icon-192.png", type: "image/png", sizes: "192x192" },
     ],
     apple: [{ url: "/apple-touch-icon.png", sizes: "180x180" }],
-    shortcut: "/brand/logo.png",
   },
   // Set NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION (Search Console HTML-tag content) to emit google-site-verification.
   ...(SITE.google.verification
