@@ -38,11 +38,11 @@ Social profile URLs go in `src/lib/site.ts` under `social` (Instagram, Facebook,
 
 ## Digital business card
 
-Same layout as the existing trades card: save-to-phone, call, email, WhatsApp, QR, Tap n Share / NFC, and recent work.
+The card is a **standalone page**, same as S.W.M Groundworks — not wrapped in the website header or footer. Files live in `public/BusinessCard/` (`index.html`, `style.css`, NFC scripts). The Next.js site only links to it.
 
 Live URL: `https://lunasen-scapes.co.uk/BusinessCard/`
 
-Locally: [http://127.0.0.1:43127/BusinessCard/](http://127.0.0.1:43127/BusinessCard/)
+Locally: [http://127.0.0.1:43127/BusinessCard/](http://127.0.0.1:43127/BusinessCard/) (or `/BusinessCard/index.html` in `next dev`)
 
 ### Add the card to your phone (PWA)
 

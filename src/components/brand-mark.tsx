@@ -38,6 +38,7 @@ export function BrandLogo({
       sizes={`${size}px`}
       className={cn("shrink-0 rounded-full object-cover", className)}
       priority={priority}
+      unoptimized
     />
   );
 }

@@ -1,11 +1,15 @@
 // LUNA SEN-Scapes card PWA + NFC message forwarder
-var CACHE = "luna-card-v1";
+var CACHE = "luna-card-v2";
 var PRECACHE = [
   "/BusinessCard/",
+  "/BusinessCard/index.html",
+  "/BusinessCard/style.css",
+  "/BusinessCard/script.js",
   "/BusinessCard/manifest.json",
   "/BusinessCard/luna-dbc-core.js",
   "/BusinessCard/luna-nfc-runtime.js",
   "/BusinessCard/contact.vcf",
+  "/BusinessCard/luna-logo.png",
   "/brand/logo.png",
   "/brand/icon-192.png",
   "/brand/icon-512.png",
