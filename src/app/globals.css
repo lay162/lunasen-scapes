@@ -152,8 +152,13 @@ body:has([data-digital-card]) {
 }
 
 body:has([data-digital-card]) > header,
-body:has([data-digital-card]) > footer {
+body:has([data-digital-card]) > footer,
+body:has([data-digital-card]) [data-site-mobile-cta] {
   display: none;
+}
+
+body:has([data-digital-card]) [data-site-main] {
+  padding-bottom: 0;
 }
 
 .luna-nfc-ready-banner {

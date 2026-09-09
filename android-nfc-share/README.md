@@ -40,7 +40,7 @@ Same URL / `LUNANFC_` token pattern as `public/BusinessCard/`.
 ## Build & install
 
 1. Install [Android Studio](https://developer.android.com/studio)
-2. **Open** this folder: `swm-groundsworks/android-nfc-share`
+2. **Open** this folder: `android-nfc-share`
 3. Let Gradle sync
 4. Plug in an Android phone (USB debugging on) **or** use an emulator with NFC (most emulators do **not** do real NFC — use real phones)
 5. Click **Run**

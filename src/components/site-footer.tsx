@@ -4,7 +4,8 @@ import { Mail, MapPin, Phone } from "lucide-react";
 import { BrandMark } from "@/components/brand-mark";
 import { SocialLinks } from "@/components/social-links";
 import { AREAS, NAV, SPACES } from "@/lib/content";
-import { SITE, fullAddress, legalLine } from "@/lib/site";
+import { LegalLines } from "@/components/legal-lines";
+import { SITE, fullAddress } from "@/lib/site";
 
 export function SiteFooter({ hasLogo = false }: { hasLogo?: boolean }) {
   return (
@@ -66,9 +67,7 @@ export function SiteFooter({ hasLogo = false }: { hasLogo?: boolean }) {
               </a>
             </p>
           </address>
-          <p className="mt-4 text-xs text-white/45">
-            {legalLine()}
-          </p>
+          <LegalLines className="mt-4 text-xs text-white/45" />
         </div>
       </div>
       <div className="border-t border-white/10">

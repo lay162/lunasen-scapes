@@ -2,7 +2,7 @@ import { JsonLd } from "@/components/json-ld";
 import { Lines } from "@/components/lines";
 import { PageHero } from "@/components/page-hero";
 import { breadcrumbJsonLd, pageMetadata } from "@/lib/seo";
-import { SITE, fullAddress, legalLine } from "@/lib/site";
+import { SITE, fullAddress, legalLines } from "@/lib/site";
 
 export const metadata = pageMetadata({
   title: "Privacy notice",
@@ -47,7 +47,7 @@ export default function PrivacyPage() {
         <Lines
           lines={[
             `Controller: ${SITE.legalName}, ${fullAddress()}.`,
-            legalLine(),
+            ...legalLines(),
           ]}
         />
       </article>

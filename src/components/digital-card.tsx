@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import Script from "next/script";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useSyncExternalStore } from "react";
 import {
   Copy,
   Globe,
@@ -12,13 +12,15 @@ import {
   Phone,
   QrCode,
   Share2,
+  Smartphone,
   UserPlus,
   X,
 } from "lucide-react";
 
 import { BrandLogo, BrandName } from "@/components/brand-mark";
+import { LegalLines } from "@/components/legal-lines";
 import { SocialLinks } from "@/components/social-links";
-import { SITE, brandedCardUrl, fullAddress, legalLine } from "@/lib/site";
+import { SITE, brandedCardUrl, fullAddress } from "@/lib/site";
 import { socialProfiles } from "@/lib/social";
 import { cn } from "@/lib/utils";
 
@@ -84,6 +86,91 @@ function startNfc() {
   if (!window.SWMNFCRuntime || !window.SWMDBC) return false;
   window.SWMNFCRuntime.initLiveCard(liveCardData());
   return true;
+}
+
+type BeforeInstallPromptEvent = Event & {
+  prompt: () => Promise<void>;
+  userChoice: Promise<{ outcome: "accepted" | "dismissed" }>;
+};
+
+function isStandaloneApp() {
+  if (typeof window === "undefined") return false;
+  return (
+    window.matchMedia("(display-mode: standalone)").matches ||
+    window.matchMedia("(display-mode: fullscreen)").matches ||
+    Boolean((window.navigator as Navigator & { standalone?: boolean }).standalone)
+  );
+}
+
+function isIosDevice() {
+  if (typeof window === "undefined") return false;
+  return /iphone|ipad|ipod/i.test(window.navigator.userAgent);
+}
+
+function subscribeDisplayMode(onStoreChange: () => void) {
+  if (typeof window === "undefined") return () => {};
+  const media = window.matchMedia("(display-mode: standalone)");
+  media.addEventListener("change", onStoreChange);
+  window.addEventListener("appinstalled", onStoreChange);
+  return () => {
+    media.removeEventListener("change", onStoreChange);
+    window.removeEventListener("appinstalled", onStoreChange);
+  };
+}
+
+function InstallCardApp() {
+  const installed = useSyncExternalStore(subscribeDisplayMode, isStandaloneApp, () => false);
+  const [deferred, setDeferred] = useState<BeforeInstallPromptEvent | null>(null);
+  const [hint, setHint] = useState(false);
+
+  useEffect(() => {
+    const onPrompt = (event: Event) => {
+      event.preventDefault();
+      setDeferred(event as BeforeInstallPromptEvent);
+    };
+    const onInstalled = () => {
+      setDeferred(null);
+    };
+    window.addEventListener("beforeinstallprompt", onPrompt);
+    window.addEventListener("appinstalled", onInstalled);
+    return () => {
+      window.removeEventListener("beforeinstallprompt", onPrompt);
+      window.removeEventListener("appinstalled", onInstalled);
+    };
+  }, []);
+
+  async function install() {
+    if (deferred) {
+      await deferred.prompt();
+      const choice = await deferred.userChoice;
+      if (choice.outcome === "accepted") setHint(false);
+      setDeferred(null);
+      return;
+    }
+    setHint(true);
+  }
+
+  if (installed) {
+    return (
+      <p className={styles.nfcHint}>
+        This card is on your phone. Open the LUNA SEN-Scapes icon on your home screen to share it.
+      </p>
+    );
+  }
+
+  return (
+    <div className={styles.installWrap}>
+      <button type="button" className={styles.installBtn} onClick={install}>
+        <Smartphone className="size-4" />
+        Add to phone
+      </button>
+      <p className={styles.nfcHint}>
+        {hint || isIosDevice()
+          ? "iPhone: tap Share, then Add to Home Screen. Android Chrome: tap Add to phone, or the menu → Add to Home screen / Install app."
+          : "Puts this card on your home screen with the LUNA SEN-Scapes badge — same as the SWM card."}
+      </p>
+    </div>
+  );
 }
 
 export function DigitalCard() {
@@ -262,6 +349,7 @@ export function DigitalCard() {
             ))}
           </div>
           <p className={styles.nfcHint}>Hold the backs of two Android phones together. Door and clock readers work too.</p>
+          <InstallCardApp />
         </div>
 
         <div className={styles.stream}>
@@ -290,7 +378,7 @@ export function DigitalCard() {
         <footer className={styles.cardFooter}>
           <BrandLogo size={56} alt="" className={styles.footerLogo} />
           <BrandName stacked size="sm" />
-          <p className={styles.footerMeta}>{legalLine()}</p>
+          <LegalLines className={styles.footerMeta} />
           <p className={styles.footerMeta}>{fullAddress()}</p>
           <Link href="/">{SITE.url.replace(/^https:\/\//, "")}</Link>
           <br />

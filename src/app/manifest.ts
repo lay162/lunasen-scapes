@@ -17,15 +17,22 @@ export default function manifest(): MetadataRoute.Manifest {
     categories: ["business", "lifestyle"],
     icons: [
       {
-        src: "/brand/logo.png",
-        sizes: "500x500",
+        src: "/brand/icon-192.png",
+        sizes: "192x192",
         type: "image/png",
         purpose: "any",
       },
       {
-        src: "/apple-touch-icon.png",
-        sizes: "180x180",
+        src: "/brand/icon-512.png",
+        sizes: "512x512",
         type: "image/png",
+        purpose: "any",
+      },
+      {
+        src: "/brand/icon-maskable-512.png",
+        sizes: "512x512",
+        type: "image/png",
+        purpose: "maskable",
       },
     ],
   };

@@ -3,7 +3,7 @@ import Link from "next/link";
 import { JsonLd } from "@/components/json-ld";
 import { PageHero } from "@/components/page-hero";
 import { breadcrumbJsonLd, pageMetadata } from "@/lib/seo";
-import { SITE, fullAddress, legalLine } from "@/lib/site";
+import { SITE, fullAddress, legalLines } from "@/lib/site";
 
 export const metadata = pageMetadata({
   title: "About LUNA SEN-Scapes",
@@ -28,7 +28,14 @@ export default function AboutPage() {
         ]}
       />
       <section className="mx-auto max-w-3xl space-y-5 px-4 py-12 text-muted-foreground sm:px-6">
-        <p>{legalLine()}.</p>
+        <p>
+          {legalLines().map((line, index, all) => (
+            <span key={line}>
+              {line}
+              {index < all.length - 1 ? <br /> : "."}
+            </span>
+          ))}
+        </p>
         <p>
           Based in {fullAddress()}. We work UK wide.
         </p>

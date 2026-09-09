@@ -228,14 +228,18 @@
 
   function registerServiceWorker() {
     if (!('serviceWorker' in navigator)) return;
-    var paths = ['nfc-sw.js', './nfc-sw.js', '/BusinessCard/nfc-sw.js'];
-    function tryRegister(i) {
-      if (i >= paths.length) return;
-      navigator.serviceWorker.register(paths[i]).catch(function () {
-        tryRegister(i + 1);
+    navigator.serviceWorker
+      .register('/BusinessCard/nfc-sw.js', { scope: '/BusinessCard/' })
+      .catch(function () {
+        var paths = ['nfc-sw.js', './nfc-sw.js'];
+        function tryRegister(i) {
+          if (i >= paths.length) return;
+          navigator.serviceWorker.register(paths[i]).catch(function () {
+            tryRegister(i + 1);
+          });
+        }
+        tryRegister(0);
       });
-    }
-    tryRegister(0);
   }
 
   function applyModeFromUrl() {

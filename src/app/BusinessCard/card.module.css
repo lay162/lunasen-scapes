@@ -343,6 +343,26 @@
   color: #5b5b5b;
 }
 
+.installWrap {
+  margin-top: 0.85rem;
+}
+
+.installBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  width: 100%;
+  border: 0;
+  border-radius: 999px;
+  padding: 0.7rem 1rem;
+  font-size: 0.9rem;
+  font-weight: 800;
+  cursor: pointer;
+  color: #fff;
+  background: linear-gradient(135deg, #ff69b4, #7ad7f0);
+}
+
 .cardFooter {
   margin-top: 1.25rem;
   padding: 1rem;

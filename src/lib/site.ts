@@ -90,12 +90,16 @@ export function hasCompanyNumber() {
   return Boolean(SITE.companyNumber);
 }
 
-/** Footer / legal line. Shows the Companies House number when SITE.companyNumber is set. */
+/** Company name, then Companies House number — always two separate lines in the UI. */
+export function legalLines() {
+  return SITE.companyNumber
+    ? ([SITE.legalName, `Company no. ${SITE.companyNumber}`] as const)
+    : ([SITE.legalName, "Registration pending"] as const);
+}
+
+/** Single-string form for places that cannot break lines. Prefer legalLines() in the UI. */
 export function legalLine(separator = " · ") {
-  if (SITE.companyNumber) {
-    return `${SITE.legalName}${separator}Company no. ${SITE.companyNumber}`;
-  }
-  return `${SITE.legalName}${separator}Registration pending`;
+  return legalLines().join(separator);
 }
 
 export function fullAddress() {

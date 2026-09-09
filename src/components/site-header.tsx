@@ -114,7 +114,10 @@ export function SiteHeader({ hasLogo = false }: { hasLogo?: boolean }) {
           </div>
         ) : null}
       </header>
-      <div className="fixed inset-x-0 bottom-0 z-40 border-t border-black/10 bg-black/95 px-3 py-2 pb-[max(0.5rem,env(safe-area-inset-bottom))] backdrop-blur lg:hidden">
+      <div
+        data-site-mobile-cta=""
+        className="fixed inset-x-0 bottom-0 z-40 border-t border-black/10 bg-black/95 px-3 py-2 pb-[max(0.5rem,env(safe-area-inset-bottom))] backdrop-blur lg:hidden"
+      >
         <div className="mx-auto flex max-w-lg gap-2">
           <a
             href={`tel:${SITE.phoneTel}`}
