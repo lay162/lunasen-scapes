@@ -38,7 +38,7 @@ Social profile URLs go in `src/lib/site.ts` under `social` (Instagram, Facebook,
 
 ## Digital business card
 
-The card is a **standalone page**, same as S.W.M Groundworks — not wrapped in the website header or footer. Files live in `public/BusinessCard/` (`index.html`, `style.css`, NFC scripts). The Next.js site only links to it.
+The card is a **standalone page**, not wrapped in the website header or footer. Files live in `public/BusinessCard/` (`index.html`, `style.css`, NFC scripts). The Next.js site only links to it.
 
 Live URL: `https://lunasen-scapes.co.uk/BusinessCard/`
 
@@ -46,15 +46,15 @@ Locally: [http://127.0.0.1:43127/BusinessCard/](http://127.0.0.1:43127/BusinessC
 
 ### Add the card to your phone (PWA)
 
-This is the LUNA SEN-Scapes version of the SWM home-screen card. Open the live URL on your phone, then:
+Open the live URL on your phone, then:
 
 1. Tap **Add to phone** on the card
 2. Or use the browser menu: **Add to Home screen** / **Install app**
 3. iPhone: tap **Share** → **Add to Home Screen**
 
-The icon is the circular LUNA SEN-Scapes badge. Opening it later is the same as opening the SWM card app — save contact, call, WhatsApp, Tap n Share.
+The icon is the circular LUNA SEN-Scapes badge. Opening it later gives save contact, call, WhatsApp and Tap n Share.
 
-Android phone-to-phone tap (notification on the other phone) still needs the companion app in `android-nfc-share`. Open that folder in Android Studio and install it on both phones — the old SWM trades app will not open this card.
+Android phone-to-phone tap (notification on the other phone) still needs the companion app in `android-nfc-share`. Open that folder in Android Studio and install it on both phones.
 
 ## Enquiry email
 
