@@ -32,8 +32,36 @@ Merseyside
 United Kingdom
 
 Set it up as a **service-area business** and hide the street address — you deliver to customers
-rather than having them visit. Add the service areas: Wirral, Liverpool, Birkenhead, Ellesmere
-Port, Chester, Warrington, St Helens, Cheshire.
+rather than having them visit.
+
+Google allows up to 20 service areas and says the overall boundary should normally stay within
+about two hours' drive of the base. Do not try to enter every North West postcode into the profile.
+Use these 20 truthful, high-priority places:
+
+1. Wirral
+2. Birkenhead
+3. Wallasey
+4. Bebington
+5. Bromborough
+6. Heswall
+7. West Kirby
+8. Neston
+9. Ellesmere Port
+10. Chester
+11. Liverpool
+12. Crosby
+13. Huyton
+14. St Helens
+15. Widnes
+16. Runcorn
+17. Warrington
+18. Frodsham
+19. Northwich
+20. Knutsford
+
+The website can describe extended North West partner delivery. The Google profile should represent
+the practical service area of the Wirral-based Bounc-SEN operation, not the full reach of a separate
+sister company.
 
 ## Phone
 
@@ -127,6 +155,23 @@ reinforce each other:
 4. Add the business to Bing Places with identical NAP
 5. Get listed on local SEN parent groups, Wirral council's local offer directory, and school
    newsletters — those links matter more for a business like this than any generic directory
+
+Use this tagged website URL in the profile so Search Console/analytics can distinguish Google
+Business clicks from normal search:
+
+`https://bounc-sen-events.co.uk/?utm_source=google&utm_medium=organic&utm_campaign=gbp`
+
+## Reviews
+
+Ask for an honest review after collection, not before the event and never in exchange for a
+discount. Send the customer the direct Google review link and one neutral prompt:
+
+> If you have a minute, an honest Google review helps other SEN families find us. It is useful if
+> you mention the equipment hired, the town and anything our team did that made the setup work for
+> your family — but please only write what you genuinely experienced.
+
+Do not hand customers a list of target keywords to copy. Repeated scripted reviews look unnatural
+and are less useful to families.
 
 ## An honest note on ranking
 

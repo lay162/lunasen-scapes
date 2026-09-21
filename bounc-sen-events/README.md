@@ -4,7 +4,7 @@ Inclusive bouncy castle, soft play and sensory equipment hire for SEN children a
 Wirral, Merseyside and Cheshire. Sister company to
 [King of the Castles](https://www.king-of-the-castles.com/).
 
-Five pages, plus a 404:
+Five main pages, five useful local service guides, plus a 404:
 
 | File | Page |
 | --- | --- |
@@ -13,6 +13,11 @@ Five pages, plus a 404:
 | `sen-inclusion.html` | SEN inclusion standard + FAQs |
 | `areas.html` | Areas we cover + postcode checker |
 | `contact.html` | Request a quote |
+| `bouncy-castle-hire-wirral.html` | Bouncy castle hire Wirral guide |
+| `soft-play-hire-wirral.html` | Soft play hire Wirral guide |
+| `bouncy-castle-hire-merseyside.html` | Merseyside event-hire guide |
+| `bouncy-castle-hire-cheshire.html` | Cheshire event-hire guide |
+| `event-hire-north-west.html` | Inclusive North West event-hire guide |
 | `404.html` | Not found |
 
 ## What this is built with
@@ -138,10 +143,16 @@ Technical SEO is already in place: unique titles, descriptions and canonicals pe
 Open Graph and Twitter card tags, `LocalBusiness` / `ItemList` / `FAQPage` / `BreadcrumbList`
 structured data, `sitemap.xml` and `robots.txt`, semantic headings and descriptive alt text.
 
+Local search coverage includes all 14 principal North West postcode areas: BB, BL, CA, CH, CW,
+FY, L, LA, M, OL, PR, SK, WA and WN. The postcode checker separates core, regional partner and
+extended routes rather than falsely presenting every postcode as an automatically confirmed job.
+
 That is the part code can do. Ranking also needs a real domain on HTTPS, a Google Business Profile
 with matching name, address and phone, photos, and genuine reviews. **Nobody can promise first
 place on Google**, and anyone who does is guessing. The honest checklist is in
 [`docs/google-business.md`](docs/google-business.md).
+The evidence-led keyword, citation, backlink and review plan is in
+[`docs/seo-growth-plan.md`](docs/seo-growth-plan.md).
 
 ## Hosting
 
