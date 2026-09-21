@@ -259,7 +259,6 @@
         "",
         "Name: " + get("name"),
         "Phone: " + get("phone"),
-        "Email: " + (get("email") || "not given"),
         "Event postcode: " + get("postcode").toUpperCase(),
         "Event date: " + (get("date") || "not decided yet"),
         "Venue type: " + (get("venue") || "not given"),
