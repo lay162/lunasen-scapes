@@ -48,8 +48,14 @@
       "url": "https://bounc-sen-events.co.uk/",
       "logo": "https://bounc-sen-events.co.uk/assets/brand/icon-512.png",
       "image": "https://bounc-sen-events.co.uk/assets/brand/og-image.jpg",
-      "telephone": "+447700900123",
-      "email": "info@bounc-sen-events.co.uk",
+      "telephone": "+447830852359",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+447830852359",
+        "contactType": "customer service",
+        "availableLanguage": "English",
+        "url": "https://www.facebook.com/BouncSenEvents"
+      },
       "priceRange": "££",
       "currenciesAccepted": "GBP",
       "paymentAccepted": "Cash, Bank transfer, Card",
@@ -272,7 +278,7 @@
         <p style="color:var(--text-muted);font-size:.9rem">Fields marked <span class="req">*</span>
         are needed so we can actually reply. Everything else helps us quote accurately first time.</p>
 
-        <form data-quote-form data-email="info@bounc-sen-events.co.uk" novalidate class="stack" style="margin-top:1.5rem">
+        <form data-quote-form data-facebook="https://www.facebook.com/BouncSenEvents" novalidate class="stack" style="margin-top:1.5rem">
           <div class="form-grid form-grid--2">
             <div class="field">
               <label for="name">Your name <span class="req">*</span></label>
@@ -287,8 +293,8 @@
 
           <div class="form-grid form-grid--2">
             <div class="field">
-              <label for="email">Email <span class="req">*</span></label>
-              <input id="email" name="email" type="email" autocomplete="email" required
+              <label for="email">Email (optional)</label>
+              <input id="email" name="email" type="email" autocomplete="email"
                      placeholder="you@example.co.uk">
             </div>
             <div class="field">
@@ -346,19 +352,14 @@
               placeholder="Ceiling height, access route, parking, timings, photos of a setup you liked…"></textarea>
           </div>
 
-          <label class="checkbox">
-            <input type="checkbox" name="consent" required value="yes">
-            <span>I am happy for Bounc-SEN Events Ltd to use these details to reply to my enquiry.
-            <span class="req">*</span></span>
-          </label>
-
           <button class="btn btn--primary btn--block" type="submit">
-            <svg class="icon" aria-hidden="true"><use href="#i-mail"></use></svg> Send my quote request
+            <svg class="icon" aria-hidden="true"><use href="#i-mail"></use></svg> Copy request &amp; open Facebook
           </button>
 
           <p style="font-size:.78rem;color:var(--text-muted);margin:0">
-            This opens your email app with the details filled in, so nothing is stored on this
-            website. Prefer to talk? Call <a href="tel:+447700900123">07700 900 123</a>.
+            This copies the details above and opens the Bounc-SEN Events Facebook page. Choose
+            <strong>Message</strong>, paste the request and send it. Nothing is uploaded or stored
+            by this website. Prefer to talk? Call <a href="tel:+447830852359">07830 852 359</a>.
           </p>
         </form>
       </div>
@@ -369,11 +370,11 @@
           <ul class="detail-list" style="margin-top:1rem">
             <li>
               <span class="icon-tile icon-tile--pink"><svg class="icon" aria-hidden="true"><use href="#i-phone"></use></svg></span>
-              <div><b>Phone</b><span><a href="tel:+447700900123">07700 900 123</a></span></div>
+              <div><b>Phone</b><span><a href="tel:+447830852359">07830 852 359</a></span></div>
             </li>
             <li>
-              <span class="icon-tile icon-tile--teal"><svg class="icon" aria-hidden="true"><use href="#i-mail"></use></svg></span>
-              <div><b>Email</b><span><a href="mailto:info@bounc-sen-events.co.uk">info@bounc-sen-events.co.uk</a></span></div>
+              <span class="icon-tile icon-tile--teal"><svg class="icon" aria-hidden="true"><use href="#i-users"></use></svg></span>
+              <div><b>Facebook</b><span><a href="https://www.facebook.com/BouncSenEvents" rel="noopener">Bounc-SEN Events</a></span></div>
             </li>
             <li>
               <span class="icon-tile icon-tile--purple"><svg class="icon" aria-hidden="true"><use href="#i-pin"></use></svg></span>
@@ -447,8 +448,7 @@
       <div>
         <h2>Get in touch</h2>
         <ul>
-          <li><a href="tel:+447700900123">07700 900 123</a></li>
-          <li><a href="mailto:info@bounc-sen-events.co.uk">info@bounc-sen-events.co.uk</a></li>
+          <li><a href="tel:+447830852359">07830 852 359</a></li>
           <li><a href="https://www.facebook.com/BouncSenEvents" rel="noopener">Follow Bounc-SEN Events on Facebook</a></li>
           <li>Open daily 08:00 &ndash; 20:00</li>
           <li>Wirral, Merseyside, United Kingdom</li>

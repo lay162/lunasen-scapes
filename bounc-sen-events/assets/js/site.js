@@ -211,6 +211,27 @@
   }
 
   /* ---------------------------------------------------------- quote form -- */
+  function copyText(text) {
+    if (navigator.clipboard && window.isSecureContext) {
+      return navigator.clipboard.writeText(text);
+    }
+
+    // Fallback for local previews and older browsers. The live custom domain
+    // will use HTTPS, where the Clipboard API above is available.
+    var field = document.createElement("textarea");
+    field.value = text;
+    field.setAttribute("readonly", "");
+    field.style.position = "fixed";
+    field.style.opacity = "0";
+    document.body.appendChild(field);
+    field.select();
+    var copied = document.execCommand("copy");
+    field.remove();
+    return copied
+      ? Promise.resolve()
+      : Promise.reject(new Error("Clipboard unavailable"));
+  }
+
   function initQuoteForm() {
     var form = $("[data-quote-form]");
     if (!form) return;
@@ -238,7 +259,7 @@
         "",
         "Name: " + get("name"),
         "Phone: " + get("phone"),
-        "Email: " + get("email"),
+        "Email: " + (get("email") || "not given"),
         "Event postcode: " + get("postcode").toUpperCase(),
         "Event date: " + (get("date") || "not decided yet"),
         "Venue type: " + (get("venue") || "not given"),
@@ -252,22 +273,23 @@
         get("message") || "none given",
       ];
 
-      var subject =
-        "Quote request — " +
-        (get("equipment") || "bespoke setup") +
-        " — " +
-        get("postcode").toUpperCase();
+      var facebook = form.getAttribute("data-facebook") || "";
+      var facebookWindow = window.open(facebook, "_blank");
+      if (facebookWindow) facebookWindow.opener = null;
 
-      var address = form.getAttribute("data-email") || "";
-      var href =
-        "mailto:" + address +
-        "?subject=" + encodeURIComponent(subject) +
-        "&body=" + encodeURIComponent(lines.join("\n"));
-
-      window.location.href = href;
-      showToast(
-        "Your email is opening",
-        "We have filled in the details for you — press send and we will reply the same day where we can."
+      copyText(lines.join("\n")).then(
+        function () {
+          showToast(
+            "Quote details copied",
+            "Facebook is opening — choose Message, paste these details and send them to Bounc-SEN Events."
+          );
+        },
+        function () {
+          showToast(
+            "Facebook is opening",
+            "Your browser blocked copying. Open Message and copy the form details manually, or call 07830 852 359."
+          );
+        }
       );
     });
   }
