@@ -91,6 +91,15 @@ Photo 4 is the one that converts. Ask families at the point of booking whether y
 the setup before the children arrive; an empty, beautifully-built soft play area in a real front
 room is more persuasive than a warehouse shot.
 
+## Social profile
+
+Add this exact URL in Google Business Profile → Contact → Social profiles:
+
+`https://www.facebook.com/BouncSenEvents`
+
+The website already links to it from every footer and includes it in the business schema, so Google
+has the same signal in all three places.
+
 ## Services
 
 Add each of these as a service on the profile, using the same names as the website so the two

@@ -71,10 +71,14 @@ put real figures in.
 
 ## 8. Social profiles
 
-When the Facebook, Instagram and TikTok pages exist, add the full `https://` URLs to:
+Facebook is already connected as:
 
-1. The `sameAs` array in the structured data on every page (it currently lists only King of the
-   Castles)
+`https://www.facebook.com/BouncSenEvents`
+
+It appears in the footer of every page and in every structured-data `sameAs` array. Add future
+Instagram and TikTok pages to:
+
+1. The `sameAs` array in the structured data on every page
 2. The footer, as links
 3. The Google Business Profile
 

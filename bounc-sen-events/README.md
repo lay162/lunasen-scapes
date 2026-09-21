@@ -89,17 +89,18 @@ python3 -c "from PIL import Image, ImageOps; im=ImageOps.exif_transpose(Image.op
 
 Skip it if you'd rather not — the JPEG still loads.
 
-### Change the brand colours to match the logo
+### Brand colours
 
-Everything is driven by six values at the top of `assets/css/styles.css`:
+The current colours were sampled from the supplied Bounc-SEN Events logo. Everything is driven by
+six values at the top of `assets/css/styles.css`:
 
 ```css
 :root {
-  --brand-pink: #e6007e;
-  --brand-purple: #6b21a8;
-  --brand-teal: #0891b2;
-  --brand-sun: #f59e0b;
-  --brand-ink: #1b1233;
+  --brand-pink: #ce21a5;
+  --brand-purple: #7a2fd0;
+  --brand-teal: #34a6ef;
+  --brand-sun: #f3a5da;
+  --brand-ink: #1e208b;
   --brand-paper: #fbfaff;
 }
 ```
@@ -107,18 +108,24 @@ Everything is driven by six values at the top of `assets/css/styles.css`:
 Change those and the header, buttons, gradients, icon tiles and footer all follow. Nothing else
 needs touching.
 
-### Swap in the real logo
+### Logo files
 
-The placeholder mark is `assets/brand/logo.svg` — a bouncy castle arch with a heart in the doorway,
-drawn in the brand gradient. To use the real logo:
+The supplied real logo is used in the header, favicon, Apple touch icon, installable-app icons,
+structured data and the Facebook/WhatsApp share image:
 
-1. Replace `assets/brand/logo.svg` with your own SVG (keep the filename), **or** drop in a square
-   PNG and change `logo.svg` to `logo.png` in the header of each HTML file.
-2. Re-cut the favicon and app icons from the new artwork and overwrite `assets/brand/favicon.ico`,
-   `icon-32.png`, `icon-48.png`, `icon-96.png`, `icon-192.png`, `icon-512.png`,
-   `icon-maskable-512.png` and `apple-touch-icon.png`.
-3. Update `assets/brand/og-image.jpg` (1200×630) — this is the picture that shows when the site is
-   shared on Facebook, WhatsApp or in a Google result card.
+- `logo.png` — 1000×1000 master for Google Business and other uploads
+- `logo.webp` — 92 KB website copy used in the header
+- `favicon.ico` and `icon-*.png` — browser and phone icons generated from that logo
+- `og-image.jpg` — 1200×630 share card combining the logo and dinosaur castle
+
+Keep the original high-resolution artwork outside this folder as the print master. The web files
+are resized copies, not a replacement for it.
+
+### Facebook
+
+The footer on every page links to
+[`facebook.com/BouncSenEvents`](https://www.facebook.com/BouncSenEvents), and the same URL is in
+the structured-data `sameAs` array so Google can match the page to the business.
 
 ### Change the phone number, email or domain
 
