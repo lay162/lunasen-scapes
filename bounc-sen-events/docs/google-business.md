@@ -65,8 +65,10 @@ sister company.
 
 ## Phone
 
-Use the same number as the website footer. Currently a placeholder — see
-[`before-you-go-live.md`](before-you-go-live.md).
+`07830 852 359`
+
+Use that exact display format on the profile. The website's clickable/schema form is
+`+447830852359`.
 
 ## Website field
 
@@ -83,8 +85,8 @@ this one rather than listing them separately.
 | --- | --- |
 | Name | `Bounc-SEN Events Ltd` |
 | Address | Wirral, Merseyside, United Kingdom |
-| Phone | (see `before-you-go-live.md`) |
-| Email | `info@bounc-sen-events.co.uk` |
+| Phone | `07830 852 359` |
+| Email | Not published yet |
 | Hours | Every day, 08:00 – 20:00 |
 
 Those exact values are in the footer of every page and in the `LocalBusiness` block in each page's

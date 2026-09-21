@@ -132,10 +132,16 @@ The footer on every page links to
 [`facebook.com/BouncSenEvents`](https://www.facebook.com/BouncSenEvents), and the same URL is in
 the structured-data `sameAs` array so Google can match the page to the business.
 
-### Change the phone number, email or domain
+### Contact and domain
 
-They are currently **placeholders** and must be replaced before launch. See
-[`docs/before-you-go-live.md`](docs/before-you-go-live.md) for the exact find-and-replace list.
+The public phone number is `07830 852 359` and Facebook is
+[`facebook.com/BouncSenEvents`](https://www.facebook.com/BouncSenEvents). No business email is
+published because the mailbox does not exist yet. The quote helper copies the customer's completed
+request and opens Facebook so it can be pasted into a message; the site does not upload or store it.
+
+The domain remains a placeholder until the final purchase. See
+[`docs/domain-and-github-pages.md`](docs/domain-and-github-pages.md) for the exact connection steps
+and [`docs/before-you-go-live.md`](docs/before-you-go-live.md) for the remaining checks.
 
 ## Search and Google
 
@@ -156,10 +162,11 @@ The evidence-led keyword, citation, backlink and review plan is in
 
 ## Hosting
 
-The folder is static, so anything can serve it: GitHub Pages, Netlify, Cloudflare Pages, or plain
-shared hosting over FTP. A ready-made GitHub Pages workflow is in
-[`docs/github-pages-workflow.yml`](docs/github-pages-workflow.yml) — copy it to
-`.github/workflows/` in the repository that will host the live site.
+The live copy is stored in the separate
+[`lay162/Bounc-Sen-Events-Ltd`](https://github.com/lay162/Bounc-Sen-Events-Ltd) repository. Its
+active `.github/workflows/deploy-pages.yml` publishes every push to `main` through GitHub Pages.
+Domain and DNS instructions are in
+[`docs/domain-and-github-pages.md`](docs/domain-and-github-pages.md).
 
 ## Accessibility
 

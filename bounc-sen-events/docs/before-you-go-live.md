@@ -1,29 +1,24 @@
 # Before you go live
 
-Everything on this list is a **placeholder**. The site looks finished with them in, which is the
-danger — work through this before the domain points at it.
+The phone and Facebook details are confirmed. The domain, company number, product specifications
+and insurance wording still need final checks before the custom domain points at the site.
 
 ## 1. Phone number
 
-Currently `07700 900 123` (an Ofcom fictional-drama number, chosen so it cannot ring a real person
-by accident).
+Complete. The public number is:
 
-Find and replace in every `.html` file:
+`07830 852 359`
 
-| Find | Replace with |
-| --- | --- |
-| `07700 900 123` | your display number, e.g. `07375 647576` |
-| `+447700900123` | the same number in `+44` form, no spaces |
-
-`+447700900123` appears in `tel:` links and in the `telephone` field of the structured data.
+The clickable/schema form is `+447830852359`. Both forms are already used consistently throughout
+the site.
 
 ## 2. Email address
 
-Currently `info@bounc-sen-events.co.uk`.
+No business email is published because no mailbox exists yet. Do not add
+`info@bounc-sen-events.co.uk` until that address has been created and tested.
 
-Find and replace in every `.html` file. It appears in the footer, on the contact page, in the
-structured data, and as `data-email` on the quote form — that last one is what the form posts to,
-so do not miss it.
+The quote helper copies the customer's details and opens the Bounc-SEN Facebook page. The customer
+pastes the request into Messenger; nothing is uploaded or stored by this website.
 
 ## 3. Domain
 
@@ -95,7 +90,8 @@ If Search Console asks for HTML-tag verification, paste the tag into the `<head>
 
 ```bash
 cd bounc-sen-events
-grep -rn "07700 900\|bounc-sen-events.co.uk" --include="*.html" --include="*.xml" --include="*.txt" .
+grep -rn "bounc-sen-events.co.uk" --include="*.html" --include="*.xml" --include="*.txt" .
 ```
 
-If that command still prints the placeholder number, you are not finished.
+If the bought domain differs from `bounc-sen-events.co.uk` and this command still prints that
+placeholder, the domain replacement is not finished.
