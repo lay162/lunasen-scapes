@@ -1,0 +1,34 @@
+{
+  "name": "Bounc-SEN Events Ltd",
+  "short_name": "Bounc-SEN",
+  "description": "Inclusive bouncy castle and soft play hire for SEN children and young people across Wirral, Merseyside and Cheshire.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#fbfaff",
+  "theme_color": "#1b1233",
+  "lang": "en-GB",
+  "categories": [
+    "business",
+    "events",
+    "kids"
+  ],
+  "icons": [
+    {
+      "src": "assets/brand/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/brand/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/brand/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
