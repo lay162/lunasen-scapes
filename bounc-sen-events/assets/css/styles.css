@@ -749,7 +749,7 @@ section {
 
 .breadcrumbs a {
   color: #ffd1e8;
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 .breadcrumbs a:hover {
@@ -759,7 +759,14 @@ section {
 
 .breadcrumbs span {
   padding-inline: 0.4rem;
+}
+
+.breadcrumbs > span:not([aria-current]) {
   opacity: 0.6;
+}
+
+.breadcrumbs [aria-current="page"] {
+  color: #fff;
 }
 
 /* ==========================================================================
@@ -1642,7 +1649,7 @@ textarea:focus {
 
 .site-footer a {
   color: #ffd1e8;
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 .site-footer a:hover {
@@ -1674,7 +1681,7 @@ textarea:focus {
   align-items: center;
   justify-content: space-between;
   font-size: 0.8rem;
-  color: #9c90c9;
+  color: #bbb5df;
 }
 
 .footer-bottom p {

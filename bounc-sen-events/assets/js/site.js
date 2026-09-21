@@ -136,11 +136,14 @@
   }
 
   /* ---------------------------------------------------------- postcodes -- */
-  // Outward-code prefixes we deliver to. Keep in sync with the areas page copy.
-  var COVERED = [
-    "CH", "L", "WA", "SK", "CW", "PR", "WN", "M", "ST", "LL", "SY", "TF"
-  ];
-  var CORE = ["CH", "L", "WA", "CW", "SK"];
+  // North West England has 14 principal postcode areas. Core routes are run
+  // directly from Wirral; regional/extended work may be fulfilled with sister
+  // company King of the Castles. Every result still asks the team to confirm
+  // the exact address, access and travel price before a booking is accepted.
+  // Keep these groups in sync with the postcode matrix on areas.html.
+  var CORE = ["CH", "L", "CW", "WA"];
+  var REGIONAL = ["M", "WN", "SK", "PR", "BL", "OL", "BB", "FY"];
+  var EXTENDED = ["LA", "CA"];
 
   function initPostcode() {
     var form = $("[data-postcode-form]");
@@ -169,20 +172,26 @@
         result.classList.add("result--ok");
         result.textContent =
           "Good news — " + outward +
-          " is inside our core Wirral, Merseyside and Cheshire delivery area. " +
-          "Send us a quote request and we will confirm your slot.";
-      } else if (COVERED.indexOf(letters) !== -1) {
+          " is inside our core Wirral, Merseyside and Cheshire route. " +
+          "Send a quote request and we will confirm availability, access and the final delivery price.";
+      } else if (REGIONAL.indexOf(letters) !== -1) {
         result.classList.add("result--info");
         result.textContent =
           outward +
-          " is just outside the core area but we regularly travel there. " +
-          "Ask for a quote and we will confirm delivery and any travel cost up front.";
+          " is in our wider North West partner-delivery area. We may fulfil it with sister company " +
+          "King of the Castles; ask for a quote and we will confirm the crew and any travel cost up front.";
+      } else if (EXTENDED.indexOf(letters) !== -1) {
+        result.classList.add("result--info");
+        result.textContent =
+          outward +
+          " is in the extended North West area. Longer-distance delivery depends on the equipment, " +
+          "date and route, so send a quote request and we will confirm it before you commit.";
       } else {
         result.classList.add("result--warn");
         result.textContent =
           "We do not run a regular route to " + outward +
-          " yet, but our sister company King of the Castles delivers nationwide — " +
-          "send a quote request and we will sort it between us.";
+          ". Our sister company King of the Castles also delivers nationwide, so it is still worth " +
+          "asking — but delivery is not confirmed until you have a written quote.";
       }
     });
   }
