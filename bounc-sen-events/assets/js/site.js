@@ -67,9 +67,23 @@
 
       if (empty) empty.hidden = shown !== 0;
       if (count) {
-        count.textContent =
-          shown + (shown === 1 ? " item" : " items") +
-          (category === "all" ? "" : " in this category");
+        var noun = shown === 1 ? "item" : "items";
+        if (category === "all") {
+          count.textContent = "Showing all " + shown + " " + noun + ".";
+        } else {
+          var label = buttons
+            .filter(function (b) {
+              return b.getAttribute("data-filter") === category;
+            })
+            .map(function (b) {
+              return b.textContent.trim();
+            })[0];
+          // Items can belong to more than one category — a soft play set is
+          // also a set of shapes and mats — so say which filter is applied
+          // rather than let the overlap look like a broken filter.
+          count.textContent =
+            "Showing " + shown + " " + noun + " in " + label + ".";
+        }
       }
 
       if (push) {
