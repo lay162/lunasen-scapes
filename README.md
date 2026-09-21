@@ -86,6 +86,10 @@ You own **lunasen-scapes.co.uk** (main) and the `.com` names (they forward to th
 
 Next.js (static export), TypeScript, Tailwind CSS, shadcn/ui. No database or login. GitHub Pages serves the built files.
 
+## Also in this repository
+
+[`bounc-sen-events/`](bounc-sen-events/) holds the **Bounc-SEN Events Ltd** website — a separate brand, a separate domain, and a self-contained static site with no shared code or build step. It is parked here so it is version controlled; move the folder to its own repository when that site goes live. Start with [`bounc-sen-events/README.md`](bounc-sen-events/README.md).
+
 ## Legal
 
 LUNA SEN-Scapes Ltd. Company no. 17450329. Based in Wirral, Merseyside.

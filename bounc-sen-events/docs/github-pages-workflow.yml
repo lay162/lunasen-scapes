@@ -1,0 +1,46 @@
+# GitHub Pages deployment for the Bounc-SEN Events Ltd website.
+#
+# This file is NOT active where it currently sits. Copy it to
+# .github/workflows/deploy.yml in the repository that will host the live site,
+# then in that repository go to Settings -> Pages and set Source to
+# "GitHub Actions".
+#
+# If the site lives at the repository root, change `path: bounc-sen-events`
+# below to `path: .`.
+#
+# For a custom domain, add a file named `CNAME` next to index.html containing
+# just the bare domain, e.g.
+#     bounc-sen-events.co.uk
+
+name: Deploy Bounc-SEN Events to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      # Nothing to build. The site is static files.
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: bounc-sen-events
+
+      - id: deployment
+        uses: actions/deploy-pages@v4
