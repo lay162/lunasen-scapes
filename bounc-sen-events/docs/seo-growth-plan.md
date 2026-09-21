@@ -135,7 +135,8 @@ Use the services, description, posts, photos and website pages for relevance.
 Priority profile work:
 
 1. Verify the profile.
-2. Replace every website placeholder phone/email/domain before connecting it.
+2. Connect the confirmed `07830 852 359` phone and the final purchased domain. Leave email blank
+   until a real mailbox has been created and tested.
 3. Add each real item and package as a service.
 4. Upload the supplied logo and all product photos.
 5. Add new photos from real setups, with permission, every month.
